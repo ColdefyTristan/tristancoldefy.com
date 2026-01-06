@@ -1,0 +1,51 @@
+# --- Secrets ---
+.env
+.env.*
+!.env.example
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+.venv/
+venv/
+
+# --- FastAPI / Uvicorn logs ---
+*.log
+
+# --- Node / Front ---
+node_modules/
+dist/
+build/
+.vite/
+.next/
+.nuxt/
+.cache/
+
+# --- DB / local data ---
+*.sqlite
+*.sqlite3
+
+# --- VSCode ---
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/tasks.json
+
+# --- JetBrains ---
+.idea/
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+desktop.ini

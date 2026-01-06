@@ -1,0 +1,18 @@
+:root {
+  --color-bg: #0f172a;
+  --color-nav: #02061755;
+  --color-text: #e5e7eb;
+
+  --nav-height: 64px;
+  --spacing: 1rem;
+
+  --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Rubik", sans-serif;
+}
+
+
+body {
+  font-family: var(--font-main);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.5;
+}
