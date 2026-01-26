@@ -1,0 +1,47 @@
+.field {
+  display: grid;
+  gap: 6px;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.input {
+  height: 40px;
+  padding: 0 12px;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+
+  font-size: 14px;
+  color: #111827;
+  background: #ffffff;
+}
+
+.input:focus-visible {
+  outline: 3px solid rgba(59, 130, 246, 0.6);
+  outline-offset: 2px;
+}
+
+.input:disabled {
+  background: #f3f4f6;
+  color: #6b7280;
+  cursor: not-allowed;
+}
+
+.inputError {
+  border-color: #dc2626;
+}
+
+.hint {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.error {
+  font-size: 12px;
+  color: #dc2626;
+}

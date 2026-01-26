@@ -1,4 +1,4 @@
-from sqlmodel import SQLModel, create_engine, Session
+from sqlmodel import create_engine, Session
 from app.settings import settings
 
 connect_args = (
@@ -6,9 +6,10 @@ connect_args = (
 )
 engine = create_engine(settings.DATABASE_URL, echo=True, connect_args=connect_args)
 
-
+"""
 def create_db_and_tables() -> None:
     SQLModel.metadata.create_all(engine)
+"""
 
 
 def get_session():

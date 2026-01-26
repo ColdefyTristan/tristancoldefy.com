@@ -55,7 +55,7 @@ def test_register_returns_409_on_duplicate_username(client, user_factory):
     )
 
     assert r.status_code == 409
-    assert r.json()["detail"] == "username already used"
+    assert r.json()["code"] == "USERNAME_TAKEN"
 
 
 def test_register_returns_409_on_duplicate_primary_email(client, user_factory):
@@ -70,7 +70,7 @@ def test_register_returns_409_on_duplicate_primary_email(client, user_factory):
     )
 
     assert r.status_code == 409
-    assert r.json()["detail"] == "email already used"
+    assert r.json()["code"] == "EMAIL_TAKEN"
 
 
 @pytest.mark.parametrize(

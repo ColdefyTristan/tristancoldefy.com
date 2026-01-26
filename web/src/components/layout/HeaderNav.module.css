@@ -1,0 +1,14 @@
+.nav {
+  display: flex;
+  gap: 12px;
+}
+
+.link {
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+
+.link:hover {
+  background: #f3f4f6;
+  text-decoration: none;
+}

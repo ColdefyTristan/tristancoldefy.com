@@ -23,26 +23,61 @@ def get_current_auth(
 ) -> AuthContext:
     token = request.cookies.get("session_id")
     if not token:
-        raise HTTPException(status_code=401, detail="not authenticated")
+        raise HTTPException(
+            status_code=401,
+            detail={
+                "code": "NOT_AUTHENTICATED",
+                "message": "Authentication required.",
+                "fields": {"session_id": "missing"},
+            },
+        )
 
     token_h = hash_token(token)
 
     stmt = select(UserSession).where(UserSession.session_token_hash == token_h)
     user_session = session.exec(stmt).first()
     if not user_session:
-        raise HTTPException(status_code=401, detail="invalid session")
+        raise HTTPException(
+            status_code=401,
+            detail={
+                "code": "SESSION_INVALID",
+                "message": "Invalid session.",
+                "fields": {"session_id": "invalid"},
+            },
+        )
 
     now = utcnow_naive()
     if user_session.revoked_at is not None:
-        raise HTTPException(status_code=401, detail="session revoked")
+        raise HTTPException(
+            status_code=401,
+            detail={
+                "code": "SESSION_REVOKED",
+                "message": "Session revoked.",
+                "fields": {"session_id": "revoked"},
+            },
+        )
     if user_session.expires_at <= now or (
         user_session.idle_expires_at and user_session.idle_expires_at <= now
     ):
-        raise HTTPException(status_code=401, detail="session expired")
+        raise HTTPException(
+            status_code=401,
+            detail={
+                "code": "SESSION_EXPIRED",
+                "message": "Session expired.",
+                "fields": {"session_id": "expired"},
+            },
+        )
 
     user = session.get(User, user_session.user_id)
     if not user or not user.is_active:
-        raise HTTPException(status_code=401, detail="user inactive")
+        raise HTTPException(
+            status_code=401,
+            detail={
+                "code": "USER_INACTIVE",
+                "message": "User account is inactive.",
+                "fields": {"user": "inactive"},
+            },
+        )
 
     touch_session(session, user_session, now, IDLE_TIMEOUT_SECONDS)
 

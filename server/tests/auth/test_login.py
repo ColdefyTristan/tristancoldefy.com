@@ -79,7 +79,7 @@ def test_login_returns_401_on_inactive_user(client, user_factory, default_passwo
     )
 
     assert r.status_code == 401
-    assert r.json()["detail"] == "invalid credentials"
+    assert r.json()["code"] == "INVALID_CREDENTIALS"
 
 
 def test_login_accepts_email_or_username(client, user_factory, default_password):

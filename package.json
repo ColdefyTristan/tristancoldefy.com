@@ -10,6 +10,9 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "prettier": "^3.8.0",
     "typescript": "^5.9.3",
     "vite": "^7.3.0"
   }

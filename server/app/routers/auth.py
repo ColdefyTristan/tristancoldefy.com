@@ -41,7 +41,14 @@ def register(
         select(User).where(User.username == payload.username)
     ).first()
     if existing:
-        raise HTTPException(status_code=409, detail="username already used")
+        raise HTTPException(
+            status_code=409,
+            detail={
+                "code": "USERNAME_TAKEN",
+                "message": "This username is already taken.",
+                "fields": {"username": "already_taken"},
+            },
+        )
 
     stripped_email = (
         normalize_email(payload.email) if payload.email is not None else None
@@ -55,7 +62,14 @@ def register(
             )
         ).first()
         if existing_email:
-            raise HTTPException(status_code=409, detail="email already used")
+            raise HTTPException(
+                status_code=409,
+                detail={
+                    "code": "EMAIL_TAKEN",
+                    "message": "This email address is already in use.",
+                    "fields": {"email": "already_taken"},
+                },
+            )
 
     # create user
     user = User(
@@ -79,7 +93,14 @@ def register(
         session.commit()
     except IntegrityError:
         session.rollback()
-        raise HTTPException(status_code=409, detail="constraint violated")
+        raise HTTPException(
+            status_code=409,
+            detail={
+                "code": "CONSTRAINT_VIOLATION",
+                "message": "Request conflicts with existing data.",
+                "fields": {},
+            },
+        )
 
     if stripped_email:
         deliver_email_verification(user_email=user_email, token=email_token)
@@ -125,7 +146,14 @@ def login(
         or not user.is_active
         or not verify_password(payload.password, user.password_hash)
     ):
-        raise HTTPException(status_code=401, detail="invalid credentials")
+        raise HTTPException(
+            status_code=401,
+            detail={
+                "code": "INVALID_CREDENTIALS",
+                "message": "Invalid identifier or password.",
+                "fields": {"identifier": "invalid", "password": "invalid"},
+            },
+        )
 
     token = create_user_session(session, user.id, payload.remember_me)
 
@@ -133,7 +161,14 @@ def login(
         session.commit()
     except IntegrityError:
         session.rollback()
-        raise HTTPException(status_code=409, detail="id or token already exist")
+        raise HTTPException(
+            status_code=409,
+            detail={
+                "code": "SESSION_CONFLICT",
+                "message": "Could not create session. Please retry.",
+                "fields": {},
+            },
+        )
 
     response.set_cookie(
         key="session_id",
@@ -211,11 +246,25 @@ def send_email_verification_endpoint(
 
     user = current_auth.user
     if not user.pending_email_id:
-        raise HTTPException(status_code=404, detail="missing pending email")
+        raise HTTPException(
+            status_code=404,
+            detail={
+                "code": "PENDING_EMAIL_MISSING",
+                "message": "No pending email address to verify.",
+                "fields": {"pending_email": "missing"},
+            },
+        )
 
     pending_email = session.get(UserEmailAddress, user.pending_email_id)
     if not pending_email or pending_email.user_id != user.id:
-        raise HTTPException(status_code=409, detail="pending email id conflict")
+        raise HTTPException(
+            status_code=409,
+            detail={
+                "code": "PENDING_EMAIL_CONFLICT",
+                "message": "Pending email does not match the current user.",
+                "fields": {"pending_email_id": "conflict"},
+            },
+        )
 
     token = create_email_verification_token(
         session=session, user_email=pending_email, user=user
@@ -244,16 +293,37 @@ def verify_email_verification_token_endpoint(
     email_token = session.exec(stmt).first()
 
     if email_token is None:
-        raise HTTPException(status_code=401, detail="invalid token")
+        raise HTTPException(
+            status_code=401,
+            detail={
+                "code": "EMAIL_TOKEN_INVALID",
+                "message": "Invalid or expired verification token.",
+                "fields": {"token": "invalid"},
+            },
+        )
 
     pending_email = session.get(UserEmailAddress, email_token.email_id)
     # no email associated with token
     if not pending_email:
-        raise HTTPException(status_code=401, detail="invalid token")
+        raise HTTPException(
+            status_code=401,
+            detail={
+                "code": "EMAIL_TOKEN_INVALID",
+                "message": "Invalid or expired verification token.",
+                "fields": {"token": "invalid"},
+            },
+        )
     user = session.get(User, pending_email.user_id)
     # no user associated with mail
     if not user or user.pending_email_id != email_token.email_id:
-        raise HTTPException(status_code=401, detail="invalid token")
+        raise HTTPException(
+            status_code=401,
+            detail={
+                "code": "EMAIL_TOKEN_INVALID",
+                "message": "Invalid or expired verification token.",
+                "fields": {"token": "invalid"},
+            },
+        )
 
     try:
         verify_pending_email(

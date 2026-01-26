@@ -5,9 +5,8 @@ from sqlalchemy import pool
 
 from alembic import context
 
-from app.settings import DATABASE_URL
 from sqlmodel import SQLModel
-import app.models
+from app.settings import settings
 
 
 # this is the Alembic Config object, which provides
@@ -30,7 +29,7 @@ target_metadata = SQLModel.metadata
 # my_important_option = config.get_main_option("my_important_option")
 # ... etc.
 
-config.set_main_option("sqlalchemy.url", DATABASE_URL)
+config.set_main_option("sqlalchemy.url", settings.DATABASE_URL)
 
 
 def run_migrations_offline() -> None:

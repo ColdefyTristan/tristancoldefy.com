@@ -1,0 +1,62 @@
+.viewport {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  width: min(360px, calc(100vw - 32px));
+  display: grid;
+  gap: 10px;
+  z-index: 50;
+  outline: none;
+}
+
+.toast {
+  position: relative;
+  padding: 12px 44px 12px 12px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  color: #111827;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+}
+
+.title {
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.message {
+  font-size: 13px;
+  line-height: 1.35;
+  color: #374151;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 28px;
+  height: 28px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+  cursor: pointer;
+}
+
+.close:focus-visible {
+  outline: 3px solid rgba(59, 130, 246, 0.6);
+  outline-offset: 2px;
+}
+
+/* variants */
+.info {
+  border-color: #bfdbfe;
+}
+
+.success {
+  border-color: #bbf7d0;
+}
+
+.error {
+  border-color: #fecaca;
+}

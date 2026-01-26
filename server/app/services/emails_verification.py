@@ -49,7 +49,14 @@ def create_email_verification_token(
     if last_active and now - last_active.created_at < timedelta(
         seconds=EMAIL_VERIFICATION_COOLDOWN
     ):
-        raise HTTPException(429, "Too many email verification in a short time.")
+        raise HTTPException(
+            429,
+            details={
+                "code": "EMAIL_VERIFICATION_RATE_LIMITED",
+                "message": "Too many verification emails sent in a short time. Please try again later.",
+                "fields": {"email_verification": "rate_limited"},
+            },
+        )
 
     if last_active:
         revoke_active_email_verification_tokens(
@@ -77,8 +84,8 @@ def create_email_verification_token(
 def deliver_email_verification(
     user_email: UserEmailAddress, token: str, email_sender=None
 ):
-    now = utcnow_naive()
-    expires_at = now + timedelta(seconds=EMAIL_VERIFICATION_EXPIRATION_TIME)
+    # now = utcnow_naive()
+    # expires_at = now + timedelta(seconds=EMAIL_VERIFICATION_EXPIRATION_TIME)
 
     if not email_sender:
         return {"ok": False}

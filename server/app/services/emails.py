@@ -18,7 +18,14 @@ def add_pending_email(session: Session, user: User, email_str: str) -> UserEmail
 
     if addr:
         if addr.verified_at is not None:
-            raise HTTPException(400, "this email is already verified for this user")
+            raise HTTPException(
+                400,
+                {
+                    "code": "EMAIL_ALREADY_VERIFIED",
+                    "message": "This email address is already verified.",
+                    "fields": {"email": "already_verified"},
+                },
+            )
 
         user.pending_email_id = addr.id
         return addr
@@ -34,10 +41,24 @@ def add_pending_email(session: Session, user: User, email_str: str) -> UserEmail
 def set_primary_email(user: User, user_email: UserEmailAddress) -> None:
 
     if user_email.user_id != user.id:
-        raise HTTPException(400, "email does not belong to this user")
+        raise HTTPException(
+            400,
+            {
+                "code": "EMAIL_NOT_OWNED",
+                "message": "This email address does not belong to the current user.",
+                "fields": {"email": "not_owned"},
+            },
+        )
 
     if user_email.verified_at is None:
-        raise HTTPException(400, "email is not verified")
+        raise HTTPException(
+            400,
+            {
+                "code": "EMAIL_NOT_VERIFIED",
+                "message": "This email address is not verified.",
+                "fields": {"email": "not_verified"},
+            },
+        )
 
     if user.primary_email_id == user_email.id:
         return
