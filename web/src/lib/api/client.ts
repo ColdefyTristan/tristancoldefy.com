@@ -1,4 +1,15 @@
-import type { ApiError } from "./errors";
+import { ApiError } from "./errors";
+
+type ServerErrorPayload = { code: string; message: string; fields?: Record<string, string[]> };
+
+function isServerErrorPayload(x: unknown): x is ServerErrorPayload {
+  return (
+    !!x &&
+    typeof x === "object" &&
+    typeof (x as any).code === "string" &&
+    typeof (x as any).message === "string"
+  );
+}
 
 type HttpMethod = "GET" | "POST" | "PUT" | "PATCH" | "DELETE";
 
@@ -9,16 +20,30 @@ type RequestOptions = {
   headers?: Record<string, string>;
   timeoutMs?: number;
   signal?: AbortSignal;
-};
+} & Omit<RequestInit, "method" | "body" | "headers" | "signal" | "credentials">;
 
 const DEFAULT_TIMEOUT = 10_000;
 
 function getBaseUrl() {
-  return process.env.NEXT_PUBLIC_API_BASE?.replace(/\/$/, "") || "/api";
+  const raw =
+    typeof window === "undefined"
+      ? process.env.INTERNAL_API_URL
+      : "/api";
+
+  if (!raw) throw new Error("INTERNAL_API_URL is missing (server-side).");
+  return raw.replace(/\/$/, "");
 }
 
-function makeError(e: ApiError): ApiError {
-  return e;
+type ApiErrorLike = {
+  status?: number;
+  code: string;
+  message: string;
+  fields?: Record<string, string[]>;
+  details?: unknown;
+};
+
+function makeError(e: ApiError | ApiErrorLike): ApiError {
+  return e instanceof ApiError ? e : new ApiError(e);
 }
 
 async function parseBody(res: Response) {
@@ -35,17 +60,50 @@ async function parseBody(res: Response) {
 }
 
 function mapHttpError(status: number, payload: unknown): ApiError {
-  if (status === 401) return { code: "UNAUTHORIZED", status, message: "Session expirée. Merci de vous reconnecter.", details: payload };
-  if (status === 403) return { code: "FORBIDDEN", status, message: "Accès refusé.", details: payload };
-  if (status === 404) return { code: "NOT_FOUND", status, message: "Ressource introuvable.", details: payload };
-  if (status >= 500) return { code: "SERVER_ERROR", status, message: "Erreur serveur. Réessayez plus tard.", details: payload };
-  if (status >= 400) return { code: "BAD_REQUEST", status, message: "Requête invalide.", details: payload };
-  return { code: "UNKNOWN", status, message: "Erreur inconnue.", details: payload };
+  if (isServerErrorPayload(payload)) {
+    return new ApiError({
+      status,
+      code: payload.code,       
+      message: payload.message, 
+      fields: payload.fields,
+      details: payload,
+    });
+  }
+
+  if (status === 401)
+    return new ApiError({ code: "UNAUTHORIZED", status, message: "Session expired. Please reconnect.", details: payload });
+
+  if (status === 403)
+    return new ApiError({ code: "FORBIDDEN", status, message: "Access denied.", details: payload });
+
+  if (status === 404)
+    return new ApiError({ code: "NOT_FOUND", status, message: "Resource not found.", details: payload });
+
+  if (status === 422)
+    return new ApiError({ code: "VALIDATION_ERROR", status, message: "Invalid fields.", details: payload });
+
+  if (status >= 500)
+    return new ApiError({ code: "SERVER_ERROR", status, message: "Server error. Please try again later.", details: payload });
+
+  if (status >= 400)
+    return new ApiError({ code: "BAD_REQUEST", status, message: "Invalid request.", details: payload });
+
+  return new ApiError({ code: "UNKNOWN", status, message: "Unknown error.", details: payload });
 }
 
 export async function request<T>(opts: RequestOptions): Promise<T> {
   const baseUrl = getBaseUrl();
+  
   const timeoutMs = opts.timeoutMs ?? DEFAULT_TIMEOUT;
+  const {
+  path,
+  method,
+  body,
+  headers,
+  signal: externalSignal,
+  ...fetchInit
+} = opts;
+
 
   const controller = new AbortController();
   const timeoutId = setTimeout(() => controller.abort("timeout"), timeoutMs);
@@ -56,16 +114,18 @@ export async function request<T>(opts: RequestOptions): Promise<T> {
 
   try {
     const res = await fetch(`${baseUrl}${opts.path}`, {
-      method: opts.method,
+      ...fetchInit,
+      method,
       credentials: "include", // cookies httpOnly
       headers: {
         "Accept": "application/json",
-        ...(opts.body ? { "Content-Type": "application/json" } : {}),
-        ...(opts.headers ?? {}),
+        ...(body != null ? { "Content-Type": "application/json" } : {}),
+        ...(headers ?? {}),
       },
-      body: opts.body ? JSON.stringify(opts.body) : undefined,
+      body: body != null ? JSON.stringify(body) : undefined,
       signal: controller.signal,
     });
+
 
     const payload = await parseBody(res);
 
@@ -76,11 +136,11 @@ export async function request<T>(opts: RequestOptions): Promise<T> {
 
     if (err?.name === "AbortError") {
       const reason = controller.signal.reason;
-      if (reason === "timeout") throw makeError({ code: "TIMEOUT", message: "Délai dépassé. Vérifiez votre connexion." });
-      throw makeError({ code: "ABORTED", message: "Requête annulée." });
+      if (reason === "timeout") throw makeError({ code: "TIMEOUT", message: "Request timed out. Check your connection." });
+      throw makeError({ code: "ABORTED", message: "Request cancelled." });
     }
 
-    throw makeError({ code: "NETWORK_ERROR", message: "Impossible de contacter le serveur. Vérifiez votre connexion.", details: String(err) });
+    throw makeError({ code: "NETWORK_ERROR", message: "Unable to reach the server. Check your connection.", details: String(err) });
   } finally {
     clearTimeout(timeoutId);
   }
