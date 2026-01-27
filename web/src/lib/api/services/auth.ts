@@ -1,8 +1,8 @@
 import { api } from "../client";
 import { endpoints } from "../endpoints";
 
-export type Me = { id: string; email: string };
+export type Me = { id: string; username: string; email?: string | null };
 
-export function getMe() {
-  return api.get<Me | null>(endpoints.me);
+export async function getMe(): Promise<Me> {
+  return api.get<Me>("/auth/me", { cache: "no-store" });
 }
