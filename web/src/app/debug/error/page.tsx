@@ -8,7 +8,7 @@ export default function DebugErrorPage() {
         throw new ApiError({ status: 500, code: "DEBUG", message: "Debug error" });
       }}
     >
-      Throw error
+      Throw error !
     </button>
   );
 }
