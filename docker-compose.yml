@@ -32,18 +32,21 @@ services:
         condition: service_healthy
     ports:
       - "8000:8000"
-    volumes:
-      - ./server:/app
     command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
     
   web:
+
     build:
       context: ./web
+    container_name: website_front
     environment:
       INTERNAL_API_URL: http://backend:8000
     depends_on:
       - backend
     ports:
       - "3000:3000"
+
+  
 volumes:
   pgdata:
+

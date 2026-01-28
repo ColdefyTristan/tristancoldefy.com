@@ -1,0 +1,94 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  height: 40px;
+  padding: 0 12px;
+
+  border: 1px solid transparent;
+  border-radius: 10px;
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1;
+
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.primary {
+  background: #111827;
+  color: #ffffff;
+}
+
+.secondary {
+  background: #f3f4f6;
+  color: #111827;
+  border-color: #e5e7eb;
+}
+
+.root:hover:not(.disabled) {
+  filter: brightness(0.98);
+}
+
+.root:active:not(.disabled) {
+  transform: translateY(1px);
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Input caché mais accessible */
+.input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+}
+
+/* La case visuelle */
+.box {
+  width: 18px;
+  height: 18px;
+  border-radius: 6px;
+
+  border: 2px solid currentColor;
+  background: transparent;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 auto;
+}
+
+/* Focus clavier */
+.input:focus-visible + .box {
+  outline: 3px solid rgba(59, 130, 246, 0.6);
+  outline-offset: 2px;
+}
+
+/* Checked state */
+.input:checked + .box {
+  background: currentColor;
+}
+
+.input:checked + .box::after {
+  content: "";
+  width: 8px;
+  height: 4px;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(-45deg);
+}
+
+/* Label */
+.label {
+  display: inline-flex;
+  align-items: center;
+}

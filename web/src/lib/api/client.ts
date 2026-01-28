@@ -113,6 +113,10 @@ export async function request<T>(opts: RequestOptions): Promise<T> {
   }
 
   try {
+    if (process.env.NODE_ENV === "development") {
+      const side = typeof window === "undefined" ? "server" : "browser";
+      console.log(`[api:${side}] ${opts.method} ${baseUrl}${opts.path}`);
+    }
     const res = await fetch(`${baseUrl}${opts.path}`, {
       ...fetchInit,
       method,
@@ -127,9 +131,18 @@ export async function request<T>(opts: RequestOptions): Promise<T> {
     });
 
 
+
+
     const payload = await parseBody(res);
 
     if (!res.ok) throw makeError(mapHttpError(res.status, payload));
+
+    if (process.env.NODE_ENV === "development") {
+      const side = typeof window === "undefined" ? "server" : "browser";
+      console.log(`[api:${side}] <- ${res.status} ${opts.method} ${baseUrl}${opts.path}`);
+    }
+
+
     return payload as T;
   } catch (err: any) {
     if (err?.code && err?.message) throw err as ApiError;
