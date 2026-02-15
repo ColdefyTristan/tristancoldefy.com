@@ -8,7 +8,9 @@ import { Button} from "@/components/ui/Button"
 import { Input} from "@/components/ui/Input"
 import { useToast } from "@/components/ui/Toast";
 import { Checkbox } from "@/components/ui/Checkbox";
-
+import { ConditionalField,isValid } from "@/components/ui/ConditionalField";
+import { passwordRules, usernameRules, emailRulesOptional } from "@/lib/fieldRules";
+import styles from "./RegisterForm.module.css"
 export default function RegisterForm() {
   const { toast } = useToast();
 
@@ -18,6 +20,11 @@ export default function RegisterForm() {
   const [password, setPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
   const [pending, setPending] = useState(false);
+
+  const usernameOk = isValid(username, usernameRules, "invalid"); 
+  const passwordOk = isValid(password, passwordRules, "invalid");
+  const emailOk = isValid(email, emailRulesOptional, "valid");    
+  const canSubmit = usernameOk && passwordOk && emailOk && !pending;
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -38,13 +45,41 @@ export default function RegisterForm() {
   }
 
   return (
-    <form onSubmit={onSubmit}>
-        <Input value={username} onChange={(e) => setUsername(e.target.value)} label="Username"/>
-        <Input value={email} onChange={(e) => setEmail(e.target.value)} label="Email"/>
-        <Input type="password" value={password} onChange={(e) => setPassword(e.target.value)} label="Password" />
-        <Checkbox checked={rememberMe} onChange={(e) => setRememberMe(e.target.checked)} label="Remember me"/>
-        <Button type="submit" disabled={pending}>{pending ? "..." : "Register"}</Button>
+    <form className={styles.form} onSubmit={onSubmit}>
+        
+      <ConditionalField
+        label="Username"
+        value={username}
+        onChange={setUsername}
+        rules={usernameRules}
+        type="text"
+        autoComplete="username"
+        emptyState="neutral"
+      />
 
+      <ConditionalField
+        label="Email (optional)"
+        value={email}
+        onChange={setEmail}
+        rules={emailRulesOptional}
+        type="email"
+        autoComplete="email"
+        emptyState="neutral"
+      />
+
+      <ConditionalField
+        label="Password"
+        value={password}
+        onChange={setPassword}
+        rules={passwordRules}
+        type="password"
+        autoComplete="new-password"
+      />
+        <div className={styles.actions}>
+
+          <Checkbox checked={rememberMe} onChange={(e) => setRememberMe(e.target.checked)} label="Remember me"/>
+          <Button variant="secondary" type="submit" disabled={pending || !canSubmit}>{pending ? "..." : "Register"}</Button>
+        </div>
     </form>
   );
 }

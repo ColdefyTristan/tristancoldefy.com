@@ -1,0 +1,2142 @@
+{
+  "annie": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/1.png",
+    "mean_hex": "#a02100",
+    "skin_number": 17,
+    "family_mastery": [],
+    "cc_quantity": 49,
+    "mobility": 106,
+    "randomness": 153,
+    "mean_hue": 12,
+    "name": "Annie"
+  },
+  "kayle": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/10.png",
+    "mean_hex": "#ff8f1c",
+    "skin_number": 17,
+    "family_mastery": [
+      "Nicolas",
+      "Matthieu"
+    ],
+    "cc_quantity": 152,
+    "mobility": 80,
+    "randomness": 151,
+    "mean_hue": 30,
+    "name": "Kayle"
+  },
+  "xerath": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/101.png",
+    "mean_hex": "#144eff",
+    "skin_number": 8,
+    "family_mastery": [
+      "Tristan"
+    ],
+    "cc_quantity": 80,
+    "mobility": 170,
+    "randomness": 131,
+    "mean_hue": 225,
+    "name": "Xerath"
+  },
+  "shyvana": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/102.png",
+    "mean_hex": "#6e0022",
+    "skin_number": 8,
+    "family_mastery": [
+      "Nicolas"
+    ],
+    "cc_quantity": 145,
+    "mobility": 111,
+    "randomness": 24,
+    "mean_hue": 341,
+    "name": "Shyvana"
+  },
+  "ahri": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/103.png",
+    "mean_hex": "#2c0083",
+    "skin_number": 21,
+    "family_mastery": [
+      "Nicolas"
+    ],
+    "cc_quantity": 48,
+    "mobility": 24,
+    "randomness": 172,
+    "mean_hue": 260,
+    "name": "Ahri"
+  },
+  "graves": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/104.png",
+    "mean_hex": "#920009",
+    "skin_number": 13,
+    "family_mastery": [
+      "Antoine"
+    ],
+    "cc_quantity": 143,
+    "mobility": 75,
+    "randomness": 33,
+    "mean_hue": 356,
+    "name": "Graves"
+  },
+  "fizz": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/105.png",
+    "mean_hex": "#0076cb",
+    "skin_number": 13,
+    "family_mastery": [
+      "Nicolas"
+    ],
+    "cc_quantity": 123,
+    "mobility": 61,
+    "randomness": 57,
+    "mean_hue": 205,
+    "name": "Fizz"
+  },
+  "volibear": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/106.png",
+    "mean_hex": "#0036dd",
+    "skin_number": 10,
+    "family_mastery": [],
+    "cc_quantity": 105,
+    "mobility": 71,
+    "randomness": 113,
+    "mean_hue": 225,
+    "name": "Volibear"
+  },
+  "rengar": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/107.png",
+    "mean_hex": "#008c46",
+    "skin_number": 8,
+    "family_mastery": [],
+    "cc_quantity": 128,
+    "mobility": 72,
+    "randomness": 84,
+    "mean_hue": 150,
+    "name": "Rengar"
+  },
+  "master yi": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/11.png",
+    "mean_hex": "#d7d700",
+    "skin_number": 17,
+    "family_mastery": [
+      "Phillipe"
+    ],
+    "cc_quantity": 167,
+    "mobility": 66,
+    "randomness": 97,
+    "mean_hue": 60,
+    "name": "Master Yi"
+  },
+  "varus": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/110.png",
+    "mean_hex": "#6300ad",
+    "skin_number": 15,
+    "family_mastery": [
+      "Matthieu"
+    ],
+    "cc_quantity": 32,
+    "mobility": 166,
+    "randomness": 103,
+    "mean_hue": 274,
+    "name": "Varus"
+  },
+  "nautilus": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/111.png",
+    "mean_hex": "#8d3700",
+    "skin_number": 11,
+    "family_mastery": [
+      "Tristan"
+    ],
+    "cc_quantity": 3,
+    "mobility": 109,
+    "randomness": 82,
+    "mean_hue": 23,
+    "name": "Nautilus"
+  },
+  "viktor": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/112.png",
+    "mean_hex": "#004499",
+    "skin_number": 8,
+    "family_mastery": [
+      "Tristan",
+      "Phillipe"
+    ],
+    "cc_quantity": 112,
+    "mobility": 141,
+    "randomness": 121,
+    "mean_hue": 213,
+    "name": "Viktor"
+  },
+  "sejuani": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/113.png",
+    "mean_hex": "#0000be",
+    "skin_number": 12,
+    "family_mastery": [
+      "Antoine",
+      "Phillipe"
+    ],
+    "cc_quantity": 12,
+    "mobility": 130,
+    "randomness": 91,
+    "mean_hue": 240,
+    "name": "Sejuani"
+  },
+  "fiora": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/114.png",
+    "mean_hex": "#ef008e",
+    "skin_number": 16,
+    "family_mastery": [
+      "Antoine"
+    ],
+    "cc_quantity": 130,
+    "mobility": 89,
+    "randomness": 56,
+    "mean_hue": 324,
+    "name": "Fiora"
+  },
+  "ziggs": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/115.png",
+    "mean_hex": "#ad3500",
+    "skin_number": 12,
+    "family_mastery": [
+      "Tristan",
+      "Matthieu"
+    ],
+    "cc_quantity": 83,
+    "mobility": 87,
+    "randomness": 119,
+    "mean_hue": 18,
+    "name": "Ziggs"
+  },
+  "lulu": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/117.png",
+    "mean_hex": "#b60081",
+    "skin_number": 13,
+    "family_mastery": [
+      "Tristan"
+    ],
+    "cc_quantity": 28,
+    "mobility": 135,
+    "randomness": 77,
+    "mean_hue": 317,
+    "name": "Lulu"
+  },
+  "draven": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/119.png",
+    "mean_hex": "#9a000e",
+    "skin_number": 14,
+    "family_mastery": [
+      "Phillipe"
+    ],
+    "cc_quantity": 156,
+    "mobility": 128,
+    "randomness": 95,
+    "mean_hue": 354,
+    "name": "Draven"
+  },
+  "alistar": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/12.png",
+    "mean_hex": "#570090",
+    "skin_number": 15,
+    "family_mastery": [],
+    "cc_quantity": 16,
+    "mobility": 116,
+    "randomness": 147,
+    "mean_hue": 276,
+    "name": "Alistar"
+  },
+  "hecarim": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/120.png",
+    "mean_hex": "#00cbcb",
+    "skin_number": 12,
+    "family_mastery": [
+      "Phillipe"
+    ],
+    "cc_quantity": 103,
+    "mobility": 9,
+    "randomness": 59,
+    "mean_hue": 180,
+    "name": "Hecarim"
+  },
+  "kha'zix": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/121.png",
+    "mean_hex": "#1700c1",
+    "skin_number": 8,
+    "family_mastery": [],
+    "cc_quantity": 144,
+    "mobility": 32,
+    "randomness": 67,
+    "mean_hue": 247,
+    "name": "Kha'Zix"
+  },
+  "darius": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/122.png",
+    "mean_hex": "#8e0011",
+    "skin_number": 15,
+    "family_mastery": [
+      "Antoine",
+      "Matthieu"
+    ],
+    "cc_quantity": 133,
+    "mobility": 152,
+    "randomness": 158,
+    "mean_hue": 352,
+    "name": "Darius"
+  },
+  "jayce": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/126.png",
+    "mean_hex": "#bc000e",
+    "skin_number": 12,
+    "family_mastery": [],
+    "cc_quantity": 125,
+    "mobility": 83,
+    "randomness": 35,
+    "mean_hue": 355,
+    "name": "Jayce"
+  },
+  "lissandra": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/127.png",
+    "mean_hex": "#003280",
+    "skin_number": 9,
+    "family_mastery": [],
+    "cc_quantity": 18,
+    "mobility": 64,
+    "randomness": 16,
+    "mean_hue": 216,
+    "name": "Lissandra"
+  },
+  "ryze": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/13.png",
+    "mean_hex": "#0003e1",
+    "skin_number": 14,
+    "family_mastery": [],
+    "cc_quantity": 65,
+    "mobility": 23,
+    "randomness": 104,
+    "mean_hue": 239,
+    "name": "Ryze"
+  },
+  "diana": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/131.png",
+    "mean_hex": "#b900ca",
+    "skin_number": 14,
+    "family_mastery": [
+      "Matthieu"
+    ],
+    "cc_quantity": 120,
+    "mobility": 125,
+    "randomness": 52,
+    "mean_hue": 295,
+    "name": "Diana"
+  },
+  "quinn": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/133.png",
+    "mean_hex": "#bc003d",
+    "skin_number": 6,
+    "family_mastery": [],
+    "cc_quantity": 62,
+    "mobility": 1,
+    "randomness": 4,
+    "mean_hue": 340,
+    "name": "Quinn"
+  },
+  "syndra": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/134.png",
+    "mean_hex": "#8c00c8",
+    "skin_number": 13,
+    "family_mastery": [],
+    "cc_quantity": 93,
+    "mobility": 163,
+    "randomness": 11,
+    "mean_hue": 282,
+    "name": "Syndra"
+  },
+  "aurelion sol": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/136.png",
+    "mean_hex": "#000a8c",
+    "skin_number": 6,
+    "family_mastery": [
+      "Nicolas",
+      "Phillipe"
+    ],
+    "cc_quantity": 38,
+    "mobility": 26,
+    "randomness": 135,
+    "mean_hue": 235,
+    "name": "Aurelion Sol"
+  },
+  "sion": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/14.png",
+    "mean_hex": "#720026",
+    "skin_number": 10,
+    "family_mastery": [
+      "Antoine"
+    ],
+    "cc_quantity": 61,
+    "mobility": 39,
+    "randomness": 94,
+    "mean_hue": 340,
+    "name": "Sion"
+  },
+  "kayn": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/141.png",
+    "mean_hex": "#5d0077",
+    "skin_number": 7,
+    "family_mastery": [],
+    "cc_quantity": 81,
+    "mobility": 16,
+    "randomness": 22,
+    "mean_hue": 286,
+    "name": "Kayn"
+  },
+  "zoe": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/142.png",
+    "mean_hex": "#d90017",
+    "skin_number": 9,
+    "family_mastery": [
+      "Nicolas",
+      "Phillipe"
+    ],
+    "cc_quantity": 47,
+    "mobility": 55,
+    "randomness": 137,
+    "mean_hue": 353,
+    "name": "Zoe"
+  },
+  "zyra": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/143.png",
+    "mean_hex": "#950300",
+    "skin_number": 12,
+    "family_mastery": [],
+    "cc_quantity": 42,
+    "mobility": 172,
+    "randomness": 74,
+    "mean_hue": 1,
+    "name": "Zyra"
+  },
+  "kai'sa": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/145.png",
+    "mean_hex": "#5b0093",
+    "skin_number": 15,
+    "family_mastery": [
+      "Nicolas",
+      "Matthieu"
+    ],
+    "cc_quantity": 164,
+    "mobility": 67,
+    "randomness": 161,
+    "mean_hue": 277,
+    "name": "Kai'Sa"
+  },
+  "seraphine": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/147.png",
+    "mean_hex": "#ff5e90",
+    "skin_number": 11,
+    "family_mastery": [],
+    "cc_quantity": 29,
+    "mobility": 97,
+    "randomness": 41,
+    "mean_hue": 341,
+    "name": "Seraphine"
+  },
+  "sivir": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/15.png",
+    "mean_hex": "#a03900",
+    "skin_number": 18,
+    "family_mastery": [
+      "Matthieu"
+    ],
+    "cc_quantity": 162,
+    "mobility": 77,
+    "randomness": 34,
+    "mean_hue": 21,
+    "name": "Sivir"
+  },
+  "gnar": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/150.png",
+    "mean_hex": "#ad3b00",
+    "skin_number": 10,
+    "family_mastery": [
+      "Phillipe"
+    ],
+    "cc_quantity": 59,
+    "mobility": 79,
+    "randomness": 27,
+    "mean_hue": 20,
+    "name": "Gnar"
+  },
+  "zac": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/154.png",
+    "mean_hex": "#00a70f",
+    "skin_number": 6,
+    "family_mastery": [
+      "Tristan"
+    ],
+    "cc_quantity": 13,
+    "mobility": 10,
+    "randomness": 117,
+    "mean_hue": 125,
+    "name": "Zac"
+  },
+  "yasuo": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/157.png",
+    "mean_hex": "#5a00a8",
+    "skin_number": 18,
+    "family_mastery": [],
+    "cc_quantity": 109,
+    "mobility": 95,
+    "randomness": 167,
+    "mean_hue": 272,
+    "name": "Yasuo"
+  },
+  "soraka": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/16.png",
+    "mean_hex": "#f500f5",
+    "skin_number": 17,
+    "family_mastery": [
+      "Tristan",
+      "Antoine"
+    ],
+    "cc_quantity": 104,
+    "mobility": 119,
+    "randomness": 140,
+    "mean_hue": 300,
+    "name": "Soraka"
+  },
+  "vel'koz": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/161.png",
+    "mean_hex": "#cf00d4",
+    "skin_number": 6,
+    "family_mastery": [
+      "Tristan",
+      "Phillipe"
+    ],
+    "cc_quantity": 96,
+    "mobility": 169,
+    "randomness": 138,
+    "mean_hue": 298,
+    "name": "Vel'Koz"
+  },
+  "taliyah": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/163.png",
+    "mean_hex": "#821a00",
+    "skin_number": 6,
+    "family_mastery": [
+      "Nicolas",
+      "Phillipe"
+    ],
+    "cc_quantity": 97,
+    "mobility": 14,
+    "randomness": 20,
+    "mean_hue": 12,
+    "name": "Taliyah"
+  },
+  "camille": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/164.png",
+    "mean_hex": "#df5900",
+    "skin_number": 8,
+    "family_mastery": [],
+    "cc_quantity": 52,
+    "mobility": 27,
+    "randomness": 50,
+    "mean_hue": 24,
+    "name": "Camille"
+  },
+  "akshan": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/166.png",
+    "mean_hex": "#6d2c00",
+    "skin_number": 3,
+    "family_mastery": [],
+    "cc_quantity": 163,
+    "mobility": 54,
+    "randomness": 14,
+    "mean_hue": 24,
+    "name": "Akshan"
+  },
+  "teemo": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/17.png",
+    "mean_hex": "#b85c00",
+    "skin_number": 15,
+    "family_mastery": [
+      "Tristan",
+      "Antoine",
+      "Phillipe",
+      "Matthieu"
+    ],
+    "cc_quantity": 43,
+    "mobility": 127,
+    "randomness": 170,
+    "mean_hue": 29,
+    "name": "Teemo"
+  },
+  "tristana": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/18.png",
+    "mean_hex": "#4800c5",
+    "skin_number": 16,
+    "family_mastery": [
+      "Nicolas",
+      "Matthieu"
+    ],
+    "cc_quantity": 137,
+    "mobility": 38,
+    "randomness": 149,
+    "mean_hue": 261,
+    "name": "Tristana"
+  },
+  "warwick": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/19.png",
+    "mean_hex": "#0c8000",
+    "skin_number": 15,
+    "family_mastery": [],
+    "cc_quantity": 106,
+    "mobility": 43,
+    "randomness": 136,
+    "mean_hue": 114,
+    "name": "Warwick"
+  },
+  "olaf": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/2.png",
+    "mean_hex": "#836a00",
+    "skin_number": 11,
+    "family_mastery": [
+      "Nicolas",
+      "Antoine"
+    ],
+    "cc_quantity": 146,
+    "mobility": 101,
+    "randomness": 126,
+    "mean_hue": 48,
+    "name": "Olaf"
+  },
+  "nunu & willump": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/20.png",
+    "mean_hex": "#2f00d0",
+    "skin_number": 12,
+    "family_mastery": [
+      "Antoine"
+    ],
+    "cc_quantity": 94,
+    "mobility": 8,
+    "randomness": 143,
+    "mean_hue": 253,
+    "name": "Nunu & Willump"
+  },
+  "bel'veth": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/200.png",
+    "mean_hex": "#1e00a1",
+    "skin_number": 3,
+    "family_mastery": [],
+    "cc_quantity": 75,
+    "mobility": 28,
+    "randomness": 26,
+    "mean_hue": 251,
+    "name": "Bel'Veth"
+  },
+  "braum": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/201.png",
+    "mean_hex": "#005cd9",
+    "skin_number": 8,
+    "family_mastery": [
+      "Phillipe"
+    ],
+    "cc_quantity": 14,
+    "mobility": 118,
+    "randomness": 49,
+    "mean_hue": 214,
+    "name": "Braum"
+  },
+  "jhin": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/202.png",
+    "mean_hex": "#6b0080",
+    "skin_number": 12,
+    "family_mastery": [
+      "Antoine",
+      "Phillipe",
+      "Matthieu"
+    ],
+    "cc_quantity": 114,
+    "mobility": 134,
+    "randomness": 160,
+    "mean_hue": 290,
+    "name": "Jhin"
+  },
+  "kindred": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/203.png",
+    "mean_hex": "#003491",
+    "skin_number": 8,
+    "family_mastery": [
+      "Matthieu"
+    ],
+    "cc_quantity": 171,
+    "mobility": 81,
+    "randomness": 69,
+    "mean_hue": 218,
+    "name": "Kindred"
+  },
+  "miss fortune": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/21.png",
+    "mean_hex": "#b02e00",
+    "skin_number": 22,
+    "family_mastery": [
+      "Antoine",
+      "Phillipe",
+      "Matthieu"
+    ],
+    "cc_quantity": 136,
+    "mobility": 112,
+    "randomness": 142,
+    "mean_hue": 15,
+    "name": "Miss Fortune"
+  },
+  "ashe": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/22.png",
+    "mean_hex": "#3a24ff",
+    "skin_number": 20,
+    "family_mastery": [
+      "Tristan",
+      "Nicolas",
+      "Phillipe",
+      "Matthieu"
+    ],
+    "cc_quantity": 8,
+    "mobility": 149,
+    "randomness": 154,
+    "mean_hue": 246,
+    "name": "Ashe"
+  },
+  "zeri": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/221.png",
+    "mean_hex": "#c2ce00",
+    "skin_number": 6,
+    "family_mastery": [
+      "Nicolas"
+    ],
+    "cc_quantity": 154,
+    "mobility": 47,
+    "randomness": 32,
+    "mean_hue": 63,
+    "name": "Zeri"
+  },
+  "jinx": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/222.png",
+    "mean_hex": "#3b00ff",
+    "skin_number": 14,
+    "family_mastery": [
+      "Nicolas",
+      "Antoine",
+      "Matthieu"
+    ],
+    "cc_quantity": 116,
+    "mobility": 84,
+    "randomness": 171,
+    "mean_hue": 253,
+    "name": "Jinx"
+  },
+  "tahm kench": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/223.png",
+    "mean_hex": "#783c00",
+    "skin_number": 6,
+    "family_mastery": [
+      "Phillipe"
+    ],
+    "cc_quantity": 27,
+    "mobility": 36,
+    "randomness": 102,
+    "mean_hue": 30,
+    "name": "Tahm Kench"
+  },
+  "tryndamere": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/23.png",
+    "mean_hex": "#6da300",
+    "skin_number": 13,
+    "family_mastery": [
+      "Antoine"
+    ],
+    "cc_quantity": 108,
+    "mobility": 48,
+    "randomness": 128,
+    "mean_hue": 79,
+    "name": "Tryndamere"
+  },
+  "briar": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/233.png",
+    "mean_hex": "#3400d9",
+    "skin_number": 3,
+    "family_mastery": [],
+    "cc_quantity": 124,
+    "mobility": 50,
+    "randomness": 18,
+    "mean_hue": 254,
+    "name": "Briar"
+  },
+  "viego": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/234.png",
+    "mean_hex": "#3796ff",
+    "skin_number": 7,
+    "family_mastery": [],
+    "cc_quantity": 119,
+    "mobility": 124,
+    "randomness": 130,
+    "mean_hue": 211,
+    "name": "Viego"
+  },
+  "senna": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/235.png",
+    "mean_hex": "#2d007d",
+    "skin_number": 10,
+    "family_mastery": [],
+    "cc_quantity": 107,
+    "mobility": 139,
+    "randomness": 28,
+    "mean_hue": 261,
+    "name": "Senna"
+  },
+  "lucian": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/236.png",
+    "mean_hex": "#a70014",
+    "skin_number": 14,
+    "family_mastery": [
+      "Phillipe",
+      "Matthieu"
+    ],
+    "cc_quantity": 161,
+    "mobility": 62,
+    "randomness": 78,
+    "mean_hue": 352,
+    "name": "Lucian"
+  },
+  "zed": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/238.png",
+    "mean_hex": "#a42f00",
+    "skin_number": 14,
+    "family_mastery": [],
+    "cc_quantity": 158,
+    "mobility": 56,
+    "randomness": 139,
+    "mean_hue": 17,
+    "name": "Zed"
+  },
+  "jax": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/24.png",
+    "mean_hex": "#23007c",
+    "skin_number": 16,
+    "family_mastery": [
+      "Antoine"
+    ],
+    "cc_quantity": 74,
+    "mobility": 40,
+    "randomness": 118,
+    "mean_hue": 257,
+    "name": "Jax"
+  },
+  "kled": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/240.png",
+    "mean_hex": "#920500",
+    "skin_number": 4,
+    "family_mastery": [],
+    "cc_quantity": 86,
+    "mobility": 51,
+    "randomness": 3,
+    "mean_hue": 2,
+    "name": "Kled"
+  },
+  "ekko": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/245.png",
+    "mean_hex": "#770091",
+    "skin_number": 12,
+    "family_mastery": [
+      "Matthieu"
+    ],
+    "cc_quantity": 90,
+    "mobility": 76,
+    "randomness": 120,
+    "mean_hue": 289,
+    "name": "Ekko"
+  },
+  "qiyana": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/246.png",
+    "mean_hex": "#ff3213",
+    "skin_number": 9,
+    "family_mastery": [],
+    "cc_quantity": 95,
+    "mobility": 96,
+    "randomness": 7,
+    "mean_hue": 7,
+    "name": "Qiyana"
+  },
+  "morgana": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/25.png",
+    "mean_hex": "#b400b4",
+    "skin_number": 17,
+    "family_mastery": [
+      "Tristan",
+      "Antoine"
+    ],
+    "cc_quantity": 1,
+    "mobility": 145,
+    "randomness": 163,
+    "mean_hue": 300,
+    "name": "Morgana"
+  },
+  "vi": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/254.png",
+    "mean_hex": "#c50032",
+    "skin_number": 13,
+    "family_mastery": [],
+    "cc_quantity": 79,
+    "mobility": 22,
+    "randomness": 145,
+    "mean_hue": 344,
+    "name": "Vi"
+  },
+  "zilean": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/26.png",
+    "mean_hex": "#0058b0",
+    "skin_number": 8,
+    "family_mastery": [
+      "Tristan",
+      "Nicolas"
+    ],
+    "cc_quantity": 36,
+    "mobility": 31,
+    "randomness": 45,
+    "mean_hue": 210,
+    "name": "Zilean"
+  },
+  "aatrox": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/266.png",
+    "mean_hex": "#7b002a",
+    "skin_number": 12,
+    "family_mastery": [],
+    "cc_quantity": 45,
+    "mobility": 115,
+    "randomness": 40,
+    "mean_hue": 339,
+    "name": "Aatrox"
+  },
+  "nami": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/267.png",
+    "mean_hex": "#00605b",
+    "skin_number": 14,
+    "family_mastery": [
+      "Tristan"
+    ],
+    "cc_quantity": 23,
+    "mobility": 103,
+    "randomness": 93,
+    "mean_hue": 176,
+    "name": "Nami"
+  },
+  "azir": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/268.png",
+    "mean_hex": "#e45f00",
+    "skin_number": 7,
+    "family_mastery": [
+      "Phillipe"
+    ],
+    "cc_quantity": 99,
+    "mobility": 19,
+    "randomness": 44,
+    "mean_hue": 24,
+    "name": "Azir"
+  },
+  "singed": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/27.png",
+    "mean_hex": "#9e5f00",
+    "skin_number": 12,
+    "family_mastery": [
+      "Antoine",
+      "Phillipe"
+    ],
+    "cc_quantity": 92,
+    "mobility": 21,
+    "randomness": 92,
+    "mean_hue": 35,
+    "name": "Singed"
+  },
+  "evelynn": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/28.png",
+    "mean_hex": "#4800ca",
+    "skin_number": 16,
+    "family_mastery": [
+      "Antoine"
+    ],
+    "cc_quantity": 73,
+    "mobility": 129,
+    "randomness": 54,
+    "mean_hue": 261,
+    "name": "Evelynn"
+  },
+  "twitch": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/29.png",
+    "mean_hex": "#24af00",
+    "skin_number": 14,
+    "family_mastery": [],
+    "cc_quantity": 148,
+    "mobility": 123,
+    "randomness": 111,
+    "mean_hue": 107,
+    "name": "Twitch"
+  },
+  "galio": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/3.png",
+    "mean_hex": "#0059f8",
+    "skin_number": 10,
+    "family_mastery": [
+      "Tristan"
+    ],
+    "cc_quantity": 41,
+    "mobility": 18,
+    "randomness": 58,
+    "mean_hue": 218,
+    "name": "Galio"
+  },
+  "karthus": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/30.png",
+    "mean_hex": "#004d72",
+    "skin_number": 10,
+    "family_mastery": [
+      "Tristan",
+      "Antoine"
+    ],
+    "cc_quantity": 126,
+    "mobility": 155,
+    "randomness": 66,
+    "mean_hue": 199,
+    "name": "Karthus"
+  },
+  "cho'gath": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/31.png",
+    "mean_hex": "#33009f",
+    "skin_number": 11,
+    "family_mastery": [
+      "Tristan",
+      "Nicolas",
+      "Antoine",
+      "Phillipe"
+    ],
+    "cc_quantity": 37,
+    "mobility": 151,
+    "randomness": 152,
+    "mean_hue": 259,
+    "name": "Cho'Gath"
+  },
+  "amumu": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/32.png",
+    "mean_hex": "#30a800",
+    "skin_number": 14,
+    "family_mastery": [
+      "Antoine"
+    ],
+    "cc_quantity": 7,
+    "mobility": 86,
+    "randomness": 150,
+    "mean_hue": 102,
+    "name": "Amumu"
+  },
+  "rammus": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/33.png",
+    "mean_hex": "#bd6c00",
+    "skin_number": 11,
+    "family_mastery": [
+      "Phillipe"
+    ],
+    "cc_quantity": 24,
+    "mobility": 7,
+    "randomness": 133,
+    "mean_hue": 34,
+    "name": "Rammus"
+  },
+  "anivia": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/34.png",
+    "mean_hex": "#007ffe",
+    "skin_number": 12,
+    "family_mastery": [
+      "Nicolas"
+    ],
+    "cc_quantity": 17,
+    "mobility": 147,
+    "randomness": 127,
+    "mean_hue": 210,
+    "name": "Anivia"
+  },
+  "shaco": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/35.png",
+    "mean_hex": "#95003e",
+    "skin_number": 15,
+    "family_mastery": [
+      "Antoine",
+      "Phillipe"
+    ],
+    "cc_quantity": 15,
+    "mobility": 33,
+    "randomness": 141,
+    "mean_hue": 334,
+    "name": "Shaco"
+  },
+  "yuumi": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/350.png",
+    "mean_hex": "#8200fb",
+    "skin_number": 10,
+    "family_mastery": [],
+    "cc_quantity": 122,
+    "mobility": 148,
+    "randomness": 134,
+    "mean_hue": 271,
+    "name": "Yuumi"
+  },
+  "dr. mundo": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/36.png",
+    "mean_hex": "#23008c",
+    "skin_number": 11,
+    "family_mastery": [
+      "Antoine"
+    ],
+    "cc_quantity": 147,
+    "mobility": 126,
+    "randomness": 157,
+    "mean_hue": 255,
+    "name": "Dr. Mundo"
+  },
+  "samira": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/360.png",
+    "mean_hex": "#cb0600",
+    "skin_number": 6,
+    "family_mastery": [
+      "Matthieu"
+    ],
+    "cc_quantity": 168,
+    "mobility": 140,
+    "randomness": 89,
+    "mean_hue": 1,
+    "name": "Samira"
+  },
+  "sona": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/37.png",
+    "mean_hex": "#fb00fb",
+    "skin_number": 15,
+    "family_mastery": [],
+    "cc_quantity": 87,
+    "mobility": 58,
+    "randomness": 110,
+    "mean_hue": 300,
+    "name": "Sona"
+  },
+  "kassadin": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/38.png",
+    "mean_hex": "#4e00a8",
+    "skin_number": 9,
+    "family_mastery": [],
+    "cc_quantity": 149,
+    "mobility": 3,
+    "randomness": 124,
+    "mean_hue": 267,
+    "name": "Kassadin"
+  },
+  "irelia": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/39.png",
+    "mean_hex": "#cb006e",
+    "skin_number": 15,
+    "family_mastery": [
+      "Nicolas"
+    ],
+    "cc_quantity": 67,
+    "mobility": 11,
+    "randomness": 123,
+    "mean_hue": 327,
+    "name": "Irelia"
+  },
+  "twisted fate": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/4.png",
+    "mean_hex": "#7e0013",
+    "skin_number": 16,
+    "family_mastery": [
+      "Nicolas",
+      "Phillipe"
+    ],
+    "cc_quantity": 30,
+    "mobility": 4,
+    "randomness": 129,
+    "mean_hue": 351,
+    "name": "Twisted Fate"
+  },
+  "janna": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/40.png",
+    "mean_hex": "#9820ff",
+    "skin_number": 16,
+    "family_mastery": [
+      "Tristan"
+    ],
+    "cc_quantity": 68,
+    "mobility": 30,
+    "randomness": 62,
+    "mean_hue": 272,
+    "name": "Janna"
+  },
+  "gangplank": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/41.png",
+    "mean_hex": "#6f4300",
+    "skin_number": 12,
+    "family_mastery": [],
+    "cc_quantity": 142,
+    "mobility": 132,
+    "randomness": 39,
+    "mean_hue": 35,
+    "name": "Gangplank"
+  },
+  "thresh": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/412.png",
+    "mean_hex": "#00a250",
+    "skin_number": 16,
+    "family_mastery": [
+      "Tristan"
+    ],
+    "cc_quantity": 5,
+    "mobility": 165,
+    "randomness": 169,
+    "mean_hue": 149,
+    "name": "Thresh"
+  },
+  "corki": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/42.png",
+    "mean_hex": "#c73b00",
+    "skin_number": 11,
+    "family_mastery": [],
+    "cc_quantity": 140,
+    "mobility": 46,
+    "randomness": 2,
+    "mean_hue": 17,
+    "name": "Corki"
+  },
+  "illaoi": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/420.png",
+    "mean_hex": "#9b5700",
+    "skin_number": 5,
+    "family_mastery": [
+      "Antoine"
+    ],
+    "cc_quantity": 82,
+    "mobility": 154,
+    "randomness": 60,
+    "mean_hue": 33,
+    "name": "Illaoi"
+  },
+  "rek'sai": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/421.png",
+    "mean_hex": "#00047c",
+    "skin_number": 5,
+    "family_mastery": [],
+    "cc_quantity": 111,
+    "mobility": 35,
+    "randomness": 23,
+    "mean_hue": 238,
+    "name": "Rek'Sai"
+  },
+  "ivern": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/427.png",
+    "mean_hex": "#696000",
+    "skin_number": 5,
+    "family_mastery": [
+      "Phillipe"
+    ],
+    "cc_quantity": 64,
+    "mobility": 85,
+    "randomness": 13,
+    "mean_hue": 54,
+    "name": "Ivern"
+  },
+  "kalista": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/429.png",
+    "mean_hex": "#004b6a",
+    "skin_number": 6,
+    "family_mastery": [],
+    "cc_quantity": 157,
+    "mobility": 73,
+    "randomness": 15,
+    "mean_hue": 197,
+    "name": "Kalista"
+  },
+  "karma": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/43.png",
+    "mean_hex": "#009c21",
+    "skin_number": 15,
+    "family_mastery": [
+      "Tristan"
+    ],
+    "cc_quantity": 66,
+    "mobility": 44,
+    "randomness": 65,
+    "mean_hue": 132,
+    "name": "Karma"
+  },
+  "bard": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/432.png",
+    "mean_hex": "#d16a00",
+    "skin_number": 8,
+    "family_mastery": [
+      "Tristan"
+    ],
+    "cc_quantity": 39,
+    "mobility": 25,
+    "randomness": 47,
+    "mean_hue": 30,
+    "name": "Bard"
+  },
+  "taric": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/44.png",
+    "mean_hex": "#5f00be",
+    "skin_number": 7,
+    "family_mastery": [
+      "Tristan"
+    ],
+    "cc_quantity": 69,
+    "mobility": 164,
+    "randomness": 99,
+    "mean_hue": 270,
+    "name": "Taric"
+  },
+  "veigar": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/45.png",
+    "mean_hex": "#4c005e",
+    "skin_number": 15,
+    "family_mastery": [
+      "Tristan",
+      "Nicolas",
+      "Phillipe",
+      "Matthieu"
+    ],
+    "cc_quantity": 33,
+    "mobility": 168,
+    "randomness": 168,
+    "mean_hue": 288,
+    "name": "Veigar"
+  },
+  "trundle": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/48.png",
+    "mean_hex": "#0f00e0",
+    "skin_number": 8,
+    "family_mastery": [],
+    "cc_quantity": 101,
+    "mobility": 41,
+    "randomness": 96,
+    "mean_hue": 243,
+    "name": "Trundle"
+  },
+  "rakan": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/497.png",
+    "mean_hex": "#ed004f",
+    "skin_number": 12,
+    "family_mastery": [
+      "Tristan"
+    ],
+    "cc_quantity": 21,
+    "mobility": 6,
+    "randomness": 83,
+    "mean_hue": 340,
+    "name": "Rakan"
+  },
+  "xayah": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/498.png",
+    "mean_hex": "#7a0040",
+    "skin_number": 12,
+    "family_mastery": [
+      "Matthieu"
+    ],
+    "cc_quantity": 78,
+    "mobility": 143,
+    "randomness": 114,
+    "mean_hue": 328,
+    "name": "Xayah"
+  },
+  "xin zhao": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/5.png",
+    "mean_hex": "#b4004d",
+    "skin_number": 11,
+    "family_mastery": [],
+    "cc_quantity": 131,
+    "mobility": 94,
+    "randomness": 30,
+    "mean_hue": 334,
+    "name": "Xin Zhao"
+  },
+  "swain": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/50.png",
+    "mean_hex": "#aa1f00",
+    "skin_number": 9,
+    "family_mastery": [
+      "Antoine",
+      "Matthieu"
+    ],
+    "cc_quantity": 58,
+    "mobility": 162,
+    "randomness": 132,
+    "mean_hue": 10,
+    "name": "Swain"
+  },
+  "caitlyn": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/51.png",
+    "mean_hex": "#6b0052",
+    "skin_number": 20,
+    "family_mastery": [
+      "Tristan",
+      "Nicolas",
+      "Phillipe",
+      "Matthieu"
+    ],
+    "cc_quantity": 117,
+    "mobility": 122,
+    "randomness": 166,
+    "mean_hue": 314,
+    "name": "Caitlyn"
+  },
+  "ornn": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/516.png",
+    "mean_hex": "#48001b",
+    "skin_number": 5,
+    "family_mastery": [
+      "Matthieu"
+    ],
+    "cc_quantity": 50,
+    "mobility": 108,
+    "randomness": 63,
+    "mean_hue": 337,
+    "name": "Ornn"
+  },
+  "sylas": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/517.png",
+    "mean_hex": "#3b007d",
+    "skin_number": 9,
+    "family_mastery": [],
+    "cc_quantity": 113,
+    "mobility": 98,
+    "randomness": 98,
+    "mean_hue": 268,
+    "name": "Sylas"
+  },
+  "neeko": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/518.png",
+    "mean_hex": "#ae0091",
+    "skin_number": 9,
+    "family_mastery": [
+      "Nicolas",
+      "Phillipe"
+    ],
+    "cc_quantity": 72,
+    "mobility": 110,
+    "randomness": 75,
+    "mean_hue": 310,
+    "name": "Neeko"
+  },
+  "aphelios": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/523.png",
+    "mean_hex": "#380088",
+    "skin_number": 6,
+    "family_mastery": [
+      "Matthieu"
+    ],
+    "cc_quantity": 115,
+    "mobility": 117,
+    "randomness": 5,
+    "mean_hue": 264,
+    "name": "Aphelios"
+  },
+  "rell": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/526.png",
+    "mean_hex": "#e66000",
+    "skin_number": 4,
+    "family_mastery": [
+      "Tristan"
+    ],
+    "cc_quantity": 6,
+    "mobility": 65,
+    "randomness": 25,
+    "mean_hue": 24,
+    "name": "Rell"
+  },
+  "blitzcrank": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/53.png",
+    "mean_hex": "#e80000",
+    "skin_number": 15,
+    "family_mastery": [
+      "Tristan"
+    ],
+    "cc_quantity": 9,
+    "mobility": 114,
+    "randomness": 155,
+    "mean_hue": 0,
+    "name": "Blitzcrank"
+  },
+  "malphite": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/54.png",
+    "mean_hex": "#902200",
+    "skin_number": 14,
+    "family_mastery": [
+      "Antoine"
+    ],
+    "cc_quantity": 46,
+    "mobility": 70,
+    "randomness": 162,
+    "mean_hue": 14,
+    "name": "Malphite"
+  },
+  "katarina": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/55.png",
+    "mean_hex": "#730017",
+    "skin_number": 19,
+    "family_mastery": [],
+    "cc_quantity": 160,
+    "mobility": 92,
+    "randomness": 156,
+    "mean_hue": 347,
+    "name": "Katarina"
+  },
+  "pyke": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/555.png",
+    "mean_hex": "#007857",
+    "skin_number": 12,
+    "family_mastery": [],
+    "cc_quantity": 25,
+    "mobility": 20,
+    "randomness": 108,
+    "mean_hue": 163,
+    "name": "Pyke"
+  },
+  "nocturne": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/56.png",
+    "mean_hex": "#0008af",
+    "skin_number": 10,
+    "family_mastery": [],
+    "cc_quantity": 118,
+    "mobility": 13,
+    "randomness": 79,
+    "mean_hue": 237,
+    "name": "Nocturne"
+  },
+  "maokai": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/57.png",
+    "mean_hex": "#001f7c",
+    "skin_number": 10,
+    "family_mastery": [],
+    "cc_quantity": 11,
+    "mobility": 136,
+    "randomness": 46,
+    "mean_hue": 225,
+    "name": "Maokai"
+  },
+  "renekton": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/58.png",
+    "mean_hex": "#783500",
+    "skin_number": 15,
+    "family_mastery": [],
+    "cc_quantity": 139,
+    "mobility": 53,
+    "randomness": 144,
+    "mean_hue": 26,
+    "name": "Renekton"
+  },
+  "jarvan iv": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/59.png",
+    "mean_hex": "#742500",
+    "skin_number": 15,
+    "family_mastery": [],
+    "cc_quantity": 71,
+    "mobility": 37,
+    "randomness": 64,
+    "mean_hue": 19,
+    "name": "Jarvan IV"
+  },
+  "urgot": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/6.png",
+    "mean_hex": "#005d1f",
+    "skin_number": 7,
+    "family_mastery": [],
+    "cc_quantity": 134,
+    "mobility": 167,
+    "randomness": 101,
+    "mean_hue": 140,
+    "name": "Urgot"
+  },
+  "elise": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/60.png",
+    "mean_hex": "#4f0054",
+    "skin_number": 9,
+    "family_mastery": [],
+    "cc_quantity": 55,
+    "mobility": 59,
+    "randomness": 53,
+    "mean_hue": 296,
+    "name": "Elise"
+  },
+  "orianna": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/61.png",
+    "mean_hex": "#830046",
+    "skin_number": 12,
+    "family_mastery": [
+      "Nicolas",
+      "Phillipe"
+    ],
+    "cc_quantity": 85,
+    "mobility": 104,
+    "randomness": 68,
+    "mean_hue": 327,
+    "name": "Orianna"
+  },
+  "wukong": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/62.png",
+    "mean_hex": "#9c0900",
+    "skin_number": 9,
+    "family_mastery": [],
+    "cc_quantity": 56,
+    "mobility": 105,
+    "randomness": 109,
+    "mean_hue": 3,
+    "name": "Wukong"
+  },
+  "brand": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/63.png",
+    "mean_hex": "#912f00",
+    "skin_number": 12,
+    "family_mastery": [],
+    "cc_quantity": 121,
+    "mobility": 150,
+    "randomness": 85,
+    "mean_hue": 19,
+    "name": "Brand"
+  },
+  "lee sin": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/64.png",
+    "mean_hex": "#e90c00",
+    "skin_number": 19,
+    "family_mastery": [],
+    "cc_quantity": 138,
+    "mobility": 63,
+    "randomness": 73,
+    "mean_hue": 3,
+    "name": "Lee Sin"
+  },
+  "vayne": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/67.png",
+    "mean_hex": "#9b00b1",
+    "skin_number": 18,
+    "family_mastery": [
+      "Nicolas",
+      "Matthieu"
+    ],
+    "cc_quantity": 100,
+    "mobility": 100,
+    "randomness": 112,
+    "mean_hue": 292,
+    "name": "Vayne"
+  },
+  "rumble": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/68.png",
+    "mean_hex": "#970012",
+    "skin_number": 6,
+    "family_mastery": [],
+    "cc_quantity": 132,
+    "mobility": 138,
+    "randomness": 86,
+    "mean_hue": 352,
+    "name": "Rumble"
+  },
+  "cassiopeia": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/69.png",
+    "mean_hex": "#753c00",
+    "skin_number": 9,
+    "family_mastery": [
+      "Nicolas"
+    ],
+    "cc_quantity": 77,
+    "mobility": 57,
+    "randomness": 51,
+    "mean_hue": 30,
+    "name": "Cassiopeia"
+  },
+  "leblanc": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/7.png",
+    "mean_hex": "#920021",
+    "skin_number": 13,
+    "family_mastery": [],
+    "cc_quantity": 54,
+    "mobility": 2,
+    "randomness": 70,
+    "mean_hue": 346,
+    "name": "LeBlanc"
+  },
+  "vex": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/711.png",
+    "mean_hex": "#0064cb",
+    "skin_number": 3,
+    "family_mastery": [
+      "Nicolas"
+    ],
+    "cc_quantity": 51,
+    "mobility": 45,
+    "randomness": 105,
+    "mean_hue": 210,
+    "name": "Vex"
+  },
+  "skarner": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/72.png",
+    "mean_hex": "#4a9400",
+    "skin_number": 6,
+    "family_mastery": [],
+    "cc_quantity": 34,
+    "mobility": 34,
+    "randomness": 8,
+    "mean_hue": 89,
+    "name": "Skarner"
+  },
+  "heimerdinger": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/74.png",
+    "mean_hex": "#c73300",
+    "skin_number": 9,
+    "family_mastery": [
+      "Tristan",
+      "Antoine"
+    ],
+    "cc_quantity": 76,
+    "mobility": 153,
+    "randomness": 122,
+    "mean_hue": 15,
+    "name": "Heimerdinger"
+  },
+  "nasus": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/75.png",
+    "mean_hex": "#8000a4",
+    "skin_number": 13,
+    "family_mastery": [
+      "Nicolas"
+    ],
+    "cc_quantity": 35,
+    "mobility": 160,
+    "randomness": 165,
+    "mean_hue": 286,
+    "name": "Nasus"
+  },
+  "nidalee": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/76.png",
+    "mean_hex": "#7e2f00",
+    "skin_number": 16,
+    "family_mastery": [],
+    "cc_quantity": 170,
+    "mobility": 90,
+    "randomness": 76,
+    "mean_hue": 22,
+    "name": "Nidalee"
+  },
+  "udyr": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/77.png",
+    "mean_hex": "#500097",
+    "skin_number": 6,
+    "family_mastery": [],
+    "cc_quantity": 102,
+    "mobility": 82,
+    "randomness": 100,
+    "mean_hue": 271,
+    "name": "Udyr"
+  },
+  "yone": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/777.png",
+    "mean_hex": "#e700b0",
+    "skin_number": 11,
+    "family_mastery": [],
+    "cc_quantity": 110,
+    "mobility": 120,
+    "randomness": 71,
+    "mean_hue": 314,
+    "name": "Yone"
+  },
+  "poppy": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/78.png",
+    "mean_hex": "#bd0093",
+    "skin_number": 13,
+    "family_mastery": [
+      "Phillipe"
+    ],
+    "cc_quantity": 70,
+    "mobility": 93,
+    "randomness": 107,
+    "mean_hue": 313,
+    "name": "Poppy"
+  },
+  "gragas": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/79.png",
+    "mean_hex": "#a81700",
+    "skin_number": 14,
+    "family_mastery": [
+      "Antoine"
+    ],
+    "cc_quantity": 60,
+    "mobility": 68,
+    "randomness": 61,
+    "mean_hue": 8,
+    "name": "Gragas"
+  },
+  "ambessa": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/799.png",
+    "mean_hex": "#c71700",
+    "skin_number": 1,
+    "family_mastery": [
+      "Antoine"
+    ],
+    "cc_quantity": 129,
+    "mobility": 91,
+    "randomness": 43,
+    "mean_hue": 7,
+    "name": "Ambessa"
+  },
+  "vladimir": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/8.png",
+    "mean_hex": "#bc1300",
+    "skin_number": 13,
+    "family_mastery": [],
+    "cc_quantity": 155,
+    "mobility": 142,
+    "randomness": 106,
+    "mean_hue": 6,
+    "name": "Vladimir"
+  },
+  "pantheon": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/80.png",
+    "mean_hex": "#da5500",
+    "skin_number": 13,
+    "family_mastery": [],
+    "cc_quantity": 53,
+    "mobility": 12,
+    "randomness": 81,
+    "mean_hue": 23,
+    "name": "Pantheon"
+  },
+  "mel": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/800.png",
+    "mean_hex": "#7b0000",
+    "skin_number": 2,
+    "family_mastery": [],
+    "cc_quantity": 98,
+    "mobility": 158,
+    "randomness": 48,
+    "mean_hue": 0,
+    "name": "Mel"
+  },
+  "yunara": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/804.png",
+    "mean_hex": "#6400f2",
+    "skin_number": 1,
+    "family_mastery": [],
+    "cc_quantity": 135,
+    "mobility": 144,
+    "randomness": 9,
+    "mean_hue": 264,
+    "name": "Yunara"
+  },
+  "ezreal": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/81.png",
+    "mean_hex": "#d50900",
+    "skin_number": 21,
+    "family_mastery": [
+      "Tristan",
+      "Matthieu"
+    ],
+    "cc_quantity": 166,
+    "mobility": 29,
+    "randomness": 115,
+    "mean_hue": 2,
+    "name": "Ezreal"
+  },
+  "mordekaiser": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/82.png",
+    "mean_hex": "#00916b",
+    "skin_number": 12,
+    "family_mastery": [],
+    "cc_quantity": 22,
+    "mobility": 159,
+    "randomness": 146,
+    "mean_hue": 164,
+    "name": "Mordekaiser"
+  },
+  "yorick": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/83.png",
+    "mean_hex": "#003787",
+    "skin_number": 9,
+    "family_mastery": [],
+    "cc_quantity": 57,
+    "mobility": 171,
+    "randomness": 80,
+    "mean_hue": 215,
+    "name": "Yorick"
+  },
+  "akali": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/84.png",
+    "mean_hex": "#000079",
+    "skin_number": 21,
+    "family_mastery": [
+      "Matthieu"
+    ],
+    "cc_quantity": 169,
+    "mobility": 69,
+    "randomness": 42,
+    "mean_hue": 240,
+    "name": "Akali"
+  },
+  "kennen": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/85.png",
+    "mean_hex": "#a500be",
+    "skin_number": 10,
+    "family_mastery": [],
+    "cc_quantity": 19,
+    "mobility": 42,
+    "randomness": 19,
+    "mean_hue": 292,
+    "name": "Kennen"
+  },
+  "garen": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/86.png",
+    "mean_hex": "#c2001f",
+    "skin_number": 17,
+    "family_mastery": [
+      "Antoine",
+      "Matthieu"
+    ],
+    "cc_quantity": 151,
+    "mobility": 60,
+    "randomness": 159,
+    "mean_hue": 350,
+    "name": "Garen"
+  },
+  "sett": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/875.png",
+    "mean_hex": "#b90c00",
+    "skin_number": 10,
+    "family_mastery": [],
+    "cc_quantity": 84,
+    "mobility": 113,
+    "randomness": 88,
+    "mean_hue": 3,
+    "name": "Sett"
+  },
+  "lillia": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/876.png",
+    "mean_hex": "#b8004f",
+    "skin_number": 6,
+    "family_mastery": [
+      "Nicolas",
+      "Antoine",
+      "Phillipe"
+    ],
+    "cc_quantity": 31,
+    "mobility": 15,
+    "randomness": 72,
+    "mean_hue": 334,
+    "name": "Lillia"
+  },
+  "gwen": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/887.png",
+    "mean_hex": "#0079c2",
+    "skin_number": 5,
+    "family_mastery": [
+      "Nicolas"
+    ],
+    "cc_quantity": 165,
+    "mobility": 99,
+    "randomness": 38,
+    "mean_hue": 202,
+    "name": "Gwen"
+  },
+  "renata glasc": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/888.png",
+    "mean_hex": "#682d00",
+    "skin_number": 5,
+    "family_mastery": [
+      "Tristan"
+    ],
+    "cc_quantity": 88,
+    "mobility": 161,
+    "randomness": 36,
+    "mean_hue": 25,
+    "name": "Renata Glasc"
+  },
+  "leona": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/89.png",
+    "mean_hex": "#c64c00",
+    "skin_number": 17,
+    "family_mastery": [
+      "Tristan",
+      "Matthieu"
+    ],
+    "cc_quantity": 4,
+    "mobility": 121,
+    "randomness": 148,
+    "mean_hue": 23,
+    "name": "Leona"
+  },
+  "aurora": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/893.png",
+    "mean_hex": "#a90043",
+    "skin_number": 2,
+    "family_mastery": [],
+    "cc_quantity": 141,
+    "mobility": 74,
+    "randomness": 6,
+    "mean_hue": 336,
+    "name": "Aurora"
+  },
+  "nilah": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/895.png",
+    "mean_hex": "#78004b",
+    "skin_number": 3,
+    "family_mastery": [],
+    "cc_quantity": 150,
+    "mobility": 102,
+    "randomness": 1,
+    "mean_hue": 322,
+    "name": "Nilah"
+  },
+  "k'sante": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/897.png",
+    "mean_hex": "#7b0c00",
+    "skin_number": 3,
+    "family_mastery": [],
+    "cc_quantity": 44,
+    "mobility": 78,
+    "randomness": 21,
+    "mean_hue": 5,
+    "name": "K'Sante"
+  },
+  "fiddlesticks": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/9.png",
+    "mean_hex": "#a90018",
+    "skin_number": 12,
+    "family_mastery": [],
+    "cc_quantity": 10,
+    "mobility": 131,
+    "randomness": 55,
+    "mean_hue": 351,
+    "name": "Fiddlesticks"
+  },
+  "malzahar": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/90.png",
+    "mean_hex": "#52008d",
+    "skin_number": 13,
+    "family_mastery": [],
+    "cc_quantity": 2,
+    "mobility": 157,
+    "randomness": 87,
+    "mean_hue": 274,
+    "name": "Malzahar"
+  },
+  "smolder": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/901.png",
+    "mean_hex": "#da1b00",
+    "skin_number": 2,
+    "family_mastery": [],
+    "cc_quantity": 153,
+    "mobility": 52,
+    "randomness": 37,
+    "mean_hue": 7,
+    "name": "Smolder"
+  },
+  "milio": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/902.png",
+    "mean_hex": "#8f3000",
+    "skin_number": 3,
+    "family_mastery": [],
+    "cc_quantity": 89,
+    "mobility": 137,
+    "randomness": 29,
+    "mean_hue": 20,
+    "name": "Milio"
+  },
+  "zaahen": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/904.png",
+    "mean_hex": "#c70009",
+    "skin_number": 1,
+    "family_mastery": [],
+    "cc_quantity": 91,
+    "mobility": 107,
+    "randomness": 31,
+    "mean_hue": 357,
+    "name": "Zaahen"
+  },
+  "talon": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/91.png",
+    "mean_hex": "#4000b8",
+    "skin_number": 12,
+    "family_mastery": [],
+    "cc_quantity": 159,
+    "mobility": 5,
+    "randomness": 12,
+    "mean_hue": 261,
+    "name": "Talon"
+  },
+  "hwei": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/910.png",
+    "mean_hex": "#001384",
+    "skin_number": 2,
+    "family_mastery": [],
+    "cc_quantity": 63,
+    "mobility": 133,
+    "randomness": 10,
+    "mean_hue": 231,
+    "name": "Hwei"
+  },
+  "riven": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/92.png",
+    "mean_hex": "#e6e600",
+    "skin_number": 17,
+    "family_mastery": [],
+    "cc_quantity": 40,
+    "mobility": 49,
+    "randomness": 90,
+    "mean_hue": 60,
+    "name": "Riven"
+  },
+  "naafiri": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/950.png",
+    "mean_hex": "#ff530e",
+    "skin_number": 3,
+    "family_mastery": [],
+    "cc_quantity": 172,
+    "mobility": 88,
+    "randomness": 17,
+    "mean_hue": 17,
+    "name": "Naafiri"
+  },
+  "kog'maw": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/96.png",
+    "mean_hex": "#821600",
+    "skin_number": 15,
+    "family_mastery": [
+      "Nicolas"
+    ],
+    "cc_quantity": 127,
+    "mobility": 146,
+    "randomness": 125,
+    "mean_hue": 10,
+    "name": "Kog'Maw"
+  },
+  "shen": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/98.png",
+    "mean_hex": "#000da5",
+    "skin_number": 12,
+    "family_mastery": [
+      "Nicolas",
+      "Matthieu"
+    ],
+    "cc_quantity": 26,
+    "mobility": 17,
+    "randomness": 116,
+    "mean_hue": 235,
+    "name": "Shen"
+  },
+  "lux": {
+    "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/99.png",
+    "mean_hex": "#ff7526",
+    "skin_number": 22,
+    "family_mastery": [
+      "Matthieu"
+    ],
+    "cc_quantity": 20,
+    "mobility": 156,
+    "randomness": 164,
+    "mean_hue": 21,
+    "name": "Lux"
+  }
+}

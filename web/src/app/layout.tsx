@@ -3,8 +3,8 @@ import { Header } from "@/components/layout/Header";
 import { Providers } from "./providers";
 import { getMeServer } from "@/components/auth/server";
 export const metadata = {
-  title: "Mon site",
-  description: "Site pro",
+  title: "TristanColdefy",
+  description: "Portfolio",
 };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {

@@ -4,18 +4,29 @@ type Props = Omit<React.InputHTMLAttributes<HTMLInputElement>, "size"> & {
   label?: string;
   hint?: string;
   error?: string;
+  validationState?: "neutral" | "valid" | "invalid";
+  rightSlot?: React.ReactNode;
 };
 
-export function Input({ label, hint, error, id, className, ...rest }: Props) {
-  const inputId = id ;
-  const hintId = hint ? `${inputId}-hint` : undefined;
-  const errorId = error ? `${inputId}-error` : undefined;
+export function Input({
+  label,
+  hint,
+  error,
+  id,
+  className,
+  validationState,
+  rightSlot,
+  ...rest
+}: Props) {
+  const inputId = id ?? rest.name; // fallback propre
+  const hintId = hint && inputId ? `${inputId}-hint` : undefined;
+  const errorId = error && inputId ? `${inputId}-error` : undefined;
 
   const describedBy = [hintId, errorId].filter(Boolean).join(" ") || undefined;
 
   return (
-    <div className={styles.field}>
-      {label ? (
+    <div className={`${styles.field} ${validationState ? styles[validationState] : ""}`}>
+      {label && inputId ? (
         <label className={styles.label} htmlFor={inputId}>
           {label}
         </label>
@@ -32,6 +43,8 @@ export function Input({ label, hint, error, id, className, ...rest }: Props) {
         aria-invalid={error ? "true" : undefined}
         aria-describedby={describedBy}
       />
+
+      {rightSlot ? <div className={styles.rightSlot}>{rightSlot}</div> : null}
 
       {hint ? (
         <div className={styles.hint} id={hintId}>

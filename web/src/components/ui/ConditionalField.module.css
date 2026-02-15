@@ -1,0 +1,80 @@
+.wrap {
+  position: relative; 
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bubble {
+  position: absolute;
+  left: calc(100% + 20px);           
+  top: 0;
+  width: min(360px, 100%);
+  z-index: 20;
+
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--bg);
+
+  padding: 0 12px;
+  transition: max-height 200ms ease, opacity 200ms ease,  padding 200ms ease;
+}
+
+.open {
+  max-height: 220px;
+  opacity: 1;
+  padding: 10px 12px;
+  pointer-events: auto;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 6px;
+  font-size: 0.92rem;
+}
+
+.rule {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.9;
+}
+
+.dot {
+  width: 18px;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.ok {
+  opacity: 1;
+}
+
+.ko {
+  opacity: 0.75;
+  color: brown;
+}
+
+.iconKo, .iconOk, .iconNeutral{
+  width: 20px;
+  height: 20px;
+}
+
+.iconKo {
+  color:brown
+}
+
+.iconOk {
+  color: green;
+}

@@ -1,17 +1,18 @@
 .field {
   display: grid;
   gap: 6px;
+  position: relative;
 }
 
 .label {
   font-size: 14px;
   font-weight: 600;
-  color: #111827;
 }
 
 .input {
   height: 40px;
   padding: 0 12px;
+  padding-right: 40px;
 
   border: 1px solid #e5e7eb;
   border-radius: 10px;
@@ -22,15 +23,15 @@
 }
 
 .input:focus-visible {
-  outline: 3px solid rgba(59, 130, 246, 0.6);
-  outline-offset: 2px;
+  outline: none;
+  box-shadow: none;
 }
 
-.input:disabled {
-  background: #f3f4f6;
-  color: #6b7280;
-  cursor: not-allowed;
+.field:focus-within {
+  outline: none;
+  box-shadow: none;
 }
+
 
 .inputError {
   border-color: #dc2626;
@@ -45,3 +46,31 @@
   font-size: 12px;
   color: #dc2626;
 }
+
+.neutral {
+}
+
+.valid .input {
+  border-color: rgba(0, 255, 150, 0.55);
+  background-color: var(--input-background-ok);
+
+  box-shadow: 0 0 0 3px rgba(0, 255, 150, 0.12);
+}
+
+.invalid .input {
+  border-color: rgba(255, 80, 80, 0.65);
+  box-shadow: 0 0 0 3px rgba(255, 80, 80, 0.12);
+  background-color: var(--input-background-ko);
+}
+
+/* slot à droite */
+.rightSlot {
+  font-size: 30px;
+  font-weight: 1500;
+  color: var(--text-inverted);
+  position: absolute;
+  right: 10px;
+  top: calc(50% - 10px);
+  opacity: 1;
+}
+
