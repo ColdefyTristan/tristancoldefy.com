@@ -111,7 +111,7 @@ def register(
         value=session_token,
         httponly=True,
         samesite="lax",
-        secure=False,  # put True in production (HTTPS)
+        secure=settings.session_cookie_secure,
         max_age=(LONG_SESSION_DAYS if payload.remember_me else SHORT_SESSION_DAYS)
         * 24
         * 60

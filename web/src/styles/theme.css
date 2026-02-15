@@ -1,0 +1,16 @@
+:root {
+  --bg: #0c0c0c;
+  --text: rgba(235,235,235,0.72);
+  --text-strong: rgba(255,255,255,0.95);
+  --border:1px solid rgba(255,255,255,0.10);
+
+  --text-inverted: black;
+
+  --input-background: white;
+  --input-background-ok: rgb(228, 255, 231);
+  --input-background-ko: rgb(255, 227, 227);
+
+  --radius-sm: 10px;
+  --radius-md: 12px;
+  --radius-pill: 999px;
+}

@@ -1,8 +1,8 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   output: "standalone",
   async rewrites() {
+    if (process.env.NODE_ENV === "production") return [];
     return [
       {
         source: "/api/:path*",

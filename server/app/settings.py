@@ -1,6 +1,7 @@
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from typing import Optional
 
+
 class Settings(BaseSettings):
     EMAIL_TOKEN_SECRET: str
     FRONTEND_BASE_URL: str = "https://tristancoldefy.com"
@@ -16,6 +17,7 @@ class Settings(BaseSettings):
         case_sensitive=True,
         extra="ignore",
     )
+    session_cookie_secure: bool = False
 
 
 settings = Settings()

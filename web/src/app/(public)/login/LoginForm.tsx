@@ -8,6 +8,8 @@ import { Input} from "@/components/ui/Input"
 import { useToast } from "@/components/ui/Toast";
 import { Checkbox } from "@/components/ui/Checkbox";
 import { useAuth } from "@/components/auth/AuthProvider";
+import styles from "./LoginForm.module.css";
+
 export default function LoginForm() {
   const { login } = useAuth();
   
@@ -19,6 +21,7 @@ export default function LoginForm() {
   const [password, setPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
   const [pending, setPending] = useState(false);
+  
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -39,11 +42,13 @@ export default function LoginForm() {
   }
 
   return (
-    <form onSubmit={onSubmit}>
-      <Input value={identifier} onChange={(e) => setIdentifier(e.target.value)} label="Username/Email"/> 
-      <Input type="password" value={password} onChange={(e) => setPassword(e.target.value)} label="Password"/> 
-      <Checkbox checked={rememberMe} onChange={(e) => setRememberMe(e.target.checked)} label="Remember me"/>
-      <Button type="submit" disabled={pending}>{pending ? "..." : "Login"}</Button> 
+    <form className={styles.form} onSubmit={onSubmit}>
+      <Input value={identifier} onChange={(e) => setIdentifier(e.target.value)} name={"identifier"} label="Username/Email"/> 
+      <Input type="password" value={password} onChange={(e) => setPassword(e.target.value)} name={"password"} label="Password"/> 
+      <div className={styles.actions}>
+        <Checkbox checked={rememberMe} onChange={(e) => setRememberMe(e.target.checked)} label="Remember me"/>
+        <Button type="submit" variant="secondary" disabled={pending}>{pending ? "..." : "Login"}</Button> 
+      </div>
     </form>
   );
 }

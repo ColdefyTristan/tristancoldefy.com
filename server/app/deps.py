@@ -2,7 +2,7 @@ from fastapi import Depends, HTTPException, Request
 from sqlmodel import Session, select
 from datetime import datetime, timedelta
 from dataclasses import dataclass
-
+from typing import Optional
 
 from app.db import get_session
 from app.models import User, UserSession
@@ -84,6 +84,16 @@ def get_current_auth(
     authContext = AuthContext(user=user, user_session=user_session)
 
     return authContext
+
+
+def get_current_auth_optional(
+    request: Request,
+    session: Session = Depends(get_session),
+) -> Optional[AuthContext]:
+    try:
+        return get_current_auth(request, session)
+    except HTTPException:
+        return None
 
 
 def touch_session(

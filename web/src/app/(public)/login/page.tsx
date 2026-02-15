@@ -1,16 +1,10 @@
 import { redirect } from "next/navigation";
-import { getMe } from "@/lib/api/services/auth.browser";
-import { ApiError } from "@/lib/api/errors";
 import LoginForm from "./LoginForm";
+import { getMeServer } from "@/components/auth/server";
+import { Card } from "@/components/layout/Card";
 
 export default async function LoginPage() {
-  try {
-    await getMe();
-    redirect("/dashboard"); // déjà connecté → zone protégée
-  } catch (e) {
-    // IMPORTANT: on ignore uniquement le cas "pas connecté"
-    if (!(e instanceof ApiError && e.status === 401)) throw e;
-  }
-
-  return <LoginForm />;
+  const me = await getMeServer();
+  if (me) redirect("/dashboard");
+  return <Card><LoginForm /></Card>;
 }
