@@ -5,7 +5,7 @@ from dataclasses import dataclass
 from typing import Optional
 
 from app.db import get_session
-from app.models import User, UserSession
+from app.models.tables import User, UserSession
 from app.security import hash_token
 from app.utils.time import utcnow_naive
 from app.constants import IDLE_TIMEOUT_SECONDS, TOUCH_MIN_INTERVAL_SECONDS

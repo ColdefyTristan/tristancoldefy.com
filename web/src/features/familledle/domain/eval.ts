@@ -1,4 +1,4 @@
-import {Cell} from "./buildRow"
+import {Cell} from "../types"
 type Dir = "higher" | "lower" | "equal";
 type Prox = "equal" | "close" | "far";
 
@@ -39,9 +39,6 @@ export function evalByDeltaInt(value: number, target: number, closeDelta: number
   return { dir, prox, delta };
 }
 
-// --------------------
-// Buckets adjacents
-// --------------------
 
 export type Bucket = { name: string; min: number; max: number }; // inclusif
 

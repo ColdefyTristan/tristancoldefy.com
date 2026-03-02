@@ -1,0 +1,109 @@
+.diagram {
+  border-radius: 20px;
+  padding: 16px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.03);
+}
+
+.lane {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  align-items: center;
+  gap: 14px;
+}
+
+.segment {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Flèche simple (prépare l’upgrade SVG plus tard) */
+.arrow {
+  width: 34px;
+  height: 2px;
+  background: rgba(255,255,255,0.18);
+  position: relative;
+}
+.arrow::after {
+  content: "";
+  position: absolute;
+  right: -2px;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid rgba(255,255,255,0.18);
+  border-top: 2px solid rgba(255,255,255,0.18);
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.footnotes {
+  margin-top: 12px;
+  display: grid;
+  gap: 10px;
+}
+
+.security {
+  width: fit-content;
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.ribbon {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  opacity: 0.8;
+}
+
+.chip {
+  font-size: 0.85rem;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(0,0,0,0.18);
+  text-decoration: none;
+}
+
+.node {
+  --picto-w: 150px;
+  --picto-h: 68px;
+}
+
+.picto {
+  width: var(--picto-w);
+  height: var(--picto-h);
+  display: grid;
+  place-items: center;
+}
+
+.picto > svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+
+/* Mobile */
+@media (max-width: 900px) {
+  .lane {
+    grid-auto-flow: row;
+    grid-auto-columns: unset;
+  }
+  .segment {
+    grid-auto-flow: row;
+    justify-items: start;
+  }
+  .arrow {
+    width: 2px;
+    height: 18px;
+  }
+  .arrow::after {
+    right: 50%;
+    top: auto;
+    bottom: -2px;
+    transform: translateX(50%) rotate(135deg);
+  }
+}

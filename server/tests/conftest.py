@@ -2,14 +2,14 @@ import pytest
 import uuid
 
 from sqlmodel import SQLModel, Session, create_engine
-import app.models
-from app.models import User
+import app.models.tables
+from app.models.tables import User
 from app.security import hash_password
 from fastapi.testclient import TestClient
 from sqlalchemy import text
 from app.main import app
 from app.db import get_session
-from app.services.emails import add_pending_email, set_primary_email
+from app.services.auth.emails import add_pending_email, set_primary_email
 from app.utils.time import utcnow_naive
 
 

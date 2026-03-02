@@ -1,7 +1,7 @@
 from sqlmodel import Session
 from datetime import timedelta
 
-from app.models import UserSession
+from app.models.tables import UserSession
 from app.security import new_session_token, hash_token
 from app.utils.time import utcnow_naive
 from app.constants import IDLE_TIMEOUT_SECONDS, LONG_SESSION_DAYS, SHORT_SESSION_DAYS

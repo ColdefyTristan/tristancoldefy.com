@@ -1,6 +1,6 @@
 from app.security import hash_token
 from sqlmodel import select
-from app.models import UserSession
+from app.models.tables import UserSession
 
 
 def _get_user_session_by_cookie_token(session, token: str) -> UserSession:

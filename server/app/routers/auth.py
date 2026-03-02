@@ -3,28 +3,30 @@ from sqlmodel import Session, select
 from sqlalchemy.exc import IntegrityError
 
 from app.db import get_session
-from app.models import (
+from app.models.tables import (
     User,
+    UserEmailAddress,
+    EmailVerificationToken,
+)
+from app.models.schemas import (
     RegisterRequest,
     LoginRequest,
-    UserEmailAddress,
     EmailTokenVerificationRequest,
-    EmailVerificationToken,
 )
 from app.security import hash_password, verify_password, hmac_token
 from app.deps import get_current_auth, AuthContext
 from app.utils.time import utcnow_naive
 from app.constants import LONG_SESSION_DAYS, SHORT_SESSION_DAYS
-from app.services.emails import (
+from app.services.auth.emails import (
     normalize_email,
     add_pending_email,
     verify_pending_email,
 )
-from app.services.emails_verification import (
+from app.services.auth.emails_verification import (
     create_email_verification_token,
     deliver_email_verification,
 )
-from app.services.sessions import create_user_session
+from app.services.auth.sessions import create_user_session
 from app.settings import settings
 
 router = APIRouter(prefix="/auth", tags=["auth"])

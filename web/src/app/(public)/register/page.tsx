@@ -7,11 +7,10 @@ import { Card } from "@/components/layout/Card";
 export default async function RegisterPage() {
   try {
     await getMe();
-    redirect("/dashboard"); // déjà connecté → zone protégée
+    redirect("/dashboard"); 
   } catch (e) {
-    // IMPORTANT: on ignore uniquement le cas "pas connecté"
     if (!(e instanceof ApiError && e.status === 401)) throw e;
   }
 
-  return <Card><RegisterForm /></Card>;
+  return <Card background="blob"><RegisterForm /></Card>;
 }

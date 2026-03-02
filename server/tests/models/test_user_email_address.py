@@ -2,7 +2,7 @@ import pytest
 from sqlalchemy.exc import IntegrityError
 from sqlmodel import select
 
-from app.models import UserEmailAddress
+from app.models.tables import UserEmailAddress
 from app.utils.time import utcnow_naive
 
 

@@ -1,10 +1,19 @@
 from fastapi import Depends, HTTPException, APIRouter
 from sqlmodel import Session, select
-from app.models import ChampData, FamilledleAttemptGuess, FamilledleAttempt, GuessIn
+from app.models.tables import ChampData, FamilledleAttemptGuess, FamilledleAttempt
+from app.models.schemas import (
+    GuessIn,
+    FamilledleAttemptTodayWrapperOut,
+)
 from app.db import get_session
 from app.utils.time import utcnow_naive, today_paris_date
-from app.deps import get_current_auth_optional, AuthContext
+from app.deps import get_current_auth_optional, AuthContext, get_current_auth
 from sqlalchemy import func
+from app.services.familledle.attempts import (
+    get_attempt_for_user_by_day,
+    attempt_to_day_out,
+)
+
 
 router = APIRouter(prefix="/familledle", tags=["familledle"])
 
@@ -166,3 +175,19 @@ def post_attempt_guess(
             "is_correct": is_correct,
         },
     }
+
+
+@router.get("/attempts/today", response_model=FamilledleAttemptTodayWrapperOut)
+def get_today_attempt(
+    session: Session = Depends(get_session),
+    auth_context: AuthContext = Depends(get_current_auth),
+):
+    day = today_paris_date()
+    attempt = get_attempt_for_user_by_day(
+        session, user_id=auth_context.user.id, day=day
+    )
+    if not attempt:
+        return FamilledleAttemptTodayWrapperOut(exists=False, attempt=None)
+    return FamilledleAttemptTodayWrapperOut(
+        exists=True, attempt=attempt_to_day_out(attempt)
+    )

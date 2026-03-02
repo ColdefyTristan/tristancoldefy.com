@@ -6,5 +6,5 @@ import { Card } from "@/components/layout/Card";
 export default async function LoginPage() {
   const me = await getMeServer();
   if (me) redirect("/dashboard");
-  return <Card><LoginForm /></Card>;
+  return <Card background="blob"><LoginForm /></Card>;
 }

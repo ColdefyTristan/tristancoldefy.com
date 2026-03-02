@@ -1,5 +1,5 @@
 import pytest
-from app.models import User, UserEmailAddress, EmailVerificationToken
+from app.models.tables import User, UserEmailAddress, EmailVerificationToken
 from sqlmodel import select
 
 
@@ -59,7 +59,7 @@ def test_register_returns_409_on_duplicate_username(client, user_factory):
 
 
 def test_register_returns_409_on_duplicate_primary_email(client, user_factory):
-    user = user_factory(email="duplicate_email@example.com", is_email_primary=True)
+    user_factory(email="duplicate_email@example.com", is_email_primary=True)
     r = client.post(
         "/auth/register",
         json={

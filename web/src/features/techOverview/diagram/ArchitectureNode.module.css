@@ -1,0 +1,39 @@
+.node {
+  display: grid;
+  gap: 10px;
+  padding: 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(0,0,0,0.22);
+  text-decoration: none;
+  min-height: 92px;
+  outline: none;
+}
+
+.node:hover {
+  border-color: rgba(255,255,255,0.22);
+}
+
+.node:focus-visible {
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.12);
+}
+
+.picto {
+  width: 46px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+}
+
+.pictoPlaceholder {
+  width: 38px;
+  height: 28px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.04);
+}
+.title {
+  font-size: 0.95rem;
+  opacity: 0.95;
+}
+
