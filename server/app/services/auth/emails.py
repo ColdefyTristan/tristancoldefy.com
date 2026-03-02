@@ -1,6 +1,6 @@
 from fastapi import HTTPException
 from sqlmodel import Session, select
-from app.models import UserEmailAddress, User, EmailVerificationToken
+from app.models.tables import UserEmailAddress, User, EmailVerificationToken
 
 
 def normalize_email(email: str) -> str:

@@ -5,7 +5,7 @@ from sqlalchemy.dialects.postgresql import insert
 from sqlmodel import Session
 
 from app.db import engine
-from app.models import ChampData
+from app.models.tables import ChampData
 
 
 data_path = (Path(__file__).resolve().parent / "../data/champ_data.json").resolve()

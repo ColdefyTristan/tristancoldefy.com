@@ -1,0 +1,83 @@
+.svg {
+  width: 46px;
+  height: 34px;
+  display: block;
+}
+
+/* strokes “clean dark” */
+.frame,
+.pill {
+  fill: rgba(255, 255, 255, 0.03);
+  stroke: rgba(255, 255, 255, 0.16);
+  stroke-width: 1.5;
+}
+
+.dot {
+  fill: rgba(255, 255, 255, 0.30);
+  transform-origin: center;
+  animation: dotFx 8s ease-in-out infinite;
+}
+
+.card {
+  fill: rgba(255, 255, 255, 0.04);
+  stroke: rgba(255, 255, 255, 0.16);
+  stroke-width: 1.5;
+
+  /* on “déploie” le rect depuis sa gauche */
+  transform-box: fill-box;
+  transform-origin: left center;
+  transform: scaleX(0.0) scaleY(0.0);
+  opacity: 0;
+  animation: cardGrow 8s ease-in-out infinite;
+}
+
+.cursor {
+  animation: cursorMove 8s ease-in-out infinite;
+}
+
+.cursorShape {
+  fill: rgba(255, 255, 255, 0.22);
+  stroke: rgba(255, 255, 255, 0.18);
+  stroke-width: 1.2;
+}
+
+/* --- Timeline (8s loop) ---
+0-25% : souris va au dot
+30-55% : dot -> card (la souris “clique” + card s’ouvre)
+60-80% : souris revient au centre
+85-100% : reset (card se referme)
+*/
+@keyframes cursorMove {
+  0% { transform: translate(60px, 52px); }
+  25% { transform: translate(28px, 40px); }
+  55% { transform: translate(28px, 40px); }
+  80% { transform: translate(60px, 52px); }
+  100% { transform: translate(60px, 52px); }
+}
+
+@keyframes dotFx {
+  0%, 24% { opacity: 1; transform: scale(1); }
+  30% { transform: scale(1.25); }
+  38% { opacity: 0.0; transform: scale(0.9); }
+  84% { opacity: 0.0; transform: scale(1); }
+  92%, 100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes cardGrow {
+  0%, 28% { opacity: 0; transform: scale(0); }
+  38% { opacity: 1; transform: scale(1); }
+  82% { opacity: 1; transform: scale(1); }
+  92% { opacity: 0; transform: scale(0); }
+  100% { opacity: 0; transform: scale(0); }
+}
+
+/* Reduced motion: statique */
+@media (prefers-reduced-motion: reduce) {
+  .cursor,
+  .dot,
+  .card {
+    animation: none;
+  }
+  .dot { opacity: 1; }
+  .card { opacity: 0; transform: scale(0); }
+}

@@ -23,7 +23,7 @@
 .content {
   position: relative;
   z-index: 1;
-  padding: 30px;
+  padding: var(--cardPadX);
 }
 
 .center {
@@ -69,4 +69,9 @@
     rgba(153, 0, 255, 0.34),
     rgba(255,255,255,0)
   );
+}
+
+.medium {
+  width: 900px;
+
 }

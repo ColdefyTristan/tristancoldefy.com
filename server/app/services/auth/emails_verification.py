@@ -8,7 +8,8 @@ from app.constants import (
     EMAIL_VERIFICATION_COOLDOWN,
     EMAIL_VERIFICATION_EXPIRATION_TIME,
 )
-from app.models import User, UserEmailAddress, EmailVerificationToken
+from app.models.tables import User, UserEmailAddress, EmailVerificationToken
+
 from app.utils.time import utcnow_naive
 from app.security import generate_raw_token, hmac_token
 from app.settings import settings

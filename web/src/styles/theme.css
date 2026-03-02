@@ -2,7 +2,11 @@
   --bg: #0c0c0c;
   --text: rgba(235,235,235,0.72);
   --text-strong: rgba(255,255,255,0.95);
-  --border:1px solid rgba(255,255,255,0.10);
+  --borderColor :rgba(255,255,255,0.10);
+  --border:1px solid var(--borderColor);
+  --lighGray: rgb(150,150,150);
+  --gray : rgb(100,100,100);
+  --darkGray : rgb(60,60,60);
 
   --text-inverted: black;
 
@@ -13,4 +17,6 @@
   --radius-sm: 10px;
   --radius-md: 12px;
   --radius-pill: 999px;
+
+  --cardPadX : 30px;
 }

@@ -7,6 +7,7 @@ import { useAuth } from "../auth/AuthProvider";
 import {LucideIcon ,UserRound} from "lucide-react";
 
 
+
 function NavLink({ href, label, icon:Icon }: { href: string; label: string; icon?:LucideIcon }) {
   const pathname = usePathname();
   const isActive = pathname === href;
@@ -35,6 +36,7 @@ export function HeaderNav() {
 
   ];*/
   const links:NavItem[] = [
+    { href: "/", label:"Accueil"},
     { href: "/familledle", label: "FamilleDLE" },
   ]
   const authLinks:NavItem[] = user
@@ -46,13 +48,13 @@ export function HeaderNav() {
 
   return (
     <nav aria-label="Navigation principale" className={styles.nav}>
-    <div className={styles.left}>
+    <div className={styles.group}>
       {links.map((l) => (
         <NavLink key={l.href} {...l} />
       ))}
     </div>
     <span className={styles.vSep} aria-hidden="true" />
-    <div className={styles.right}>
+    <div className={styles.group}>
       {authLinks.map((l) => (
         <NavLink key={l.href} {...l} />
       ))}

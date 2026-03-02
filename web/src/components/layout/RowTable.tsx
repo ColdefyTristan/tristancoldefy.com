@@ -1,7 +1,7 @@
 "use client";
 
 import styles from "./RowTable.module.css";
-import type { ChampRow, Cell } from "@/lib/champData/buildRow"; // adapte le path
+import type { ChampRow, Cell } from "@/features/familledle/types";
 
 function cellClass(c: Cell): string {
   if (c.prox === "equal") return styles.equal;
@@ -70,15 +70,13 @@ export default function RowTable({ rows }: { rows: ChampRow[] }) {
                     />
                     <img className={styles.hueRing} src="/images/chroma_circle.png" alt="" />
                     {(() => {
-                      const size = 80; // doit matcher le CSS (hueWidget)
+                      const size = 80; 
                       const cx = size / 2;
                       const cy = size / 2;
 
-                      // rayon du point (au milieu de l’anneau) -> ajuste si besoin
                       const rPoint = 31;
 
-                      // IMPORTANT: ajuste l'offset selon ton image
-                      // -90 => hue=0 en haut. Mets 0 si hue=0 doit être à droite.
+
                       const offsetDeg = -90;
                       const rad = ((r.data.mean_hue + offsetDeg) * Math.PI) / 180;
 
@@ -99,15 +97,14 @@ export default function RowTable({ rows }: { rows: ChampRow[] }) {
                       const cx = size / 2;
                       const cy = size / 2;
 
-                      const rArc = 31;         // même “piste” que ton point
-                      const sweepDeg = 40;     // longueur d’arc
-                      const offsetDeg = -90;   // même offset que ton point
+                      const rArc = 31;         
+                      const sweepDeg = 40;     
+                      const offsetDeg = -90;  
 
                       const delta = r.cells.mean_hue.delta ?? 0;
-                      if (r.cells.mean_hue.prox == "equal") return null; // pas de flèche si equal
+                      if (r.cells.mean_hue.prox == "equal") return null; 
 
-                      // direction: delta>0 => valeur "plus haute" => sens trig ? (à ajuster selon ton mapping)
-                      const dir = delta < 0 ? 1 : -1; // 1 = sens horaire ou antihoraire selon ton image (voir note)
+                      const dir = delta < 0 ? 1 : -1; 
 
                       const a0 = r.data.mean_hue + offsetDeg;
                       const a1 = a0 + dir * sweepDeg;
@@ -121,7 +118,6 @@ export default function RowTable({ rows }: { rows: ChampRow[] }) {
                       const p0 = polar(a0);
                       const p1 = polar(a1);
 
-                      // SVG arc flag: large-arc=0 (petit arc), sweep = 1 ou 0
                       const sweepFlag = dir > 0 ? 1 : 0;
 
                       const d = `M ${p0.x} ${p0.y} A ${rArc} ${rArc} 0 0 ${sweepFlag} ${p1.x} ${p1.y}`;

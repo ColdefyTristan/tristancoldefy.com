@@ -1,42 +1,13 @@
-import type { ChampDataOut,ChampDataResponse } from "@/lib/api/champData"; // adapte si besoin
+import type { ChampDataOut,ChampDataResponse,BuildRowRules,ChampRow } from "../types"; 
 import {evalByDeltaInt,evalFamily,evalByBucketAdjacent,evalHue} from "./eval"
-type Dir = "higher" | "lower" | "equal";
-type Prox = "equal" | "close" | "far";
 
-export type Cell = { dir?: Dir; prox: Prox; delta?: number; bucketName?: string };
-
-
-export type Bucket = { name: string; min: number; max: number };
-
-export type ChampRow = {
-  id: string;
-  name: string;
-  data: ChampDataOut;
-  cells: {
-    skin_number: Cell;
-    family_mastery: Cell;
-    mobility: Cell;
-    randomness: Cell;
-    cc_quantity: Cell;
-    mean_hue: Cell;
-    champOfTheDay: { value: boolean };
-  };
-};
 
 function uid() {
   return `${Date.now()}-${Math.random().toString(16).slice(2)}`;
 }
 
 
-export type BuildRowRules = {
-  skinCloseDelta: number; // distance int
-  hue: { equalMax: number; closeMax: number }; // degrés
-  buckets: {
-    mobility: Bucket[];
-    randomness: Bucket[];
-    cc_quantity: Bucket[];
-  };
-};
+
 
 export function buildRow(
   res: ChampDataResponse,
