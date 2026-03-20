@@ -2,7 +2,7 @@ from datetime import date
 from sqlmodel import Session, select
 from sqlalchemy.orm import selectinload
 
-from app.models.tables import FamilledleAttempt
+from app.models.familledle.familledle_attempt import FamilledleAttempt
 
 
 def get_attempt_for_user_by_day(

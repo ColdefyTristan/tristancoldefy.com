@@ -1,5 +1,4 @@
 from sqlmodel import SQLModel
-from datetime import date
 from typing import Annotated
 from pydantic import EmailStr, StringConstraints, field_validator
 
@@ -8,21 +7,6 @@ Username = Annotated[
     str, StringConstraints(min_length=3, max_length=25, pattern=r"^[a-zA-Z0-9_]+$")
 ]
 Password = Annotated[str, StringConstraints(min_length=8, max_length=128)]
-
-
-class GuessIn(SQLModel):
-    champion_name: str
-
-
-class FamilledleAttemptDayOut(SQLModel):
-    day: date
-    is_finished: bool
-    champions: list[str]
-
-
-class FamilledleAttemptTodayWrapperOut(SQLModel):
-    exists: bool
-    attempt: FamilledleAttemptDayOut | None = None
 
 
 class RegisterRequest(SQLModel):

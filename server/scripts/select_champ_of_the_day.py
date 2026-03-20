@@ -2,7 +2,7 @@ from sqlmodel import Session, select
 from sqlalchemy import func, update
 
 from app.db import engine
-from app.models.tables import ChampData
+from app.models.familledle.champ_data import ChampData
 
 
 def select_champ_of_the_day():

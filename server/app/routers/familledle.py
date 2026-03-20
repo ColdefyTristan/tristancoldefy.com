@@ -1,7 +1,11 @@
 from fastapi import Depends, HTTPException, APIRouter
 from sqlmodel import Session, select
-from app.models.tables import ChampData, FamilledleAttemptGuess, FamilledleAttempt
-from app.models.schemas import (
+from app.models.familledle.champ_data import ChampData
+from app.models.familledle.familledle_attempt import (
+    FamilledleAttemptGuess,
+    FamilledleAttempt,
+)
+from app.models.familledle.schemas import (
     GuessIn,
     FamilledleAttemptTodayWrapperOut,
 )
