@@ -10,3 +10,5 @@ passlib
 httpx
 argon2-cffi
 python-dotenv
+ijson
+requests
