@@ -4,7 +4,6 @@ from enum import Enum
 class DeckEntryZone(str, Enum):
     MAINBOARD = "mainboard"
     SIDEBOARD = "sideboard"
-    COMMANDER = "commander"
     MAYBEBOARD = "maybeboard"
 
 

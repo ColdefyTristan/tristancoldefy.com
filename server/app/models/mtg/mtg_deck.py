@@ -1,7 +1,8 @@
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Any
 from datetime import datetime
 
-from sqlalchemy import UniqueConstraint
+from sqlalchemy import UniqueConstraint, Column
+from sqlalchemy.dialects.postgresql import JSONB
 from sqlmodel import SQLModel, Field, Relationship
 
 from app.utils.time import utcnow_naive
@@ -18,12 +19,32 @@ class Deck(SQLModel, table=True):
     id: int | None = Field(default=None, primary_key=True)
     user_id: int = Field(foreign_key="user.id", index=True)
     name: str = Field(max_length=120, index=True)
+    version: int = Field(default=1, nullable=False)
 
     created_at: datetime = Field(default_factory=utcnow_naive, nullable=False)
     updated_at: datetime = Field(default_factory=utcnow_naive, nullable=False)
 
     deck_entries: list["DeckEntry"] = Relationship(back_populates="deck")
     tag_definitions: list["TagDefinition"] = Relationship(back_populates="deck")
+    batch_results: list["DeckBatchResult"] = Relationship(back_populates="deck")
+
+
+class DeckBatchResult(SQLModel, table=True):
+    __tablename__ = "deck_batch_result"
+    __table_args__ = (
+        UniqueConstraint(
+            "deck_id", "user_id", "batch_id", name="uq_deck_batch_result_deck_user_batch"
+        ),
+    )
+
+    id: int | None = Field(default=None, primary_key=True)
+    deck_id: int = Field(foreign_key="deck.id", index=True)
+    user_id: int = Field(foreign_key="user.id", index=True)
+    batch_id: str = Field(max_length=255, index=True)
+    result_json: Any = Field(default=None, sa_column=Column(JSONB, nullable=False))
+    applied_at: datetime = Field(default_factory=utcnow_naive, nullable=False)
+
+    deck: "Deck" = Relationship(back_populates="batch_results")
 
 
 class DeckEntry(SQLModel, table=True):

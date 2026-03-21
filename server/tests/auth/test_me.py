@@ -2,7 +2,7 @@ from datetime import datetime
 import pytest
 
 from _utils import _get_user_session_by_cookie_token
-from app.services.emails import add_pending_email  # adapte l'import
+from app.services.auth.emails import add_pending_email
 
 
 @pytest.mark.parametrize(

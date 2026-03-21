@@ -43,13 +43,19 @@ Each batch must include a `batch_id`.
 
 If the same batch is submitted multiple times for the same deck and user, the server must not apply it more than once.
 
+The server must persist the result of each applied batch in a `DeckBatchResult` store (keyed by `deck_id` + `user_id` + `batch_id`) and return the original response on replay. This allows the client to recover its `local_to_server_mappings` after a network failure or timeout.
+
 ### Conflict detection
 
 Each batch must include a `base_version`.
 
+The server must acquire an exclusive lock on the deck row (e.g., `SELECT FOR UPDATE`) before checking the version, to prevent race conditions between concurrent requests.
+
 The server compares `base_version` with the current deck version in storage.
 
 If they do not match, the batch must be rejected as a conflict.
+
+When a conflict occurs, the client should fetch the current deck state from `GET /decks/{deck_id}` to retrieve the latest version and reconcile pending local operations before retrying.
 
 ### Local-first client flow
 
@@ -162,6 +168,10 @@ The version of the deck the client expects to be editing.
 * Required: yes
 
 Ordered list of deck operations.
+
+The array must contain at least one operation. An empty `operations` array must be rejected with `invalid_batch`.
+
+The array must not exceed **500 operations** per batch. A batch exceeding this limit must be rejected with `batch_too_large`.
 
 ---
 
@@ -298,6 +308,30 @@ Used for:
 
 ## Operation Catalog
 
+## Deck
+
+### `rename_deck`
+
+Renames the deck.
+
+```json
+{
+  "type": "rename_deck",
+  "operation_id": "op_000",
+  "name": "New Deck Name"
+}
+```
+
+#### Fields
+
+* `name`: string, required
+
+#### Rules
+
+* `name` must not be empty.
+
+---
+
 ## Cards
 
 ### `add_card`
@@ -325,6 +359,10 @@ Creates a new deck card entry.
   One of `mainboard`, `sideboard`, `maybeboard`.
 * `quantity`: integer, required
   Must be greater than or equal to `1`.
+
+#### Rules
+
+* If an entry for the same `oracle_card_id` and `zone` already exists in the deck, the server must increment its quantity by the provided `quantity` value rather than creating a duplicate entry. In this case, no new `server_id` is created and the existing entry's `server_id` is returned in `local_to_server_mappings`.
 
 #### Notes
 
@@ -399,6 +437,33 @@ Sets the quantity of a card entry.
 * `quantity` must be greater than or equal to `1`
 * `quantity = 0` is invalid
 * card removal must be expressed using `remove_card`
+
+---
+
+## Tag Scoping
+
+Tag definitions are either **global** or **deck-scoped**.
+
+### Global tags
+
+Global tags are predefined by the system and are identical across all decks. They are read-only.
+
+The following operations are **forbidden** on a global tag definition or its value definitions and must be rejected with `immutable_tag_def`:
+
+* `remove_tag_def`
+* `rename_tag_def`
+* `add_tag_value_def`
+* `remove_tag_value_def`
+* `rename_tag_value_def`
+* `set_tag_value_def_weight`
+
+### Deck-scoped tags
+
+Deck-scoped tags are created by the user and belong to a specific deck. All modification operations apply to them.
+
+### Assigning tags to cards
+
+Both global and deck-scoped tag values may be assigned to cards using `add_card_tag`, `remove_card_tag`, `set_card_tag_value`, and `set_card_tag_weight`. Tag scoping does not restrict card-level operations.
 
 ---
 
@@ -706,6 +771,8 @@ At minimum, the following checks should exist.
 * `batch_id` must be present
 * `base_version` must be present
 * `operations` must be present
+* `operations` must not be empty
+* `operations` must not exceed 500 items
 * `operations` must not contain duplicate `operation_id` values
 * `base_version` must match the current persisted deck version
 * the authenticated user must own the target deck
@@ -731,6 +798,7 @@ Examples:
 * referenced card tag assignments must exist
 * a tag value definition must belong to the given tag definition
 * a card tag must belong to the given card
+* modification operations targeting a global tag definition must be rejected with `immutable_tag_def`
 
 ### Consistency validation
 
@@ -829,6 +897,7 @@ Request-level:
 * `duplicate_batch_id`
 * `invalid_batch`
 * `forbidden_deck_access`
+* `batch_too_large`
 
 Operation-level:
 
@@ -842,6 +911,20 @@ Operation-level:
 * `unresolved_local_id`
 * `tag_value_def_mismatch`
 * `operation_dependency_error`
+* `immutable_tag_def`
+
+---
+
+## HTTP Status Codes
+
+| HTTP status | Error code(s) | When |
+|---|---|---|
+| `200 OK` | — | Batch applied successfully (first application or idempotent replay). |
+| `400 Bad Request` | `invalid_batch`, `batch_too_large` | Malformed request, empty operations, or batch exceeds size limit. |
+| `401 Unauthorized` | — | No valid session. |
+| `403 Forbidden` | `forbidden_deck_access` | Authenticated user does not own the target deck. |
+| `409 Conflict` | `conflict_version` | `base_version` does not match the current deck version. |
+| `422 Unprocessable Entity` | `invalid_batch`, operation-level errors | Request is structurally valid but contains semantic errors (invalid refs, bad quantities, etc.). |
 
 ---
 

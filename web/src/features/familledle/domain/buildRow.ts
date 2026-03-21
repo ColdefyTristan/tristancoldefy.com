@@ -1,12 +1,10 @@
-import type { ChampDataOut,ChampDataResponse,BuildRowRules,ChampRow } from "../types"; 
-import {evalByDeltaInt,evalFamily,evalByBucketAdjacent,evalHue} from "./eval"
+import type { ChampDataResponse, BuildRowRules, ChampRow } from "../types";
+import { evalByDeltaInt, evalFamily, evalByBucketAdjacent, evalHue } from "./eval";
 
 
 function uid() {
   return `${Date.now()}-${Math.random().toString(16).slice(2)}`;
 }
-
-
 
 
 export function buildRow(
@@ -24,6 +22,10 @@ export function buildRow(
       mobility: evalByBucketAdjacent(res.data.mobility, champOfTheDay.data.mobility, rules.buckets.mobility),
       randomness: evalByBucketAdjacent(res.data.randomness, champOfTheDay.data.randomness, rules.buckets.randomness),
       cc_quantity: evalByBucketAdjacent(res.data.cc_quantity, champOfTheDay.data.cc_quantity, rules.buckets.cc_quantity),
+      intension: evalByBucketAdjacent(res.data.intension, champOfTheDay.data.intension, rules.buckets.intension),
+      vote: evalFamily(res.data.vote, champOfTheDay.data.vote),
+      regime: evalFamily(res.data.regime, champOfTheDay.data.regime),
+      pilosite: evalFamily(res.data.pilosite, champOfTheDay.data.pilosite),
       mean_hue: evalHue(res.data.mean_hue, champOfTheDay.data.mean_hue, rules.hue),
       champOfTheDay: { value: res.name === champOfTheDay.name },
     },

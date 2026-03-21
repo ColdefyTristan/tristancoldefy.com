@@ -1,7 +1,8 @@
 .root {
-  max-width: 720px;
-  margin: 0 auto;       
-  padding: 0 16px;      
+  width: fit-content;
+  min-width: min(720px, 100%);
+  margin: 0 auto;
+  padding: 0 16px;
   display: grid;
   gap: 16px;
 }

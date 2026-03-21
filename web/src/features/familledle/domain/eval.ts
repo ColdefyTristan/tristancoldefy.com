@@ -1,8 +1,4 @@
-import {Cell} from "../types"
-type Dir = "higher" | "lower" | "equal";
-type Prox = "equal" | "close" | "far";
-
-
+import type { Cell, Dir, Prox, Bucket } from "../types";
 
 // --------------------
 // Hue circulaire
@@ -39,8 +35,6 @@ export function evalByDeltaInt(value: number, target: number, closeDelta: number
   return { dir, prox, delta };
 }
 
-
-export type Bucket = { name: string; min: number; max: number }; // inclusif
 
 function bucketIndex(value: number, buckets: Bucket[]): number {
   const i = buckets.findIndex((b) => value >= b.min && value <= b.max);
@@ -85,6 +79,5 @@ export function evalFamily(
 
   const equal = v.size === t.size && inter === t.size;
   const prox: Prox = equal ? "equal" : inter > 0 ? "close" : "far";
-  return { prox, delta: inter }; // delta = nb d’intersections (optionnel)
+  return { prox, delta: inter }; // delta = nb d'intersections (optionnel)
 }
-

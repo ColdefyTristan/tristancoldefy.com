@@ -1,0 +1,169 @@
+.root {
+  width: 100%;
+}
+
+.table {
+  width: auto;
+  border-collapse: separate;
+  table-layout: auto;
+  border-color: transparent;
+  border-spacing: 8px;
+  padding: 8px;
+  border-radius: 100px;
+}
+
+.table th,
+.table td {
+  border-radius: 12px;
+  width: 100px;
+  min-width: 100px;
+  max-width: 100px;
+  height: 100px;
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.table th{
+  color: whitesmoke;
+}
+
+.table td{
+  color:black;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.empty {
+  opacity: 0.7;
+}
+
+.equal {
+  background: #61FF64;
+}
+
+.close {
+  background: #FFA340;
+}
+
+.far {
+  background: #FF4545;
+}
+
+
+.bucketCell {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+}
+
+.bucketName {
+  flex-shrink: 0;
+  font-size: 12px;
+  opacity: 0.75;
+  line-height: 1.1;
+  font-weight: 400;
+}
+
+.bucketValue {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.fraction {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.fractionNum {
+  border-bottom: 2px solid currentColor;
+  padding: 0 6px 2px;
+}
+
+.fractionDen {
+  padding: 2px 6px 0;
+}
+
+.listCell {
+  font-size: 14px;
+  padding: 4px;
+}
+
+.bucketText {
+  font-size: 14px;
+  padding: 4px;
+}
+
+.portrait {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;     /* fill sans déformer */
+  object-position: center;
+}
+
+.hueWidget {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto; /* centre dans la cellule */
+}
+
+.hueCenter {
+  position: absolute;
+  inset: 9px; /* ajuste selon l’épaisseur de ton anneau */
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.hueRing {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+}
+
+.hSep {
+  height: 1px;
+  width: 100%;
+  margin: 4px 0; /* ajuste */
+  background: rgba(0,0,0,0.5);
+  border-radius: 999px;
+}
+
+.hueDot {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #000;
+  border-radius: 999px;
+
+  /* centre le point sur (left, top) */
+  transform: translate(-50%, -50%);
+
+  /* pour qu’il soit visible sur toutes couleurs */
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.7);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.hueArrow {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 3; /* au-dessus du ring */
+}

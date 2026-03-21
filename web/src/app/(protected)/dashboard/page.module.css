@@ -1,0 +1,145 @@
+.page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 48px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.greeting {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-strong);
+}
+
+.subtitle {
+  font-size: 14px;
+  color: var(--lighGray);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sectionTitle {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gray);
+}
+
+.card {
+  background: rgb(18, 18, 18);
+  border: 1px solid var(--borderColor);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.infoRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  gap: 12px;
+}
+
+.infoRow + .infoRow {
+  border-top: 1px solid var(--borderColor);
+}
+
+.infoLabel {
+  font-size: 13px;
+  color: var(--lighGray);
+  flex-shrink: 0;
+}
+
+.infoValue {
+  font-size: 14px;
+  color: var(--text-strong);
+  font-weight: 500;
+  text-align: right;
+  word-break: break-all;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badgeVerified {
+  background: rgba(34, 197, 94, 0.15);
+  color: rgb(134, 239, 172);
+}
+
+.badgePending {
+  background: rgba(234, 179, 8, 0.15);
+  color: rgb(253, 224, 71);
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.linksGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.linkCard {
+  background: rgb(18, 18, 18);
+  border: 1px solid var(--borderColor);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  text-decoration: none;
+  color: inherit;
+}
+
+.linkCard:hover {
+  border-color: rgba(255, 255, 255, 0.22);
+  background: rgb(22, 22, 22);
+  text-decoration: none;
+}
+
+.linkIcon {
+  font-size: 22px;
+}
+
+.linkTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-strong);
+}
+
+.linkDesc {
+  font-size: 12px;
+  color: var(--lighGray);
+}
