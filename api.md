@@ -265,6 +265,216 @@ Consumes a verification token and promotes pending email to verified.
 
 ---
 
+## Decks (protected)
+
+> Full batch specification: [`deck_batch_operation.md`](deck_batch_operation.md)
+
+### Get deck
+
+`GET /decks/{deck_id}` — **200**
+
+Returns the current deck state including its version. Used to resolve conflicts after a rejected batch.
+
+**Errors**
+
+* 403 `FORBIDDEN`
+* 404 `NOT_FOUND`
+
+---
+
+### Apply batch operations
+
+`POST /decks/{deck_id}/apply-operations` — **200**
+
+Applies a list of deck operations atomically. The batch is idempotent via `batch_id`.
+
+**Body**
+
+```json
+{
+  "batch_id": "string",
+  "base_version": 12,
+  "operations": []
+}
+```
+
+* `operations`: ordered list of typed operations (1–500 items). See [`deck_batch_operation.md`](deck_batch_operation.md) for the full operation catalog.
+* `base_version` must match the current deck version, otherwise returns 409 `conflict_version`.
+* If `batch_id` was already applied, the server returns the original response without reapplying.
+
+**Response (200)**
+
+```json
+{
+  "applied_batch_id": "string",
+  "new_version": 13,
+  "applied_operation_ids": ["op_001"],
+  "local_to_server_mappings": {
+    "cards": [],
+    "tag_defs": [],
+    "tag_value_defs": [],
+    "card_tags": []
+  }
+}
+```
+
+**Error format** (differs from standard — batch errors include per-operation detail)
+
+```json
+{
+  "error": "invalid_batch",
+  "message": "string",
+  "operation_errors": [
+    { "operation_id": "op_001", "code": "string", "message": "string" }
+  ]
+}
+```
+
+**HTTP errors**
+
+* 400 `invalid_batch` — empty operations or malformed request
+* 400 `batch_too_large` — more than 500 operations
+* 403 `forbidden_deck_access`
+* 409 `conflict_version` — `base_version` mismatch
+* 422 `invalid_batch` — semantic errors (invalid refs, bad quantities, etc.)
+
+---
+
+## Familledle
+
+### Get champion data
+
+`GET /familledle/champ_data/{champion_name}` — **200**
+
+Returns stats and ranks for a given champion.
+
+**Response (200)**
+
+```json
+{
+  "name": "string",
+  "data": {
+    "skin_number": 0,
+    "family_mastery": ["string"],
+    "mobility": 0,
+    "randomness": 0,
+    "cc_quantity": 0,
+    "icon_url": "string",
+    "mean_hex": "string",
+    "mean_hue": 0,
+    "mobility_rank": 1,
+    "randomness_rank": 1,
+    "cc_quantity_rank": 1,
+    "total_champions": 100
+  }
+}
+```
+
+**Errors**
+
+* 404 `INVALID_CHAMPION_NAME`
+
+---
+
+### Get daily game
+
+`GET /familledle/daily_game` — **200**
+
+Returns the configuration for today's game: the champion to guess, which row columns are active, and the current winner count.
+
+**Response (200)**
+
+```json
+{
+  "day": "2026-03-21",
+  "champ_name": "string",
+  "row_columns": ["family_mastery", "colorwheel", "mobility", "randomness", "cc_quantity"],
+  "winner_count": 0
+}
+```
+
+`row_columns` is a subset of: `family_mastery`, `colorwheel`, `mobility`, `randomness`, `cc_quantity`.
+
+**Errors**
+
+* 404 `NO_DAILY_GAME`
+
+---
+
+### Submit a guess
+
+`POST /familledle/attempts/guess` — **200**
+
+Submits a champion guess for today's game. Works for anonymous and authenticated users. Authenticated users have their attempt persisted; `winner_count` is incremented on a correct guess.
+
+**Body**
+
+```json
+{
+  "champion_name": "string"
+}
+```
+
+**Response (200)**
+
+```json
+{
+  "attempt": {
+    "id": 1,
+    "day": "2026-03-21",
+    "try_count": 3,
+    "finished_at": "ISO-8601 | null"
+  },
+  "guess": {
+    "position": 2,
+    "champion_name": "string",
+    "is_correct": false
+  }
+}
+```
+
+For anonymous users, `attempt` is `null` and `position` is `null`.
+
+**Errors**
+
+* 404 `INVALID_CHAMPION_NAME`
+* 404 `NO_DAILY_GAME`
+* 409 `ATTEMPT_ALREADY_FINISHED`
+
+---
+
+### Get today's attempt (protected)
+
+`GET /familledle/attempts/today` — **200**
+
+Returns the authenticated user's attempt for today, if any.
+
+**Response (200)**
+
+```json
+{
+  "exists": false,
+  "attempt": null
+}
+```
+
+```json
+{
+  "exists": true,
+  "attempt": {
+    "day": "2026-03-21",
+    "is_finished": true,
+    "champions": ["string"]
+  }
+}
+```
+
+**Errors**
+
+* 401 `NOT_AUTHENTICATED`
+
+---
+
 ## Tasks (protected)
 
 ### Task model (response)
@@ -385,6 +595,15 @@ Accessing or modifying another user’s task → 403 `FORBIDDEN`
 * `FORBIDDEN` → 403
 * `NOT_FOUND` → 404
 * `INTERNAL_ERROR` → 500
+
+Deck batch error codes (use `error` key, not `code`):
+
+* `conflict_version` → 409
+* `duplicate_batch_id` → 200 (idempotent replay)
+* `invalid_batch` → 400 / 422
+* `batch_too_large` → 400
+* `forbidden_deck_access` → 403
+* `immutable_tag_def` → 422
 
 ---
 

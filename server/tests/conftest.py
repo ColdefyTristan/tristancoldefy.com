@@ -1,3 +1,4 @@
+import os
 import pytest
 import uuid
 
@@ -17,23 +18,14 @@ DEFAULT_PASSWORD = "TestPassword123!"
 
 
 @pytest.fixture(scope="session")
-def engine(tmp_path_factory):
-    # 1) crée un fichier sqlite dans un dossier temporaire de pytest
-    db_path = tmp_path_factory.mktemp("db") / "test.sqlite"
-    engine = create_engine(
-        f"sqlite:///{db_path}",
-        connect_args={
-            "check_same_thread": False
-        },  # utile pour éviter des soucis avec SQLite
-    )
-
-    # 2) crée toutes les tables (à partir de tes models SQLModel)
-    SQLModel.metadata.create_all(engine)
-
-    yield engine
-
-    # 3) nettoyage à la fin de tous les tests
-    SQLModel.metadata.drop_all(engine)
+def engine():
+    url = os.environ.get("TEST_DATABASE_URL")
+    if not url:
+        raise RuntimeError(
+            "La variable d'environnement TEST_DATABASE_URL est requise. "
+            "Exemple : postgresql+psycopg://app:password@localhost:5432/test_db"
+        )
+    return create_engine(url)
 
 
 @pytest.fixture
@@ -41,17 +33,17 @@ def session(engine):
     SQLModel.metadata.drop_all(engine)
     SQLModel.metadata.create_all(engine)
 
-    with Session(engine) as session:
-        session.exec(
+    with engine.connect() as conn:
+        conn.execute(
             text(
-                """
-            CREATE UNIQUE INDEX IF NOT EXISTS uq_verified_email
-            ON user_email_address(email)
-            WHERE verified_at IS NOT NULL;
-        """
+                "CREATE UNIQUE INDEX IF NOT EXISTS uq_verified_email "
+                "ON user_email_address(email) "
+                "WHERE verified_at IS NOT NULL"
             )
         )
-        session.commit()
+        conn.commit()
+
+    with Session(engine) as session:
         yield session
 
 

@@ -30,7 +30,7 @@ def list_attempts_for_user(
 
 
 def attempt_to_day_out(attempt: FamilledleAttempt):
-    # sécurité: forcer l'ordre en DB (position) au cas où la relation ne respecte pas l’ordre
+    # sécurité: forcer l’ordre en DB (position) au cas où la relation ne respecte pas l’ordre
     champions = [
         g.champion_name for g in sorted(attempt.guesses, key=lambda x: x.position)
     ]
@@ -38,4 +38,6 @@ def attempt_to_day_out(attempt: FamilledleAttempt):
         "day": attempt.day,
         "is_finished": attempt.finished_at is not None,
         "champions": champions,
+        "clues": attempt.clues,
+        "clue_points": attempt.clue_points,
     }

@@ -1,15 +1,17 @@
 import { useCallback, useEffect, useState } from "react";
-import { getChampOfTheDay } from "../api/client";
-import type { ChampDataResponse } from "../types";
+import { getChampData, getDailyGame } from "../api/client";
+import type { ChampDataResponse, DailyGameResponse } from "../types";
 
-export type UseChampOfTheDayResult = {
+export type UseDailyGameResult = {
+  dailyGame: DailyGameResponse | null;
   champOfTheDay: ChampDataResponse | null;
   isLoading: boolean;
   error: unknown | null;
   reload: () => void;
 };
 
-export function useChampOfTheDay(): UseChampOfTheDayResult {
+export function useDailyGame(): UseDailyGameResult {
+  const [dailyGame, setDailyGame] = useState<DailyGameResponse | null>(null);
   const [champOfTheDay, setChampOfTheDay] = useState<ChampDataResponse | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<unknown | null>(null);
@@ -27,11 +29,17 @@ export function useChampOfTheDay(): UseChampOfTheDayResult {
       setError(null);
 
       try {
-        const fetchedChampOfTheDay = await getChampOfTheDay();
+        const game = await getDailyGame();
         if (cancelled) return;
-        setChampOfTheDay(fetchedChampOfTheDay);
+
+        const champData = await getChampData(game.champ_name);
+        if (cancelled) return;
+
+        setDailyGame(game);
+        setChampOfTheDay(champData);
       } catch (caughtError) {
         if (cancelled) return;
+        setDailyGame(null);
         setChampOfTheDay(null);
         setError(caughtError);
       } finally {
@@ -45,5 +53,5 @@ export function useChampOfTheDay(): UseChampOfTheDayResult {
     };
   }, [reloadToken]);
 
-  return { champOfTheDay, isLoading, error, reload };
+  return { dailyGame, champOfTheDay, isLoading, error, reload };
 }

@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:leagueoflegends.fandom.com)",
+      "WebFetch(domain:universe-meeps.leagueoflegends.com)",
+      "WebFetch(domain:raw.communitydragon.org)",
+      "WebFetch(domain:cdn.merakianalytics.com)",
+      "Bash(grep -rh \"^revision:\" alembic/versions/*.py)"
+    ]
+  }
+}

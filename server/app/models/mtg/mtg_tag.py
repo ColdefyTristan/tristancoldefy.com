@@ -22,7 +22,7 @@ class TagDefinition(SQLModel, table=True):
     tag_kind: TagKind = Field(index=True)
     value_kind: TagValueKind = Field(default=TagValueKind.NONE)
 
-    has_rate: bool = Field(default=False)
+    has_weight: bool = Field(default=False)
     minimum_per_entry: int = Field(default=0, ge=0)
 
     created_at: datetime = Field(default_factory=utcnow_naive, nullable=False)
@@ -52,7 +52,7 @@ class TagValueOption(SQLModel, table=True):
 
     value: str = Field(max_length=120)
     normalized_value: str = Field(max_length=120, index=True)
-    sort_order: int = Field(default=0)
+    weight: int = Field(default=0, ge=0, le=10)
 
     created_at: datetime = Field(default_factory=utcnow_naive, nullable=False)
     updated_at: datetime = Field(default_factory=utcnow_naive, nullable=False)
@@ -76,7 +76,7 @@ class DeckEntryTag(SQLModel, table=True):
         index=True,
     )
     integer_value: int | None = Field(default=None)
-    rate: int | None = Field(default=None, ge=0, le=10)
+    weight: int | None = Field(default=None, ge=0, le=10)
 
     source_kind: TagSourceKind = Field(default=TagSourceKind.USER)
 

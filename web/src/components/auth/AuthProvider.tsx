@@ -1,8 +1,8 @@
 "use client";
 
-import React, { createContext, useContext, useMemo, useState } from "react";
+import React, { createContext, useCallback, useContext, useMemo, useState } from "react";
 import { getMe } from "@/lib/api/services/auth.browser";
-import { ApiError } from "@/lib/api/errors"; 
+import { ApiError } from "@/lib/api/errors";
 import {AuthUser} from "@/lib/api/services/users"
 import { logout as apiLogout, login as apiLogin } from "@/lib/api/services/auth.browser";
 import { useRouter } from "next/navigation";
@@ -34,7 +34,7 @@ export function AuthProvider({
 
   const router = useRouter();
 
-  async function refreshMe(): Promise<AuthUser | null> {
+  const refreshMe = useCallback(async (): Promise<AuthUser | null> => {
     try {
       const me = await getMe();
       setUser(me);
@@ -46,23 +46,23 @@ export function AuthProvider({
       }
       throw e;
     }
-  }
-  
-  async function logout(): Promise<void> {
+  }, []);
+
+  const logout = useCallback(async (): Promise<void> => {
     await apiLogout();
     setUser(null);
-    router.refresh(); 
-  }
+    router.refresh();
+  }, [router]);
 
-  async function login(body : LoginRequest): Promise<void> {
+  const login = useCallback(async (body: LoginRequest): Promise<void> => {
     await apiLogin(body);
     await refreshMe();
-    router.refresh(); 
-  }
+    router.refresh();
+  }, [refreshMe, router]);
 
   const value = useMemo<AuthContextValue>(
     () => ({ user, status, setUser, refreshMe, logout, login }),
-    [user, status]
+    [user, status, setUser, refreshMe, logout, login]
   );
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

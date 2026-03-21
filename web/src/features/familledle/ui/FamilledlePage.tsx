@@ -2,138 +2,68 @@
 
 import { useEffect, useMemo, useState } from "react";
 import SearchComboBox from "@/components/ui/SearchComboBox";
-import RowTable from "@/components/layout/RowTable"; 
 import champTerms from "../data/champTerms.json";
 import styles from "./Familledle.module.css";
 
-import { buildRow} from "../domain/buildRow";
-import { type ChampRow, type ChampDataResponse, type Status  } from "../types";
-import { getChampData,postAttemptGuess,getChampOfTheDay} from "../api/client";
-import { getTodayAttempt } from "../api/attempst";
-import { RULES } from "../domain/rules"; 
+import GameBar from "./GameBar";
+import RowTable from "./RowTable";
+import { useDailyGame } from "../hooks/useChampOfTheDay";
+import { useFamilledleGame } from "../hooks/useFamilledleGame";
+import type { ChampDataOut, ClueType } from "../types";
+
+const normalize = (s: string) => s.trim().toLowerCase();
+
+const champsIds = champTerms.champions.map((c) => c.id);
+const allowed = new Set(champsIds);
+
+// L'ordre doit rester aligné avec CLUE_TYPES ci-dessous
+const CLUE_TYPES: ClueType[] = ["date", "genre", "espece", "region", "ressource", "position"];
+
+function buildClues(data: ChampDataOut): { label: string; value: string }[] {
+  return [
+    { label: "Année", value: data.annee_sortie ?? "?" },
+    { label: "Genre", value: data.genre ?? "?" },
+    { label: "Espèce", value: data.espece.join(", ") || "?" },
+    { label: "Région", value: data.region.join(", ") || "?" },
+    { label: "Ressource", value: data.ressource ?? "?" },
+    { label: "Position", value: data.role.join(", ") || "?" },
+  ];
+}
 
 export default function FamilledlePage() {
-  const normalize = (s: string) => s.trim().toLowerCase();
-
   const [input, setInput] = useState("");
+  const [selectedBarIndices, setSelectedBarIndices] = useState<number[]>([]);
 
-  const [status, setStatus] = useState<Status>({ kind: "idle" });
-  const [rows, setRows] = useState<ChampRow[]>([]);
-  const [champOfTheDay, setChampOfTheDay] = useState<ChampDataResponse | null>(null);
+  const { dailyGame, champOfTheDay, isLoading, error: champError } = useDailyGame();
+  const { rows, isFinished, submitStatus, usedClues, cluePoints, revealClue, submit } = useFamilledleGame(champOfTheDay);
 
-  const [todayAttemptChampions, setTodayAttemptChampions] = useState<string[] | null>(null);
-  const [todayAttemptFinished, setTodayAttemptFinished] = useState(false);
+  useEffect(() => {
+    if (usedClues.length === 0) return;
+    setSelectedBarIndices(usedClues.map((c) => CLUE_TYPES.indexOf(c)).filter((i) => i !== -1));
+  }, [usedClues]);
 
-
-  
   const normalizedInput = normalize(input);
-
-
-  const champsIds = useMemo(() => champTerms.champions.map((c) => c.id), []);
-  const allowed = useMemo(() => new Set(champsIds), [champsIds]);
   const ready = champOfTheDay !== null;
   const canSubmit = ready && allowed.has(normalizedInput);
-  
-  // Charger le champ du jour une fois
-  useEffect(() => {
-    let cancelled = false;
-    (async () => {
-      try {
-        const day = await getChampOfTheDay(); // ChampDataResponse
-        if (!cancelled) setChampOfTheDay(day);
-      } catch (e) {
-        if (!cancelled) setChampOfTheDay(null);
-      }
-    })();
-    return () => {
-      cancelled = true;
-    };
-  }, []);
 
-  useEffect(() => {
-  let cancelled = false;
+  const guessCount = useMemo(() => rows.length, [rows]);
 
-  (async () => {
-    try {
-      const wrapper = await getTodayAttempt(); // { exists, attempt }
-      if (cancelled) return;
-
-      if (!wrapper.exists || !wrapper.attempt) {
-        setTodayAttemptChampions(null);
-        setTodayAttemptFinished(false);
-        return;
-      }
-
-      setTodayAttemptChampions(wrapper.attempt.champions);
-      setTodayAttemptFinished(wrapper.attempt.is_finished);
-    } catch (e) {
-      // not connected is ok
-      return;
-    }
-  })();
-
-  return () => {
-    cancelled = true;
-  };
-}, []);
-
-    useEffect(() => {
-    if (!champOfTheDay) return;
-    if (!todayAttemptChampions || todayAttemptChampions.length === 0) return;
-
-    let cancelled = false;
-
-    (async () => {
-        try {
-        // fetch champ data pour chaque guess (ordre conservé)
-        const champs = await Promise.all(todayAttemptChampions.map((n) => getChampData(n)));
-        if (cancelled) return;
-
-        const built = champs.map((c) => buildRow(c, champOfTheDay, RULES));
-        setRows(built);
-        } catch {
-        // si ça rate, on ne bloque pas la page
-        }
-    })();
-
-    return () => {
-        cancelled = true;
-    };
-    }, [champOfTheDay, todayAttemptChampions]);
-
-
-  async function submitCurrent() {
-    if (!canSubmit || !champOfTheDay) return;
-    const name = input.trim();
-    if (!name) return;
-
-    setStatus({ kind: "loading" });
-    try {
-        const attemptRes = await postAttemptGuess(name);
-        const champRes = await getChampData(name);
-        setRows((prev) => [...prev, buildRow(champRes, champOfTheDay, RULES)]);
-        setStatus({ kind: "idle" });
-        setInput("");
-        if (attemptRes.guess.is_correct) {
-            setTodayAttemptFinished(true);
-        }
-    } catch (e) {
-        const msg = e instanceof Error ? e.message : "Unknown error";
-        setStatus({ kind: "error", message: msg });
-    }
+  async function handleSubmit() {
+    if (!canSubmit) return;
+    await submit(input.trim());
+    setInput("");
   }
-
-
 
   return (
     <div className={styles.root}>
-      <RowTable rows={rows} />
-      {todayAttemptFinished && (
+      <RowTable rows={rows} activeColumns={dailyGame?.row_columns ?? []} />
+
+      {isFinished && (
         <div className={styles.centerResult}>
-            <div className={styles.winAnnounce}>
-                <h2>Bravo ! Vous avez gagné !</h2>
-                <h3>Score : {todayAttemptChampions && todayAttemptChampions.length}</h3>
-            </div>
+          <div className={styles.winAnnounce}>
+            <h2>Bravo ! Vous avez gagné !</h2>
+            <h3>Score : {guessCount}</h3>
+          </div>
         </div>
       )}
 
@@ -141,7 +71,7 @@ export default function FamilledlePage() {
         className={styles.form}
         onSubmit={(e) => {
           e.preventDefault();
-          void submitCurrent();
+          void handleSubmit();
         }}
       >
         <SearchComboBox
@@ -155,21 +85,36 @@ export default function FamilledlePage() {
         <button
           type="submit"
           className={styles.btn}
-          disabled={!canSubmit || status.kind === "loading"}
+          disabled={!canSubmit || submitStatus.kind === "loading"}
         >
-          {status.kind === "loading" ? "Chargement…" : "Selectionner champion"}
+          {submitStatus.kind === "loading" ? "Chargement…" : "Selectionner champion"}
         </button>
 
-        {!ready ? <div className={styles.hint}>Récupération du champion du jour…</div> : null}
-
-        {ready && !allowed.has(input) && input.trim() ? (
+        {isLoading && <div className={styles.hint}>Récupération du champion du jour…</div>}
+        {!!champError && (
+          <div className={styles.error}>
+            Impossible de charger le champion du jour. Réessayez plus tard.
+          </div>
+        )}
+        {ready && !allowed.has(normalizedInput) && input.trim() && (
           <div className={styles.hint}>Choisis un élément dans la liste.</div>
-        ) : null}
+        )}
       </form>
 
-      
+      {submitStatus.kind === "error" && (
+        <div className={styles.error}>{submitStatus.message}</div>
+      )}
 
-      {status.kind === "error" ? <div className={styles.error}>{status.message}</div> : null}
+      <GameBar
+        clues={champOfTheDay ? buildClues(champOfTheDay.data) : []}
+        selectedIndices={selectedBarIndices}
+        cluePoints={cluePoints}
+        isFinished={isFinished}
+        onSelect={(i) => {
+          setSelectedBarIndices((prev) => [...prev, i]);
+          void revealClue(CLUE_TYPES[i]);
+        }}
+      />
     </div>
   );
 }

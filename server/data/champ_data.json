@@ -6,9 +6,32 @@
     "family_mastery": [],
     "cc_quantity": 49,
     "mobility": 106,
-    "randomness": 153,
+    "randomness": 150,
     "mean_hue": 12,
-    "name": "Annie"
+    "name": "Annie",
+    "intension": 54,
+    "vote": [
+      "Ne vote pas"
+    ],
+    "regime": [
+      "Fast food"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Milieu"
+    ],
+    "espece": [
+      "Humain,Né magique"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Noxus,Runeterra"
+    ],
+    "annee_sortie": "2009"
   },
   "kayle": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/10.png",
@@ -20,9 +43,32 @@
     ],
     "cc_quantity": 152,
     "mobility": 80,
-    "randomness": 151,
+    "randomness": 148,
     "mean_hue": 30,
-    "name": "Kayle"
+    "name": "Kayle",
+    "intension": 116,
+    "vote": [
+      "Extreme droite"
+    ],
+    "regime": [
+      "Haute gastronomie"
+    ],
+    "pilosite": [
+      "Mystère"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Haut"
+    ],
+    "espece": [
+      "Hôte,Humain,Altéré Magiquement"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée,À distance",
+    "region": [
+      "Demacia,Targon"
+    ],
+    "annee_sortie": "2009"
   },
   "xerath": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/101.png",
@@ -33,9 +79,32 @@
     ],
     "cc_quantity": 80,
     "mobility": 170,
-    "randomness": 131,
+    "randomness": 128,
     "mean_hue": 225,
-    "name": "Xerath"
+    "name": "Xerath",
+    "intension": 31,
+    "vote": [
+      "Extreme droite"
+    ],
+    "regime": [
+      "Ne mange pas"
+    ],
+    "pilosite": [
+      "Aucun poil"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Milieu,Support"
+    ],
+    "espece": [
+      "Baccai"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Shurima"
+    ],
+    "annee_sortie": "2011"
   },
   "shyvana": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/102.png",
@@ -46,9 +115,32 @@
     ],
     "cc_quantity": 145,
     "mobility": 111,
-    "randomness": 24,
+    "randomness": 25,
     "mean_hue": 341,
-    "name": "Shyvana"
+    "name": "Shyvana",
+    "intension": 115,
+    "vote": [
+      "Les verts"
+    ],
+    "regime": [
+      "Chasse"
+    ],
+    "pilosite": [
+      "Aucun poil"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Jungle"
+    ],
+    "espece": [
+      "Dragon,Altéré Magiquement"
+    ],
+    "ressource": "Furie",
+    "portee": "Mêlée",
+    "region": [
+      "Demacia"
+    ],
+    "annee_sortie": "2011"
   },
   "ahri": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/103.png",
@@ -59,9 +151,32 @@
     ],
     "cc_quantity": 48,
     "mobility": 24,
-    "randomness": 172,
+    "randomness": 170,
     "mean_hue": 260,
-    "name": "Ahri"
+    "name": "Ahri",
+    "intension": 73,
+    "vote": [
+      "Anarchiste"
+    ],
+    "regime": [
+      "Vegan"
+    ],
+    "pilosite": [
+      "Tas de poil"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Milieu"
+    ],
+    "espece": [
+      "Vastaya"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Ionia"
+    ],
+    "annee_sortie": "2011"
   },
   "graves": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/104.png",
@@ -72,9 +187,33 @@
     ],
     "cc_quantity": 143,
     "mobility": 75,
-    "randomness": 33,
+    "randomness": 35,
     "mean_hue": 356,
-    "name": "Graves"
+    "name": "Graves",
+    "intension": 121,
+    "vote": [
+      "Gauche"
+    ],
+    "regime": [
+      "Cuisine soi même",
+      "Chasse"
+    ],
+    "pilosite": [
+      "Belle moustache"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Jungle"
+    ],
+    "espece": [
+      "Humain"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Bilgewater"
+    ],
+    "annee_sortie": "2011"
   },
   "fizz": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/105.png",
@@ -85,9 +224,33 @@
     ],
     "cc_quantity": 123,
     "mobility": 61,
-    "randomness": 57,
+    "randomness": 62,
     "mean_hue": 205,
-    "name": "Fizz"
+    "name": "Fizz",
+    "intension": 118,
+    "vote": [
+      "Anarchiste"
+    ],
+    "regime": [
+      "Fast food",
+      "Est la nouriture"
+    ],
+    "pilosite": [
+      "Aucun poil"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Milieu"
+    ],
+    "espece": [
+      "Yordle"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Bilgewater"
+    ],
+    "annee_sortie": "2011"
   },
   "volibear": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/106.png",
@@ -96,9 +259,33 @@
     "family_mastery": [],
     "cc_quantity": 105,
     "mobility": 71,
-    "randomness": 113,
+    "randomness": 71,
     "mean_hue": 225,
-    "name": "Volibear"
+    "name": "Volibear",
+    "intension": 29,
+    "vote": [
+      "Les verts"
+    ],
+    "regime": [
+      "Mange des gens",
+      "Chasse"
+    ],
+    "pilosite": [
+      "Tas de poil"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Jungle,Haut"
+    ],
+    "espece": [
+      "Dieu,Esprit"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Freljord"
+    ],
+    "annee_sortie": "2011"
   },
   "rengar": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/107.png",
@@ -107,9 +294,32 @@
     "family_mastery": [],
     "cc_quantity": 128,
     "mobility": 72,
-    "randomness": 84,
+    "randomness": 58,
     "mean_hue": 150,
-    "name": "Rengar"
+    "name": "Rengar",
+    "intension": 22,
+    "vote": [
+      "Les verts"
+    ],
+    "regime": [
+      "Chasse"
+    ],
+    "pilosite": [
+      "Tas de poil"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Jungle"
+    ],
+    "espece": [
+      "Vastaya"
+    ],
+    "ressource": "Férocité",
+    "portee": "Mêlée",
+    "region": [
+      "Ixtal,Shurima"
+    ],
+    "annee_sortie": "2012"
   },
   "master yi": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/11.png",
@@ -120,9 +330,32 @@
     ],
     "cc_quantity": 167,
     "mobility": 66,
-    "randomness": 97,
+    "randomness": 163,
     "mean_hue": 60,
-    "name": "Master Yi"
+    "name": "Master Yi",
+    "intension": 126,
+    "vote": [
+      "Gauche"
+    ],
+    "regime": [
+      "Vegan"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Jungle"
+    ],
+    "espece": [
+      "Humain,Spiritualiste"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Ionia"
+    ],
+    "annee_sortie": "2009"
   },
   "varus": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/110.png",
@@ -133,9 +366,32 @@
     ],
     "cc_quantity": 32,
     "mobility": 166,
-    "randomness": 103,
+    "randomness": 101,
     "mean_hue": 274,
-    "name": "Varus"
+    "name": "Varus",
+    "intension": 64,
+    "vote": [
+      "idk"
+    ],
+    "regime": [
+      "Haute gastronomie"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Bas"
+    ],
+    "espece": [
+      "Darkin,Humain"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Ionia,Runeterra,Shurima"
+    ],
+    "annee_sortie": "2012"
   },
   "nautilus": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/111.png",
@@ -146,9 +402,32 @@
     ],
     "cc_quantity": 3,
     "mobility": 109,
-    "randomness": 82,
+    "randomness": 125,
     "mean_hue": 23,
-    "name": "Nautilus"
+    "name": "Nautilus",
+    "intension": 90,
+    "vote": [
+      "Anarchiste"
+    ],
+    "regime": [
+      "Ne mange pas"
+    ],
+    "pilosite": [
+      "Aucun poil"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Support"
+    ],
+    "espece": [
+      "Revenant"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Bilgewater"
+    ],
+    "annee_sortie": "2012"
   },
   "viktor": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/112.png",
@@ -160,9 +439,32 @@
     ],
     "cc_quantity": 112,
     "mobility": 141,
-    "randomness": 121,
+    "randomness": 135,
     "mean_hue": 213,
-    "name": "Viktor"
+    "name": "Viktor",
+    "intension": 109,
+    "vote": [
+      "Extreme droite"
+    ],
+    "regime": [
+      "Ne mange pas"
+    ],
+    "pilosite": [
+      "Mystère"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Milieu"
+    ],
+    "espece": [
+      "Cyborg,Humain"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Piltover,Zaun"
+    ],
+    "annee_sortie": "2011"
   },
   "sejuani": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/113.png",
@@ -174,9 +476,35 @@
     ],
     "cc_quantity": 12,
     "mobility": 130,
-    "randomness": 91,
+    "randomness": 97,
     "mean_hue": 240,
-    "name": "Sejuani"
+    "name": "Sejuani",
+    "intension": 101,
+    "vote": [
+      "Extreme droite"
+    ],
+    "regime": [
+      "Vegan",
+      "Cuisine soi même",
+      "Est la nouriture"
+    ],
+    "pilosite": [
+      "Tas de poil",
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Jungle"
+    ],
+    "espece": [
+      "Humain,Né de glace"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Freljord"
+    ],
+    "annee_sortie": "2012"
   },
   "fiora": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/114.png",
@@ -187,9 +515,32 @@
     ],
     "cc_quantity": 130,
     "mobility": 89,
-    "randomness": 56,
+    "randomness": 61,
     "mean_hue": 324,
-    "name": "Fiora"
+    "name": "Fiora",
+    "intension": 75,
+    "vote": [
+      "Extreme droite"
+    ],
+    "regime": [
+      "Haute gastronomie"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Haut"
+    ],
+    "espece": [
+      "Humain"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Demacia"
+    ],
+    "annee_sortie": "2012"
   },
   "ziggs": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/115.png",
@@ -201,9 +552,32 @@
     ],
     "cc_quantity": 83,
     "mobility": 87,
-    "randomness": 119,
+    "randomness": 114,
     "mean_hue": 18,
-    "name": "Ziggs"
+    "name": "Ziggs",
+    "intension": 65,
+    "vote": [
+      "Anarchiste"
+    ],
+    "regime": [
+      "Fast food"
+    ],
+    "pilosite": [
+      "Tas de poil"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Bas,Milieu"
+    ],
+    "espece": [
+      "Yordle"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Zaun"
+    ],
+    "annee_sortie": "2012"
   },
   "lulu": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/117.png",
@@ -214,9 +588,32 @@
     ],
     "cc_quantity": 28,
     "mobility": 135,
-    "randomness": 77,
+    "randomness": 107,
     "mean_hue": 317,
-    "name": "Lulu"
+    "name": "Lulu",
+    "intension": 162,
+    "vote": [
+      "Ne vote pas"
+    ],
+    "regime": [
+      "Fast food"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Support"
+    ],
+    "espece": [
+      "Yordle"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Bandle"
+    ],
+    "annee_sortie": "2012"
   },
   "draven": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/119.png",
@@ -227,9 +624,32 @@
     ],
     "cc_quantity": 156,
     "mobility": 128,
-    "randomness": 95,
+    "randomness": 130,
     "mean_hue": 354,
-    "name": "Draven"
+    "name": "Draven",
+    "intension": 45,
+    "vote": [
+      "Extreme droite"
+    ],
+    "regime": [
+      "Fast food"
+    ],
+    "pilosite": [
+      "Belle moustache"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Bas"
+    ],
+    "espece": [
+      "Humain"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Noxus"
+    ],
+    "annee_sortie": "2012"
   },
   "alistar": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/12.png",
@@ -238,9 +658,32 @@
     "family_mastery": [],
     "cc_quantity": 16,
     "mobility": 116,
-    "randomness": 147,
+    "randomness": 162,
     "mean_hue": 276,
-    "name": "Alistar"
+    "name": "Alistar",
+    "intension": 95,
+    "vote": [
+      "Les verts"
+    ],
+    "regime": [
+      "Mange des gens"
+    ],
+    "pilosite": [
+      "Tas de poil"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Support"
+    ],
+    "espece": [
+      "Minotaure"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Noxus,Runeterra"
+    ],
+    "annee_sortie": "2009"
   },
   "hecarim": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/120.png",
@@ -251,9 +694,33 @@
     ],
     "cc_quantity": 103,
     "mobility": 9,
-    "randomness": 59,
+    "randomness": 63,
     "mean_hue": 180,
-    "name": "Hecarim"
+    "name": "Hecarim",
+    "intension": 11,
+    "vote": [
+      "Anarchiste"
+    ],
+    "regime": [
+      "Mange des gens",
+      "Est la nouriture"
+    ],
+    "pilosite": [
+      "Aucun poil"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Jungle"
+    ],
+    "espece": [
+      "Mort-vivant"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Camavor,Îles Obscures"
+    ],
+    "annee_sortie": "2012"
   },
   "kha'zix": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/121.png",
@@ -262,9 +729,33 @@
     "family_mastery": [],
     "cc_quantity": 144,
     "mobility": 32,
-    "randomness": 67,
+    "randomness": 74,
     "mean_hue": 247,
-    "name": "Kha'Zix"
+    "name": "Kha'Zix",
+    "intension": 16,
+    "vote": [
+      "Ne vote pas"
+    ],
+    "regime": [
+      "Mange des gens",
+      "Chasse"
+    ],
+    "pilosite": [
+      "Aucun poil"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Jungle"
+    ],
+    "espece": [
+      "Être du néant"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Le Néant"
+    ],
+    "annee_sortie": "2012"
   },
   "darius": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/122.png",
@@ -276,9 +767,32 @@
     ],
     "cc_quantity": 133,
     "mobility": 152,
-    "randomness": 158,
+    "randomness": 154,
     "mean_hue": 352,
-    "name": "Darius"
+    "name": "Darius",
+    "intension": 57,
+    "vote": [
+      "Gauche"
+    ],
+    "regime": [
+      "Haute gastronomie"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Haut"
+    ],
+    "espece": [
+      "Humain"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Noxus"
+    ],
+    "annee_sortie": "2012"
   },
   "jayce": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/126.png",
@@ -287,9 +801,32 @@
     "family_mastery": [],
     "cc_quantity": 125,
     "mobility": 83,
-    "randomness": 35,
+    "randomness": 37,
     "mean_hue": 355,
-    "name": "Jayce"
+    "name": "Jayce",
+    "intension": 132,
+    "vote": [
+      "Extreme droite"
+    ],
+    "regime": [
+      "Haute gastronomie"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Jungle,Haut"
+    ],
+    "espece": [
+      "Humain"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée,À distance",
+    "region": [
+      "Piltover"
+    ],
+    "annee_sortie": "2012"
   },
   "lissandra": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/127.png",
@@ -298,9 +835,32 @@
     "family_mastery": [],
     "cc_quantity": 18,
     "mobility": 64,
-    "randomness": 16,
+    "randomness": 17,
     "mean_hue": 216,
-    "name": "Lissandra"
+    "name": "Lissandra",
+    "intension": 53,
+    "vote": [
+      "Extreme droite"
+    ],
+    "regime": [
+      "Haute gastronomie"
+    ],
+    "pilosite": [
+      "Mystère"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Milieu"
+    ],
+    "espece": [
+      "Humain,Né de glace"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Freljord"
+    ],
+    "annee_sortie": "2013"
   },
   "ryze": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/13.png",
@@ -309,9 +869,32 @@
     "family_mastery": [],
     "cc_quantity": 65,
     "mobility": 23,
-    "randomness": 104,
+    "randomness": 129,
     "mean_hue": 239,
-    "name": "Ryze"
+    "name": "Ryze",
+    "intension": 100,
+    "vote": [
+      "Extreme droite"
+    ],
+    "regime": [
+      "Cuisine soi même"
+    ],
+    "pilosite": [
+      "Chauve"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Milieu"
+    ],
+    "espece": [
+      "Humain,Altéré Magiquement"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Runeterra"
+    ],
+    "annee_sortie": "2009"
   },
   "diana": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/131.png",
@@ -322,9 +905,32 @@
     ],
     "cc_quantity": 120,
     "mobility": 125,
-    "randomness": 52,
+    "randomness": 55,
     "mean_hue": 295,
-    "name": "Diana"
+    "name": "Diana",
+    "intension": 74,
+    "vote": [
+      "Gauche"
+    ],
+    "regime": [
+      "Cuisine soi même"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Jungle,Milieu"
+    ],
+    "espece": [
+      "Hôte,Humain"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Targon"
+    ],
+    "annee_sortie": "2012"
   },
   "quinn": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/133.png",
@@ -335,7 +941,30 @@
     "mobility": 1,
     "randomness": 4,
     "mean_hue": 340,
-    "name": "Quinn"
+    "name": "Quinn",
+    "intension": 94,
+    "vote": [
+      "Les verts"
+    ],
+    "regime": [
+      "Chasse"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Haut"
+    ],
+    "espece": [
+      "Humain"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Demacia"
+    ],
+    "annee_sortie": "2013"
   },
   "syndra": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/134.png",
@@ -346,7 +975,30 @@
     "mobility": 163,
     "randomness": 11,
     "mean_hue": 282,
-    "name": "Syndra"
+    "name": "Syndra",
+    "intension": 103,
+    "vote": [
+      "Extreme droite"
+    ],
+    "regime": [
+      "Haute gastronomie"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Milieu"
+    ],
+    "espece": [
+      "Humain,Né magique"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Ionia"
+    ],
+    "annee_sortie": "2012"
   },
   "aurelion sol": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/136.png",
@@ -358,9 +1010,32 @@
     ],
     "cc_quantity": 38,
     "mobility": 26,
-    "randomness": 135,
+    "randomness": 113,
     "mean_hue": 235,
-    "name": "Aurelion Sol"
+    "name": "Aurelion Sol",
+    "intension": 89,
+    "vote": [
+      "Ne vote pas"
+    ],
+    "regime": [
+      "Ne mange pas"
+    ],
+    "pilosite": [
+      "Aucun poil"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Milieu"
+    ],
+    "espece": [
+      "Céleste,Dragon"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Runeterra,Targon"
+    ],
+    "annee_sortie": "2016"
   },
   "sion": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/14.png",
@@ -371,9 +1046,32 @@
     ],
     "cc_quantity": 61,
     "mobility": 39,
-    "randomness": 94,
+    "randomness": 138,
     "mean_hue": 340,
-    "name": "Sion"
+    "name": "Sion",
+    "intension": 24,
+    "vote": [
+      "Extreme droite"
+    ],
+    "regime": [
+      "Mange des gens"
+    ],
+    "pilosite": [
+      "Chauve"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Haut"
+    ],
+    "espece": [
+      "Revenant"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Noxus"
+    ],
+    "annee_sortie": "2009"
   },
   "kayn": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/141.png",
@@ -382,9 +1080,32 @@
     "family_mastery": [],
     "cc_quantity": 81,
     "mobility": 16,
-    "randomness": 22,
+    "randomness": 23,
     "mean_hue": 286,
-    "name": "Kayn"
+    "name": "Kayn",
+    "intension": 25,
+    "vote": [
+      "Extreme droite"
+    ],
+    "regime": [
+      "Fast food"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Jungle"
+    ],
+    "espece": [
+      "Darkin,Humain,Altéré Magiquement"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Ionia,Noxus,Runeterra,Shurima"
+    ],
+    "annee_sortie": "2017"
   },
   "zoe": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/142.png",
@@ -396,9 +1117,32 @@
     ],
     "cc_quantity": 47,
     "mobility": 55,
-    "randomness": 137,
+    "randomness": 111,
     "mean_hue": 353,
-    "name": "Zoe"
+    "name": "Zoe",
+    "intension": 150,
+    "vote": [
+      "Ne vote pas"
+    ],
+    "regime": [
+      "Fast food"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Milieu"
+    ],
+    "espece": [
+      "Hôte,Humain"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Targon"
+    ],
+    "annee_sortie": "2017"
   },
   "zyra": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/143.png",
@@ -407,9 +1151,32 @@
     "family_mastery": [],
     "cc_quantity": 42,
     "mobility": 172,
-    "randomness": 74,
+    "randomness": 44,
     "mean_hue": 1,
-    "name": "Zyra"
+    "name": "Zyra",
+    "intension": 59,
+    "vote": [
+      "Les verts"
+    ],
+    "regime": [
+      "Vegan"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Support"
+    ],
+    "espece": [
+      "Humain,Plante"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Ixtal"
+    ],
+    "annee_sortie": "2012"
   },
   "kai'sa": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/145.png",
@@ -421,9 +1188,33 @@
     ],
     "cc_quantity": 164,
     "mobility": 67,
-    "randomness": 161,
+    "randomness": 137,
     "mean_hue": 277,
-    "name": "Kai'Sa"
+    "name": "Kai'Sa",
+    "intension": 123,
+    "vote": [
+      "idk"
+    ],
+    "regime": [
+      "Cuisine soi même",
+      "Chasse"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Bas"
+    ],
+    "espece": [
+      "Humain,Être du néant"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Shurima,Le Néant"
+    ],
+    "annee_sortie": "2018"
   },
   "seraphine": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/147.png",
@@ -432,9 +1223,33 @@
     "family_mastery": [],
     "cc_quantity": 29,
     "mobility": 97,
-    "randomness": 41,
+    "randomness": 46,
     "mean_hue": 341,
-    "name": "Seraphine"
+    "name": "Seraphine",
+    "intension": 165,
+    "vote": [
+      "Gauche"
+    ],
+    "regime": [
+      "Haute gastronomie",
+      "Cuisine soi même"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Support"
+    ],
+    "espece": [
+      "Humain,Né magique"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Piltover,Zaun"
+    ],
+    "annee_sortie": "2020"
   },
   "sivir": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/15.png",
@@ -445,9 +1260,32 @@
     ],
     "cc_quantity": 162,
     "mobility": 77,
-    "randomness": 34,
+    "randomness": 36,
     "mean_hue": 21,
-    "name": "Sivir"
+    "name": "Sivir",
+    "intension": 127,
+    "vote": [
+      "Gauche"
+    ],
+    "regime": [
+      "Cuisine soi même"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Bas"
+    ],
+    "espece": [
+      "Humain"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Shurima"
+    ],
+    "annee_sortie": "2009"
   },
   "gnar": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/150.png",
@@ -458,9 +1296,32 @@
     ],
     "cc_quantity": 59,
     "mobility": 79,
-    "randomness": 27,
+    "randomness": 29,
     "mean_hue": 20,
-    "name": "Gnar"
+    "name": "Gnar",
+    "intension": 135,
+    "vote": [
+      "Ne vote pas"
+    ],
+    "regime": [
+      "Fouille les poubelles"
+    ],
+    "pilosite": [
+      "Tas de poil"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Haut"
+    ],
+    "espece": [
+      "Yordle"
+    ],
+    "ressource": "Rage",
+    "portee": "Mêlée,À distance",
+    "region": [
+      "Freljord"
+    ],
+    "annee_sortie": "2014"
   },
   "zac": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/154.png",
@@ -471,9 +1332,32 @@
     ],
     "cc_quantity": 13,
     "mobility": 10,
-    "randomness": 117,
+    "randomness": 141,
     "mean_hue": 125,
-    "name": "Zac"
+    "name": "Zac",
+    "intension": 167,
+    "vote": [
+      "Les verts"
+    ],
+    "regime": [
+      "Est la nouriture"
+    ],
+    "pilosite": [
+      "Aucun poil"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Jungle"
+    ],
+    "espece": [
+      "Golem"
+    ],
+    "ressource": "Coûts de santé",
+    "portee": "Mêlée",
+    "region": [
+      "Zaun"
+    ],
+    "annee_sortie": "2013"
   },
   "yasuo": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/157.png",
@@ -482,9 +1366,32 @@
     "family_mastery": [],
     "cc_quantity": 109,
     "mobility": 95,
-    "randomness": 167,
+    "randomness": 168,
     "mean_hue": 272,
-    "name": "Yasuo"
+    "name": "Yasuo",
+    "intension": 125,
+    "vote": [
+      "Gauche"
+    ],
+    "regime": [
+      "Fast food"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Milieu,Haut"
+    ],
+    "espece": [
+      "Humain,Né magique"
+    ],
+    "ressource": "Vent",
+    "portee": "Mêlée",
+    "region": [
+      "Ionia"
+    ],
+    "annee_sortie": "2013"
   },
   "soraka": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/16.png",
@@ -496,9 +1403,32 @@
     ],
     "cc_quantity": 104,
     "mobility": 119,
-    "randomness": 140,
+    "randomness": 124,
     "mean_hue": 300,
-    "name": "Soraka"
+    "name": "Soraka",
+    "intension": 166,
+    "vote": [
+      "Gauche"
+    ],
+    "regime": [
+      "Vegan"
+    ],
+    "pilosite": [
+      "Tas de poil"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Support"
+    ],
+    "espece": [
+      "Céleste"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Ionia,Targon"
+    ],
+    "annee_sortie": "2009"
   },
   "vel'koz": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/161.png",
@@ -510,9 +1440,32 @@
     ],
     "cc_quantity": 96,
     "mobility": 169,
-    "randomness": 138,
+    "randomness": 115,
     "mean_hue": 298,
-    "name": "Vel'Koz"
+    "name": "Vel'Koz",
+    "intension": 4,
+    "vote": [
+      "Anarchiste"
+    ],
+    "regime": [
+      "Mange de la \"nouriture\""
+    ],
+    "pilosite": [
+      "Aucun poil"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Milieu,Support"
+    ],
+    "espece": [
+      "Être du néant"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Le Néant"
+    ],
+    "annee_sortie": "2014"
   },
   "taliyah": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/163.png",
@@ -524,9 +1477,32 @@
     ],
     "cc_quantity": 97,
     "mobility": 14,
-    "randomness": 20,
+    "randomness": 21,
     "mean_hue": 12,
-    "name": "Taliyah"
+    "name": "Taliyah",
+    "intension": 143,
+    "vote": [
+      "Gauche"
+    ],
+    "regime": [
+      "Vegan"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Milieu"
+    ],
+    "espece": [
+      "Humain,Né magique"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Shurima"
+    ],
+    "annee_sortie": "2016"
   },
   "camille": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/164.png",
@@ -535,9 +1511,32 @@
     "family_mastery": [],
     "cc_quantity": 52,
     "mobility": 27,
-    "randomness": 50,
+    "randomness": 53,
     "mean_hue": 24,
-    "name": "Camille"
+    "name": "Camille",
+    "intension": 40,
+    "vote": [
+      "Extreme droite"
+    ],
+    "regime": [
+      "Haute gastronomie"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Haut"
+    ],
+    "espece": [
+      "Cyborg,Humain"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Piltover"
+    ],
+    "annee_sortie": "2016"
   },
   "akshan": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/166.png",
@@ -548,7 +1547,31 @@
     "mobility": 54,
     "randomness": 14,
     "mean_hue": 24,
-    "name": "Akshan"
+    "name": "Akshan",
+    "intension": 152,
+    "vote": [
+      "Anarchiste"
+    ],
+    "regime": [
+      "Fast food"
+    ],
+    "pilosite": [
+      "Belle moustache",
+      "Pilositée normale"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Milieu"
+    ],
+    "espece": [
+      "Humain"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Shurima"
+    ],
+    "annee_sortie": "2021"
   },
   "teemo": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/17.png",
@@ -562,9 +1585,32 @@
     ],
     "cc_quantity": 43,
     "mobility": 127,
-    "randomness": 170,
+    "randomness": 171,
     "mean_hue": 29,
-    "name": "Teemo"
+    "name": "Teemo",
+    "intension": 35,
+    "vote": [
+      "Extreme droite"
+    ],
+    "regime": [
+      "Chasse"
+    ],
+    "pilosite": [
+      "Tas de poil"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Haut"
+    ],
+    "espece": [
+      "Yordle"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Bandle"
+    ],
+    "annee_sortie": "2009"
   },
   "tristana": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/18.png",
@@ -576,9 +1622,32 @@
     ],
     "cc_quantity": 137,
     "mobility": 38,
-    "randomness": 149,
+    "randomness": 146,
     "mean_hue": 261,
-    "name": "Tristana"
+    "name": "Tristana",
+    "intension": 106,
+    "vote": [
+      "Gauche"
+    ],
+    "regime": [
+      "Fast food"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Bas"
+    ],
+    "espece": [
+      "Yordle"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Bandle"
+    ],
+    "annee_sortie": "2009"
   },
   "warwick": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/19.png",
@@ -589,7 +1658,31 @@
     "mobility": 43,
     "randomness": 136,
     "mean_hue": 114,
-    "name": "Warwick"
+    "name": "Warwick",
+    "intension": 10,
+    "vote": [
+      "Les verts"
+    ],
+    "regime": [
+      "Mange des gens",
+      "Chasse"
+    ],
+    "pilosite": [
+      "Tas de poil"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Jungle"
+    ],
+    "espece": [
+      "Altéré Chimiquement,Cyborg,Humain"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Zaun"
+    ],
+    "annee_sortie": "2009"
   },
   "olaf": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/2.png",
@@ -601,9 +1694,32 @@
     ],
     "cc_quantity": 146,
     "mobility": 101,
-    "randomness": 126,
+    "randomness": 65,
     "mean_hue": 48,
-    "name": "Olaf"
+    "name": "Olaf",
+    "intension": 91,
+    "vote": [
+      "idk"
+    ],
+    "regime": [
+      "Fast food"
+    ],
+    "pilosite": [
+      "Belle moustache"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Haut"
+    ],
+    "espece": [
+      "Humain,Né de glace"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Freljord"
+    ],
+    "annee_sortie": "2010"
   },
   "nunu & willump": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/20.png",
@@ -614,9 +1730,34 @@
     ],
     "cc_quantity": 94,
     "mobility": 8,
-    "randomness": 143,
+    "randomness": 142,
     "mean_hue": 253,
-    "name": "Nunu & Willump"
+    "name": "Nunu & Willump",
+    "intension": 170,
+    "vote": [
+      "Ne vote pas"
+    ],
+    "regime": [
+      "Fast food",
+      "Fouille les poubelles"
+    ],
+    "pilosite": [
+      "Tas de poil",
+      "Pilositée normale"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Jungle"
+    ],
+    "espece": [
+      "Humain,Yeti"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Freljord"
+    ],
+    "annee_sortie": "2009"
   },
   "bel'veth": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/200.png",
@@ -625,9 +1766,32 @@
     "family_mastery": [],
     "cc_quantity": 75,
     "mobility": 28,
-    "randomness": 26,
+    "randomness": 28,
     "mean_hue": 251,
-    "name": "Bel'Veth"
+    "name": "Bel'Veth",
+    "intension": 5,
+    "vote": [
+      "Extreme droite"
+    ],
+    "regime": [
+      "Mange des gens"
+    ],
+    "pilosite": [
+      "Aucun poil"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Jungle"
+    ],
+    "espece": [
+      "Être du néant"
+    ],
+    "ressource": "Sans Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Le Néant"
+    ],
+    "annee_sortie": "2022"
   },
   "braum": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/201.png",
@@ -638,9 +1802,33 @@
     ],
     "cc_quantity": 14,
     "mobility": 118,
-    "randomness": 49,
+    "randomness": 52,
     "mean_hue": 214,
-    "name": "Braum"
+    "name": "Braum",
+    "intension": 158,
+    "vote": [
+      "Gauche"
+    ],
+    "regime": [
+      "Cuisine soi même"
+    ],
+    "pilosite": [
+      "Belle moustache",
+      "Chauve"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Support"
+    ],
+    "espece": [
+      "Humain,Né de glace"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Freljord"
+    ],
+    "annee_sortie": "2014"
   },
   "jhin": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/202.png",
@@ -653,9 +1841,32 @@
     ],
     "cc_quantity": 114,
     "mobility": 134,
-    "randomness": 160,
+    "randomness": 143,
     "mean_hue": 290,
-    "name": "Jhin"
+    "name": "Jhin",
+    "intension": 12,
+    "vote": [
+      "Anarchiste"
+    ],
+    "regime": [
+      "Haute gastronomie"
+    ],
+    "pilosite": [
+      "Mystère"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Bas"
+    ],
+    "espece": [
+      "Humain,Spiritualiste"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Ionia"
+    ],
+    "annee_sortie": "2016"
   },
   "kindred": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/203.png",
@@ -666,9 +1877,33 @@
     ],
     "cc_quantity": 171,
     "mobility": 81,
-    "randomness": 69,
+    "randomness": 39,
     "mean_hue": 218,
-    "name": "Kindred"
+    "name": "Kindred",
+    "intension": 17,
+    "vote": [
+      "Ne vote pas"
+    ],
+    "regime": [
+      "Chasse",
+      "Mange de la \"nouriture\""
+    ],
+    "pilosite": [
+      "Tas de poil"
+    ],
+    "genre": "Autre",
+    "role": [
+      "Jungle"
+    ],
+    "espece": [
+      "Dieu,Esprit"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Runeterra"
+    ],
+    "annee_sortie": "2015"
   },
   "miss fortune": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/21.png",
@@ -681,9 +1916,32 @@
     ],
     "cc_quantity": 136,
     "mobility": 112,
-    "randomness": 142,
+    "randomness": 140,
     "mean_hue": 15,
-    "name": "Miss Fortune"
+    "name": "Miss Fortune",
+    "intension": 51,
+    "vote": [
+      "Anarchiste"
+    ],
+    "regime": [
+      "Haute gastronomie"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Bas"
+    ],
+    "espece": [
+      "Humain"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Bilgewater"
+    ],
+    "annee_sortie": "2010"
   },
   "ashe": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/22.png",
@@ -697,9 +1955,32 @@
     ],
     "cc_quantity": 8,
     "mobility": 149,
-    "randomness": 154,
+    "randomness": 151,
     "mean_hue": 246,
-    "name": "Ashe"
+    "name": "Ashe",
+    "intension": 71,
+    "vote": [
+      "idk"
+    ],
+    "regime": [
+      "Cuisine soi même"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Bas"
+    ],
+    "espece": [
+      "Humain,Né de glace"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Freljord"
+    ],
+    "annee_sortie": "2009"
   },
   "zeri": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/221.png",
@@ -710,9 +1991,32 @@
     ],
     "cc_quantity": 154,
     "mobility": 47,
-    "randomness": 32,
+    "randomness": 34,
     "mean_hue": 63,
-    "name": "Zeri"
+    "name": "Zeri",
+    "intension": 147,
+    "vote": [
+      "Gauche"
+    ],
+    "regime": [
+      "Vegan"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Bas"
+    ],
+    "espece": [
+      "Humain,Né magique"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Zaun"
+    ],
+    "annee_sortie": "2022"
   },
   "jinx": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/222.png",
@@ -725,9 +2029,32 @@
     ],
     "cc_quantity": 116,
     "mobility": 84,
-    "randomness": 171,
+    "randomness": 172,
     "mean_hue": 253,
-    "name": "Jinx"
+    "name": "Jinx",
+    "intension": 34,
+    "vote": [
+      "Anarchiste"
+    ],
+    "regime": [
+      "Fast food"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Bas"
+    ],
+    "espece": [
+      "Altéré Chimiquement,Humain"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Zaun"
+    ],
+    "annee_sortie": "2013"
   },
   "tahm kench": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/223.png",
@@ -738,9 +2065,39 @@
     ],
     "cc_quantity": 27,
     "mobility": 36,
-    "randomness": 102,
+    "randomness": 43,
     "mean_hue": 30,
-    "name": "Tahm Kench"
+    "name": "Tahm Kench",
+    "intension": 104,
+    "vote": [
+      "Anarchiste"
+    ],
+    "regime": [
+      "Haute gastronomie",
+      "Fast food",
+      "Cuisine soi même",
+      "Fouille les poubelles",
+      "Mange des gens",
+      "Chasse",
+      "Mange de la \"nouriture\"",
+      "Est la nouriture"
+    ],
+    "pilosite": [
+      "Aucun poil"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Support,Haut"
+    ],
+    "espece": [
+      "Démon,Esprit"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Bilgewater,Runeterra"
+    ],
+    "annee_sortie": "2015"
   },
   "tryndamere": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/23.png",
@@ -751,9 +2108,32 @@
     ],
     "cc_quantity": 108,
     "mobility": 48,
-    "randomness": 128,
+    "randomness": 120,
     "mean_hue": 79,
-    "name": "Tryndamere"
+    "name": "Tryndamere",
+    "intension": 107,
+    "vote": [
+      "idk"
+    ],
+    "regime": [
+      "Fast food"
+    ],
+    "pilosite": [
+      "Belle moustache"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Haut"
+    ],
+    "espece": [
+      "Humain,Altéré Magiquement"
+    ],
+    "ressource": "Furie",
+    "portee": "Mêlée",
+    "region": [
+      "Freljord"
+    ],
+    "annee_sortie": "2009"
   },
   "briar": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/233.png",
@@ -762,9 +2142,33 @@
     "family_mastery": [],
     "cc_quantity": 124,
     "mobility": 50,
-    "randomness": 18,
+    "randomness": 19,
     "mean_hue": 254,
-    "name": "Briar"
+    "name": "Briar",
+    "intension": 32,
+    "vote": [
+      "Anarchiste"
+    ],
+    "regime": [
+      "Mange des gens",
+      "Chasse"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Jungle"
+    ],
+    "espece": [
+      "Golem"
+    ],
+    "ressource": "Coûts de santé",
+    "portee": "Mêlée",
+    "region": [
+      "Noxus"
+    ],
+    "annee_sortie": "2023"
   },
   "viego": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/234.png",
@@ -773,9 +2177,32 @@
     "family_mastery": [],
     "cc_quantity": 119,
     "mobility": 124,
-    "randomness": 130,
+    "randomness": 132,
     "mean_hue": 211,
-    "name": "Viego"
+    "name": "Viego",
+    "intension": 28,
+    "vote": [
+      "Extreme droite"
+    ],
+    "regime": [
+      "Haute gastronomie"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Jungle"
+    ],
+    "espece": [
+      "Mort-vivant"
+    ],
+    "ressource": "Sans Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Camavor,Îles Obscures"
+    ],
+    "annee_sortie": "2021"
   },
   "senna": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/235.png",
@@ -784,9 +2211,32 @@
     "family_mastery": [],
     "cc_quantity": 107,
     "mobility": 139,
-    "randomness": 28,
+    "randomness": 30,
     "mean_hue": 261,
-    "name": "Senna"
+    "name": "Senna",
+    "intension": 105,
+    "vote": [
+      "Gauche"
+    ],
+    "regime": [
+      "Haute gastronomie"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Support"
+    ],
+    "espece": [
+      "Humain,Mort-vivant"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Îles Obscures"
+    ],
+    "annee_sortie": "2019"
   },
   "lucian": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/236.png",
@@ -798,9 +2248,32 @@
     ],
     "cc_quantity": 161,
     "mobility": 62,
-    "randomness": 78,
+    "randomness": 82,
     "mean_hue": 352,
-    "name": "Lucian"
+    "name": "Lucian",
+    "intension": 137,
+    "vote": [
+      "idk"
+    ],
+    "regime": [
+      "Haute gastronomie"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Bas"
+    ],
+    "espece": [
+      "Humain"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Demacia,Îles Obscures"
+    ],
+    "annee_sortie": "2013"
   },
   "zed": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/238.png",
@@ -811,7 +2284,30 @@
     "mobility": 56,
     "randomness": 139,
     "mean_hue": 17,
-    "name": "Zed"
+    "name": "Zed",
+    "intension": 37,
+    "vote": [
+      "Extreme droite"
+    ],
+    "regime": [
+      "Haute gastronomie"
+    ],
+    "pilosite": [
+      "Mystère"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Jungle,Milieu"
+    ],
+    "espece": [
+      "Humain,Altéré Magiquement"
+    ],
+    "ressource": "Énergie",
+    "portee": "Mêlée",
+    "region": [
+      "Ionia"
+    ],
+    "annee_sortie": "2012"
   },
   "jax": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/24.png",
@@ -822,9 +2318,32 @@
     ],
     "cc_quantity": 74,
     "mobility": 40,
-    "randomness": 118,
+    "randomness": 112,
     "mean_hue": 257,
-    "name": "Jax"
+    "name": "Jax",
+    "intension": 79,
+    "vote": [
+      "Ne vote pas"
+    ],
+    "regime": [
+      "Vegan"
+    ],
+    "pilosite": [
+      "Mystère"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Jungle,Haut"
+    ],
+    "espece": [
+      "Inconnu"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Icathia,Runeterra,Shurima"
+    ],
+    "annee_sortie": "2009"
   },
   "kled": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/240.png",
@@ -835,7 +2354,31 @@
     "mobility": 51,
     "randomness": 3,
     "mean_hue": 2,
-    "name": "Kled"
+    "name": "Kled",
+    "intension": 62,
+    "vote": [
+      "Extreme droite"
+    ],
+    "regime": [
+      "Fast food"
+    ],
+    "pilosite": [
+      "Belle moustache",
+      "Tas de poil"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Haut"
+    ],
+    "espece": [
+      "Yordle"
+    ],
+    "ressource": "Courage",
+    "portee": "Mêlée",
+    "region": [
+      "Noxus"
+    ],
+    "annee_sortie": "2016"
   },
   "ekko": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/245.png",
@@ -846,9 +2389,32 @@
     ],
     "cc_quantity": 90,
     "mobility": 76,
-    "randomness": 120,
+    "randomness": 165,
     "mean_hue": 289,
-    "name": "Ekko"
+    "name": "Ekko",
+    "intension": 138,
+    "vote": [
+      "Anarchiste"
+    ],
+    "regime": [
+      "Fast food"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Jungle,Milieu"
+    ],
+    "espece": [
+      "Humain"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Zaun"
+    ],
+    "annee_sortie": "2015"
   },
   "qiyana": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/246.png",
@@ -859,7 +2425,30 @@
     "mobility": 96,
     "randomness": 7,
     "mean_hue": 7,
-    "name": "Qiyana"
+    "name": "Qiyana",
+    "intension": 81,
+    "vote": [
+      "Extreme droite"
+    ],
+    "regime": [
+      "Haute gastronomie"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Jungle,Milieu"
+    ],
+    "espece": [
+      "Humain,Né magique"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Ixtal"
+    ],
+    "annee_sortie": "2019"
   },
   "morgana": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/25.png",
@@ -871,9 +2460,32 @@
     ],
     "cc_quantity": 1,
     "mobility": 145,
-    "randomness": 163,
+    "randomness": 157,
     "mean_hue": 300,
-    "name": "Morgana"
+    "name": "Morgana",
+    "intension": 67,
+    "vote": [
+      "Gauche"
+    ],
+    "regime": [
+      "Haute gastronomie"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Milieu,Support"
+    ],
+    "espece": [
+      "Hôte,Humain,Altéré Magiquement"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Demacia,Targon"
+    ],
+    "annee_sortie": "2009"
   },
   "vi": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/254.png",
@@ -882,9 +2494,33 @@
     "family_mastery": [],
     "cc_quantity": 79,
     "mobility": 22,
-    "randomness": 145,
+    "randomness": 158,
     "mean_hue": 344,
-    "name": "Vi"
+    "name": "Vi",
+    "intension": 66,
+    "vote": [
+      "Extreme droite"
+    ],
+    "regime": [
+      "Fast food",
+      "Mange de la \"nouriture\""
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Jungle"
+    ],
+    "espece": [
+      "Humain"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Piltover,Zaun"
+    ],
+    "annee_sortie": "2012"
   },
   "zilean": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/26.png",
@@ -896,9 +2532,32 @@
     ],
     "cc_quantity": 36,
     "mobility": 31,
-    "randomness": 45,
+    "randomness": 49,
     "mean_hue": 210,
-    "name": "Zilean"
+    "name": "Zilean",
+    "intension": 149,
+    "vote": [
+      "Gauche"
+    ],
+    "regime": [
+      "Haute gastronomie"
+    ],
+    "pilosite": [
+      "Belle moustache"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Support"
+    ],
+    "espece": [
+      "Humain,Né magique"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Icathia,Runeterra,Shurima"
+    ],
+    "annee_sortie": "2009"
   },
   "aatrox": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/266.png",
@@ -907,9 +2566,32 @@
     "family_mastery": [],
     "cc_quantity": 45,
     "mobility": 115,
-    "randomness": 40,
+    "randomness": 45,
     "mean_hue": 339,
-    "name": "Aatrox"
+    "name": "Aatrox",
+    "intension": 7,
+    "vote": [
+      "Anarchiste"
+    ],
+    "regime": [
+      "Mange des gens"
+    ],
+    "pilosite": [
+      "Aucun poil"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Haut"
+    ],
+    "espece": [
+      "Darkin"
+    ],
+    "ressource": "Sans Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Runeterra,Shurima"
+    ],
+    "annee_sortie": "2013"
   },
   "nami": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/267.png",
@@ -920,9 +2602,33 @@
     ],
     "cc_quantity": 23,
     "mobility": 103,
-    "randomness": 93,
+    "randomness": 98,
     "mean_hue": 176,
-    "name": "Nami"
+    "name": "Nami",
+    "intension": 88,
+    "vote": [
+      "Les verts"
+    ],
+    "regime": [
+      "Chasse",
+      "Est la nouriture"
+    ],
+    "pilosite": [
+      "Aucun poil"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Support"
+    ],
+    "espece": [
+      "Vastaya"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Bilgewater,Runeterra"
+    ],
+    "annee_sortie": "2012"
   },
   "azir": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/268.png",
@@ -933,9 +2639,32 @@
     ],
     "cc_quantity": 99,
     "mobility": 19,
-    "randomness": 44,
+    "randomness": 48,
     "mean_hue": 24,
-    "name": "Azir"
+    "name": "Azir",
+    "intension": 146,
+    "vote": [
+      "Extreme droite"
+    ],
+    "regime": [
+      "Ne mange pas"
+    ],
+    "pilosite": [
+      "Mystère"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Milieu"
+    ],
+    "espece": [
+      "Dieu-Guerrier"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Shurima"
+    ],
+    "annee_sortie": "2014"
   },
   "singed": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/27.png",
@@ -947,9 +2676,32 @@
     ],
     "cc_quantity": 92,
     "mobility": 21,
-    "randomness": 92,
+    "randomness": 133,
     "mean_hue": 35,
-    "name": "Singed"
+    "name": "Singed",
+    "intension": 39,
+    "vote": [
+      "Anarchiste"
+    ],
+    "regime": [
+      "Cuisine soi même"
+    ],
+    "pilosite": [
+      "Chauve"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Haut"
+    ],
+    "espece": [
+      "Altéré Chimiquement,Humain"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Piltover,Zaun"
+    ],
+    "annee_sortie": "2009"
   },
   "evelynn": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/28.png",
@@ -960,9 +2712,33 @@
     ],
     "cc_quantity": 73,
     "mobility": 129,
-    "randomness": 54,
+    "randomness": 57,
     "mean_hue": 261,
-    "name": "Evelynn"
+    "name": "Evelynn",
+    "intension": 8,
+    "vote": [
+      "Extreme droite"
+    ],
+    "regime": [
+      "Chasse",
+      "Mange de la \"nouriture\""
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Jungle"
+    ],
+    "espece": [
+      "Démon,Esprit"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Runeterra"
+    ],
+    "annee_sortie": "2009"
   },
   "twitch": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/29.png",
@@ -971,9 +2747,32 @@
     "family_mastery": [],
     "cc_quantity": 148,
     "mobility": 123,
-    "randomness": 111,
+    "randomness": 85,
     "mean_hue": 107,
-    "name": "Twitch"
+    "name": "Twitch",
+    "intension": 27,
+    "vote": [
+      "Anarchiste"
+    ],
+    "regime": [
+      "Fouille les poubelles"
+    ],
+    "pilosite": [
+      "Tas de poil"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Bas"
+    ],
+    "espece": [
+      "Altéré Chimiquement,Rat"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Zaun"
+    ],
+    "annee_sortie": "2009"
   },
   "galio": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/3.png",
@@ -984,9 +2783,32 @@
     ],
     "cc_quantity": 41,
     "mobility": 18,
-    "randomness": 58,
+    "randomness": 93,
     "mean_hue": 218,
-    "name": "Galio"
+    "name": "Galio",
+    "intension": 159,
+    "vote": [
+      "Gauche"
+    ],
+    "regime": [
+      "Ne mange pas"
+    ],
+    "pilosite": [
+      "Aucun poil"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Milieu"
+    ],
+    "espece": [
+      "Golem"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Demacia"
+    ],
+    "annee_sortie": "2010"
   },
   "karthus": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/30.png",
@@ -998,9 +2820,32 @@
     ],
     "cc_quantity": 126,
     "mobility": 155,
-    "randomness": 66,
+    "randomness": 73,
     "mean_hue": 199,
-    "name": "Karthus"
+    "name": "Karthus",
+    "intension": 15,
+    "vote": [
+      "Extreme droite"
+    ],
+    "regime": [
+      "Ne mange pas"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Jungle"
+    ],
+    "espece": [
+      "Mort-vivant"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Noxus,Îles Obscures"
+    ],
+    "annee_sortie": "2009"
   },
   "cho'gath": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/31.png",
@@ -1014,9 +2859,32 @@
     ],
     "cc_quantity": 37,
     "mobility": 151,
-    "randomness": 152,
+    "randomness": 149,
     "mean_hue": 259,
-    "name": "Cho'Gath"
+    "name": "Cho'Gath",
+    "intension": 1,
+    "vote": [
+      "Anarchiste"
+    ],
+    "regime": [
+      "Mange des gens"
+    ],
+    "pilosite": [
+      "Aucun poil"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Haut"
+    ],
+    "espece": [
+      "Être du néant"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Le Néant"
+    ],
+    "annee_sortie": "2009"
   },
   "amumu": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/32.png",
@@ -1027,9 +2895,32 @@
     ],
     "cc_quantity": 7,
     "mobility": 86,
-    "randomness": 150,
+    "randomness": 147,
     "mean_hue": 102,
-    "name": "Amumu"
+    "name": "Amumu",
+    "intension": 172,
+    "vote": [
+      "Ne vote pas"
+    ],
+    "regime": [
+      "Ne mange pas"
+    ],
+    "pilosite": [
+      "Mystère"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Jungle"
+    ],
+    "espece": [
+      "Mort-vivant,Yordle"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Shurima"
+    ],
+    "annee_sortie": "2009"
   },
   "rammus": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/33.png",
@@ -1040,9 +2931,34 @@
     ],
     "cc_quantity": 24,
     "mobility": 7,
-    "randomness": 133,
+    "randomness": 131,
     "mean_hue": 34,
-    "name": "Rammus"
+    "name": "Rammus",
+    "intension": 164,
+    "vote": [
+      "Ne vote pas"
+    ],
+    "regime": [
+      "Vegan",
+      "Fouille les poubelles",
+      "Est la nouriture"
+    ],
+    "pilosite": [
+      "Aucun poil"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Jungle"
+    ],
+    "espece": [
+      "Inconnu"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Shurima"
+    ],
+    "annee_sortie": "2009"
   },
   "anivia": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/34.png",
@@ -1053,9 +2969,32 @@
     ],
     "cc_quantity": 17,
     "mobility": 147,
-    "randomness": 127,
+    "randomness": 118,
     "mean_hue": 210,
-    "name": "Anivia"
+    "name": "Anivia",
+    "intension": 70,
+    "vote": [
+      "idk"
+    ],
+    "regime": [
+      "Est la nouriture"
+    ],
+    "pilosite": [
+      "Aucun poil"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Milieu"
+    ],
+    "espece": [
+      "Dieu,Esprit"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Freljord"
+    ],
+    "annee_sortie": "2009"
   },
   "shaco": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/35.png",
@@ -1067,9 +3006,32 @@
     ],
     "cc_quantity": 15,
     "mobility": 33,
-    "randomness": 141,
+    "randomness": 69,
     "mean_hue": 334,
-    "name": "Shaco"
+    "name": "Shaco",
+    "intension": 23,
+    "vote": [
+      "Anarchiste"
+    ],
+    "regime": [
+      "Ne mange pas"
+    ],
+    "pilosite": [
+      "Aucun poil"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Jungle,Support"
+    ],
+    "espece": [
+      "Esprit"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Runeterra"
+    ],
+    "annee_sortie": "2009"
   },
   "yuumi": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/350.png",
@@ -1078,9 +3040,33 @@
     "family_mastery": [],
     "cc_quantity": 122,
     "mobility": 148,
-    "randomness": 134,
+    "randomness": 86,
     "mean_hue": 271,
-    "name": "Yuumi"
+    "name": "Yuumi",
+    "intension": 168,
+    "vote": [
+      "Ne vote pas"
+    ],
+    "regime": [
+      "Fouille les poubelles",
+      "Est la nouriture"
+    ],
+    "pilosite": [
+      "Tas de poil"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Support"
+    ],
+    "espece": [
+      "Chat,Altéré Magiquement"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Bandle"
+    ],
+    "annee_sortie": "2019"
   },
   "dr mundo": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/36.png",
@@ -1091,9 +3077,34 @@
     ],
     "cc_quantity": 147,
     "mobility": 126,
-    "randomness": 157,
+    "randomness": 153,
     "mean_hue": 255,
-    "name": "Dr. Mundo"
+    "name": "Dr. Mundo",
+    "intension": 153,
+    "vote": [
+      "Gauche"
+    ],
+    "regime": [
+      "Fast food",
+      "Fouille les poubelles",
+      "Mange des gens"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Jungle,Haut"
+    ],
+    "espece": [
+      "Altéré Chimiquement,Humain"
+    ],
+    "ressource": "Coûts de santé",
+    "portee": "Mêlée",
+    "region": [
+      "Zaun"
+    ],
+    "annee_sortie": "2009"
   },
   "samira": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/360.png",
@@ -1104,9 +3115,32 @@
     ],
     "cc_quantity": 168,
     "mobility": 140,
-    "randomness": 89,
+    "randomness": 70,
     "mean_hue": 1,
-    "name": "Samira"
+    "name": "Samira",
+    "intension": 63,
+    "vote": [
+      "idk"
+    ],
+    "regime": [
+      "Cuisine soi même"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Bas"
+    ],
+    "espece": [
+      "Humain"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Noxus,Shurima"
+    ],
+    "annee_sortie": "2020"
   },
   "sona": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/37.png",
@@ -1115,9 +3149,32 @@
     "family_mastery": [],
     "cc_quantity": 87,
     "mobility": 58,
-    "randomness": 110,
+    "randomness": 127,
     "mean_hue": 300,
-    "name": "Sona"
+    "name": "Sona",
+    "intension": 142,
+    "vote": [
+      "Gauche"
+    ],
+    "regime": [
+      "Haute gastronomie"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Support"
+    ],
+    "espece": [
+      "Humain,Né magique"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Demacia,Ionia"
+    ],
+    "annee_sortie": "2010"
   },
   "kassadin": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/38.png",
@@ -1126,9 +3183,32 @@
     "family_mastery": [],
     "cc_quantity": 149,
     "mobility": 3,
-    "randomness": 124,
+    "randomness": 117,
     "mean_hue": 267,
-    "name": "Kassadin"
+    "name": "Kassadin",
+    "intension": 60,
+    "vote": [
+      "Extreme droite"
+    ],
+    "regime": [
+      "Chasse"
+    ],
+    "pilosite": [
+      "Mystère"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Milieu"
+    ],
+    "espece": [
+      "Humain,Être du néant"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Shurima,Le Néant"
+    ],
+    "annee_sortie": "2009"
   },
   "irelia": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/39.png",
@@ -1139,9 +3219,32 @@
     ],
     "cc_quantity": 67,
     "mobility": 11,
-    "randomness": 123,
+    "randomness": 116,
     "mean_hue": 327,
-    "name": "Irelia"
+    "name": "Irelia",
+    "intension": 120,
+    "vote": [
+      "Extreme droite"
+    ],
+    "regime": [
+      "Haute gastronomie"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Milieu,Haut"
+    ],
+    "espece": [
+      "Humain,Spiritualiste"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Ionia"
+    ],
+    "annee_sortie": "2010"
   },
   "twisted fate": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/4.png",
@@ -1153,9 +3256,32 @@
     ],
     "cc_quantity": 30,
     "mobility": 4,
-    "randomness": 129,
+    "randomness": 121,
     "mean_hue": 351,
-    "name": "Twisted Fate"
+    "name": "Twisted Fate",
+    "intension": 108,
+    "vote": [
+      "Gauche"
+    ],
+    "regime": [
+      "Cuisine soi même"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Milieu"
+    ],
+    "espece": [
+      "Humain,Né magique"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Bilgewater"
+    ],
+    "annee_sortie": "2009"
   },
   "janna": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/40.png",
@@ -1166,9 +3292,32 @@
     ],
     "cc_quantity": 68,
     "mobility": 30,
-    "randomness": 62,
+    "randomness": 88,
     "mean_hue": 272,
-    "name": "Janna"
+    "name": "Janna",
+    "intension": 77,
+    "vote": [
+      "Les verts"
+    ],
+    "regime": [
+      "Haute gastronomie"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Support"
+    ],
+    "espece": [
+      "Dieu,Esprit"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Shurima,Zaun"
+    ],
+    "annee_sortie": "2009"
   },
   "gangplank": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/41.png",
@@ -1177,9 +3326,32 @@
     "family_mastery": [],
     "cc_quantity": 142,
     "mobility": 132,
-    "randomness": 39,
+    "randomness": 41,
     "mean_hue": 35,
-    "name": "Gangplank"
+    "name": "Gangplank",
+    "intension": 49,
+    "vote": [
+      "Anarchiste"
+    ],
+    "regime": [
+      "Fast food"
+    ],
+    "pilosite": [
+      "Belle moustache"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Haut"
+    ],
+    "espece": [
+      "Humain"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Bilgewater"
+    ],
+    "annee_sortie": "2009"
   },
   "thresh": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/412.png",
@@ -1190,9 +3362,32 @@
     ],
     "cc_quantity": 5,
     "mobility": 165,
-    "randomness": 169,
+    "randomness": 166,
     "mean_hue": 149,
-    "name": "Thresh"
+    "name": "Thresh",
+    "intension": 33,
+    "vote": [
+      "Extreme droite"
+    ],
+    "regime": [
+      "Mange de la \"nouriture\""
+    ],
+    "pilosite": [
+      "Aucun poil"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Support"
+    ],
+    "espece": [
+      "Mort-vivant"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Îles Obscures"
+    ],
+    "annee_sortie": "2013"
   },
   "corki": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/42.png",
@@ -1203,7 +3398,30 @@
     "mobility": 46,
     "randomness": 2,
     "mean_hue": 17,
-    "name": "Corki"
+    "name": "Corki",
+    "intension": 129,
+    "vote": [
+      "Gauche"
+    ],
+    "regime": [
+      "Haute gastronomie"
+    ],
+    "pilosite": [
+      "Belle moustache"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Bas"
+    ],
+    "espece": [
+      "Yordle"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Bandle,Piltover"
+    ],
+    "annee_sortie": "2009"
   },
   "illaoi": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/420.png",
@@ -1214,9 +3432,32 @@
     ],
     "cc_quantity": 82,
     "mobility": 154,
-    "randomness": 60,
+    "randomness": 81,
     "mean_hue": 33,
-    "name": "Illaoi"
+    "name": "Illaoi",
+    "intension": 76,
+    "vote": [
+      "Gauche"
+    ],
+    "regime": [
+      "Fast food"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Haut"
+    ],
+    "espece": [
+      "Humain,Spiritualiste"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Bilgewater"
+    ],
+    "annee_sortie": "2015"
   },
   "rek'sai": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/421.png",
@@ -1225,9 +3466,33 @@
     "family_mastery": [],
     "cc_quantity": 111,
     "mobility": 35,
-    "randomness": 23,
+    "randomness": 24,
     "mean_hue": 238,
-    "name": "Rek'Sai"
+    "name": "Rek'Sai",
+    "intension": 2,
+    "vote": [
+      "Ne vote pas"
+    ],
+    "regime": [
+      "Mange des gens",
+      "Chasse"
+    ],
+    "pilosite": [
+      "Aucun poil"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Jungle"
+    ],
+    "espece": [
+      "Être du néant"
+    ],
+    "ressource": "Rage",
+    "portee": "Mêlée",
+    "region": [
+      "Shurima,Le Néant"
+    ],
+    "annee_sortie": "2014"
   },
   "ivern": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/427.png",
@@ -1238,9 +3503,33 @@
     ],
     "cc_quantity": 64,
     "mobility": 85,
-    "randomness": 13,
+    "randomness": 15,
     "mean_hue": 54,
-    "name": "Ivern"
+    "name": "Ivern",
+    "intension": 171,
+    "vote": [
+      "Les verts"
+    ],
+    "regime": [
+      "Vegan",
+      "Ne mange pas"
+    ],
+    "pilosite": [
+      "Mystère"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Jungle"
+    ],
+    "espece": [
+      "Humain,Altéré Magiquement"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Freljord,Ionia"
+    ],
+    "annee_sortie": "2016"
   },
   "kalista": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/429.png",
@@ -1249,9 +3538,32 @@
     "family_mastery": [],
     "cc_quantity": 157,
     "mobility": 73,
-    "randomness": 15,
+    "randomness": 16,
     "mean_hue": 197,
-    "name": "Kalista"
+    "name": "Kalista",
+    "intension": 13,
+    "vote": [
+      "Extreme droite"
+    ],
+    "regime": [
+      "Ne mange pas"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Bas"
+    ],
+    "espece": [
+      "Mort-vivant"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Camavor,Îles Obscures"
+    ],
+    "annee_sortie": "2014"
   },
   "karma": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/43.png",
@@ -1262,9 +3574,32 @@
     ],
     "cc_quantity": 66,
     "mobility": 44,
-    "randomness": 65,
+    "randomness": 72,
     "mean_hue": 132,
-    "name": "Karma"
+    "name": "Karma",
+    "intension": 133,
+    "vote": [
+      "Les verts"
+    ],
+    "regime": [
+      "Vegan"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Support"
+    ],
+    "espece": [
+      "Humain,Spiritualiste"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Ionia"
+    ],
+    "annee_sortie": "2011"
   },
   "bard": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/432.png",
@@ -1275,9 +3610,32 @@
     ],
     "cc_quantity": 39,
     "mobility": 25,
-    "randomness": 47,
+    "randomness": 51,
     "mean_hue": 30,
-    "name": "Bard"
+    "name": "Bard",
+    "intension": 156,
+    "vote": [
+      "Ne vote pas"
+    ],
+    "regime": [
+      "Ne mange pas"
+    ],
+    "pilosite": [
+      "Tas de poil"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Support"
+    ],
+    "espece": [
+      "Céleste"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Runeterra"
+    ],
+    "annee_sortie": "2015"
   },
   "taric": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/44.png",
@@ -1288,9 +3646,33 @@
     ],
     "cc_quantity": 69,
     "mobility": 164,
-    "randomness": 99,
+    "randomness": 100,
     "mean_hue": 270,
-    "name": "Taric"
+    "name": "Taric",
+    "intension": 160,
+    "vote": [
+      "Gauche"
+    ],
+    "regime": [
+      "Haute gastronomie",
+      "Mange de la \"nouriture\""
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Support"
+    ],
+    "espece": [
+      "Hôte,Humain"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Demacia,Targon"
+    ],
+    "annee_sortie": "2009"
   },
   "veigar": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/45.png",
@@ -1304,9 +3686,32 @@
     ],
     "cc_quantity": 33,
     "mobility": 168,
-    "randomness": 168,
+    "randomness": 161,
     "mean_hue": 288,
-    "name": "Veigar"
+    "name": "Veigar",
+    "intension": 36,
+    "vote": [
+      "Vote pour qui on lui dit de voter"
+    ],
+    "regime": [
+      "Vegan"
+    ],
+    "pilosite": [
+      "Mystère"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Milieu"
+    ],
+    "espece": [
+      "Yordle"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Bandle,Runeterra,Îles Obscures"
+    ],
+    "annee_sortie": "2009"
   },
   "trundle": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/48.png",
@@ -1315,9 +3720,34 @@
     "family_mastery": [],
     "cc_quantity": 101,
     "mobility": 41,
-    "randomness": 96,
+    "randomness": 66,
     "mean_hue": 243,
-    "name": "Trundle"
+    "name": "Trundle",
+    "intension": 26,
+    "vote": [
+      "Ne vote pas"
+    ],
+    "regime": [
+      "Fast food",
+      "Fouille les poubelles",
+      "Chasse"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Jungle,Haut"
+    ],
+    "espece": [
+      "Né de glace,Troll"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Freljord"
+    ],
+    "annee_sortie": "2010"
   },
   "rakan": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/497.png",
@@ -1328,9 +3758,33 @@
     ],
     "cc_quantity": 21,
     "mobility": 6,
-    "randomness": 83,
+    "randomness": 89,
     "mean_hue": 340,
-    "name": "Rakan"
+    "name": "Rakan",
+    "intension": 151,
+    "vote": [
+      "Anarchiste"
+    ],
+    "regime": [
+      "Vegan",
+      "Cuisine soi même"
+    ],
+    "pilosite": [
+      "Tas de poil"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Support"
+    ],
+    "espece": [
+      "Vastaya"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Ionia"
+    ],
+    "annee_sortie": "2017"
   },
   "xayah": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/498.png",
@@ -1341,9 +3795,32 @@
     ],
     "cc_quantity": 78,
     "mobility": 143,
-    "randomness": 114,
+    "randomness": 59,
     "mean_hue": 328,
-    "name": "Xayah"
+    "name": "Xayah",
+    "intension": 110,
+    "vote": [
+      "Anarchiste"
+    ],
+    "regime": [
+      "Haute gastronomie"
+    ],
+    "pilosite": [
+      "Tas de poil"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Bas"
+    ],
+    "espece": [
+      "Vastaya"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Ionia"
+    ],
+    "annee_sortie": "2017"
   },
   "xin zhao": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/5.png",
@@ -1352,9 +3829,32 @@
     "family_mastery": [],
     "cc_quantity": 131,
     "mobility": 94,
-    "randomness": 30,
+    "randomness": 32,
     "mean_hue": 334,
-    "name": "Xin Zhao"
+    "name": "Xin Zhao",
+    "intension": 145,
+    "vote": [
+      "Gauche"
+    ],
+    "regime": [
+      "Cuisine soi même"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Jungle"
+    ],
+    "espece": [
+      "Humain"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Demacia,Ionia,Noxus"
+    ],
+    "annee_sortie": "2010"
   },
   "swain": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/50.png",
@@ -1366,9 +3866,32 @@
     ],
     "cc_quantity": 58,
     "mobility": 162,
-    "randomness": 132,
+    "randomness": 122,
     "mean_hue": 10,
-    "name": "Swain"
+    "name": "Swain",
+    "intension": 55,
+    "vote": [
+      "Extreme droite"
+    ],
+    "regime": [
+      "Haute gastronomie"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Support"
+    ],
+    "espece": [
+      "Humain,Altéré Magiquement"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Noxus"
+    ],
+    "annee_sortie": "2010"
   },
   "caitlyn": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/51.png",
@@ -1382,9 +3905,33 @@
     ],
     "cc_quantity": 117,
     "mobility": 122,
-    "randomness": 166,
+    "randomness": 160,
     "mean_hue": 314,
-    "name": "Caitlyn"
+    "name": "Caitlyn",
+    "intension": 68,
+    "vote": [
+      "Extreme droite"
+    ],
+    "regime": [
+      "Haute gastronomie",
+      "Mange de la \"nouriture\""
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Bas"
+    ],
+    "espece": [
+      "Humain"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Piltover"
+    ],
+    "annee_sortie": "2011"
   },
   "ornn": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/516.png",
@@ -1395,9 +3942,32 @@
     ],
     "cc_quantity": 50,
     "mobility": 108,
-    "randomness": 63,
+    "randomness": 64,
     "mean_hue": 337,
-    "name": "Ornn"
+    "name": "Ornn",
+    "intension": 140,
+    "vote": [
+      "Gauche"
+    ],
+    "regime": [
+      "Cuisine soi même"
+    ],
+    "pilosite": [
+      "Tas de poil"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Haut"
+    ],
+    "espece": [
+      "Dieu,Esprit"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Freljord"
+    ],
+    "annee_sortie": "2017"
   },
   "sylas": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/517.png",
@@ -1406,9 +3976,32 @@
     "family_mastery": [],
     "cc_quantity": 113,
     "mobility": 98,
-    "randomness": 98,
+    "randomness": 99,
     "mean_hue": 268,
-    "name": "Sylas"
+    "name": "Sylas",
+    "intension": 56,
+    "vote": [
+      "Anarchiste"
+    ],
+    "regime": [
+      "Fast food"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Jungle,Milieu"
+    ],
+    "espece": [
+      "Humain,Né magique"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Demacia,Freljord"
+    ],
+    "annee_sortie": "2019"
   },
   "neeko": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/518.png",
@@ -1420,9 +4013,32 @@
     ],
     "cc_quantity": 72,
     "mobility": 110,
-    "randomness": 75,
+    "randomness": 79,
     "mean_hue": 310,
-    "name": "Neeko"
+    "name": "Neeko",
+    "intension": 163,
+    "vote": [
+      "Les verts"
+    ],
+    "regime": [
+      "Vegan"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Support"
+    ],
+    "espece": [
+      "Vastaya"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Ixtal"
+    ],
+    "annee_sortie": "2018"
   },
   "aphelios": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/523.png",
@@ -1435,7 +4051,30 @@
     "mobility": 117,
     "randomness": 5,
     "mean_hue": 264,
-    "name": "Aphelios"
+    "name": "Aphelios",
+    "intension": 72,
+    "vote": [
+      "Extreme droite"
+    ],
+    "regime": [
+      "Cuisine soi même"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Bas"
+    ],
+    "espece": [
+      "Humain,Spiritualiste"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Targon"
+    ],
+    "annee_sortie": "2019"
   },
   "rell": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/526.png",
@@ -1446,9 +4085,32 @@
     ],
     "cc_quantity": 6,
     "mobility": 65,
-    "randomness": 25,
+    "randomness": 26,
     "mean_hue": 24,
-    "name": "Rell"
+    "name": "Rell",
+    "intension": 122,
+    "vote": [
+      "Gauche"
+    ],
+    "regime": [
+      "Cuisine soi même"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Support"
+    ],
+    "espece": [
+      "Humain,Altéré Magiquement,Né magique"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Noxus"
+    ],
+    "annee_sortie": "2020"
   },
   "blitzcrank": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/53.png",
@@ -1459,9 +4121,32 @@
     ],
     "cc_quantity": 9,
     "mobility": 114,
-    "randomness": 155,
+    "randomness": 169,
     "mean_hue": 0,
-    "name": "Blitzcrank"
+    "name": "Blitzcrank",
+    "intension": 144,
+    "vote": [
+      "Ne vote pas"
+    ],
+    "regime": [
+      "Ne mange pas"
+    ],
+    "pilosite": [
+      "Aucun poil"
+    ],
+    "genre": "Autre",
+    "role": [
+      "Support"
+    ],
+    "espece": [
+      "Golem"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Zaun"
+    ],
+    "annee_sortie": "2009"
   },
   "malphite": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/54.png",
@@ -1472,9 +4157,32 @@
     ],
     "cc_quantity": 46,
     "mobility": 70,
-    "randomness": 162,
+    "randomness": 156,
     "mean_hue": 14,
-    "name": "Malphite"
+    "name": "Malphite",
+    "intension": 86,
+    "vote": [
+      "Les verts"
+    ],
+    "regime": [
+      "Ne mange pas"
+    ],
+    "pilosite": [
+      "Aucun poil"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Haut"
+    ],
+    "espece": [
+      "Golem"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Ixtal,Shurima"
+    ],
+    "annee_sortie": "2009"
   },
   "katarina": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/55.png",
@@ -1483,9 +4191,32 @@
     "family_mastery": [],
     "cc_quantity": 160,
     "mobility": 92,
-    "randomness": 156,
+    "randomness": 152,
     "mean_hue": 347,
-    "name": "Katarina"
+    "name": "Katarina",
+    "intension": 44,
+    "vote": [
+      "idk"
+    ],
+    "regime": [
+      "Haute gastronomie"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Milieu"
+    ],
+    "espece": [
+      "Humain"
+    ],
+    "ressource": "Sans Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Noxus"
+    ],
+    "annee_sortie": "2009"
   },
   "pyke": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/555.png",
@@ -1494,9 +4225,32 @@
     "family_mastery": [],
     "cc_quantity": 25,
     "mobility": 20,
-    "randomness": 108,
+    "randomness": 106,
     "mean_hue": 163,
-    "name": "Pyke"
+    "name": "Pyke",
+    "intension": 6,
+    "vote": [
+      "Anarchiste"
+    ],
+    "regime": [
+      "Ne mange pas"
+    ],
+    "pilosite": [
+      "Chauve"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Support"
+    ],
+    "espece": [
+      "Revenant"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Bilgewater"
+    ],
+    "annee_sortie": "2018"
   },
   "nocturne": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/56.png",
@@ -1505,9 +4259,33 @@
     "family_mastery": [],
     "cc_quantity": 118,
     "mobility": 13,
-    "randomness": 79,
+    "randomness": 83,
     "mean_hue": 237,
-    "name": "Nocturne"
+    "name": "Nocturne",
+    "intension": 20,
+    "vote": [
+      "Extreme droite"
+    ],
+    "regime": [
+      "Mange des gens",
+      "Chasse"
+    ],
+    "pilosite": [
+      "Aucun poil"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Jungle"
+    ],
+    "espece": [
+      "Démon,Esprit"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Runeterra"
+    ],
+    "annee_sortie": "2011"
   },
   "maokai": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/57.png",
@@ -1516,9 +4294,33 @@
     "family_mastery": [],
     "cc_quantity": 11,
     "mobility": 136,
-    "randomness": 46,
+    "randomness": 50,
     "mean_hue": 225,
-    "name": "Maokai"
+    "name": "Maokai",
+    "intension": 87,
+    "vote": [
+      "Les verts"
+    ],
+    "regime": [
+      "Vegan",
+      "Ne mange pas"
+    ],
+    "pilosite": [
+      "Mystère"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Support"
+    ],
+    "espece": [
+      "Esprit"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Îles Obscures"
+    ],
+    "annee_sortie": "2011"
   },
   "renekton": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/58.png",
@@ -1527,9 +4329,32 @@
     "family_mastery": [],
     "cc_quantity": 139,
     "mobility": 53,
-    "randomness": 144,
+    "randomness": 91,
     "mean_hue": 26,
-    "name": "Renekton"
+    "name": "Renekton",
+    "intension": 21,
+    "vote": [
+      "Anarchiste"
+    ],
+    "regime": [
+      "Mange des gens"
+    ],
+    "pilosite": [
+      "Aucun poil"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Haut"
+    ],
+    "espece": [
+      "Dieu-Guerrier"
+    ],
+    "ressource": "Furie",
+    "portee": "Mêlée",
+    "region": [
+      "Shurima"
+    ],
+    "annee_sortie": "2011"
   },
   "jarvan iv": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/59.png",
@@ -1538,9 +4363,32 @@
     "family_mastery": [],
     "cc_quantity": 71,
     "mobility": 37,
-    "randomness": 64,
+    "randomness": 67,
     "mean_hue": 19,
-    "name": "Jarvan IV"
+    "name": "Jarvan IV",
+    "intension": 78,
+    "vote": [
+      "Extreme droite"
+    ],
+    "regime": [
+      "Haute gastronomie"
+    ],
+    "pilosite": [
+      "Mystère"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Jungle"
+    ],
+    "espece": [
+      "Humain"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Demacia"
+    ],
+    "annee_sortie": "2011"
   },
   "urgot": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/6.png",
@@ -1549,9 +4397,32 @@
     "family_mastery": [],
     "cc_quantity": 134,
     "mobility": 167,
-    "randomness": 101,
+    "randomness": 68,
     "mean_hue": 140,
-    "name": "Urgot"
+    "name": "Urgot",
+    "intension": 30,
+    "vote": [
+      "Anarchiste"
+    ],
+    "regime": [
+      "Fouille les poubelles"
+    ],
+    "pilosite": [
+      "Chauve"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Haut"
+    ],
+    "espece": [
+      "Altéré Chimiquement,Cyborg,Humain"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Noxus,Zaun"
+    ],
+    "annee_sortie": "2010"
   },
   "elise": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/60.png",
@@ -1560,9 +4431,32 @@
     "family_mastery": [],
     "cc_quantity": 55,
     "mobility": 59,
-    "randomness": 53,
+    "randomness": 56,
     "mean_hue": 296,
-    "name": "Elise"
+    "name": "Elise",
+    "intension": 47,
+    "vote": [
+      "Extreme droite"
+    ],
+    "regime": [
+      "Mange des gens"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Jungle,Support"
+    ],
+    "espece": [
+      "Humain,Altéré Magiquement"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée,À distance",
+    "region": [
+      "Noxus,Îles Obscures"
+    ],
+    "annee_sortie": "2012"
   },
   "orianna": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/61.png",
@@ -1574,9 +4468,32 @@
     ],
     "cc_quantity": 85,
     "mobility": 104,
-    "randomness": 68,
+    "randomness": 75,
     "mean_hue": 327,
-    "name": "Orianna"
+    "name": "Orianna",
+    "intension": 102,
+    "vote": [
+      "Ne vote pas"
+    ],
+    "regime": [
+      "Ne mange pas"
+    ],
+    "pilosite": [
+      "Aucun poil"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Milieu"
+    ],
+    "espece": [
+      "Golem"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Piltover"
+    ],
+    "annee_sortie": "2011"
   },
   "wukong": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/62.png",
@@ -1585,9 +4502,32 @@
     "family_mastery": [],
     "cc_quantity": 56,
     "mobility": 105,
-    "randomness": 109,
+    "randomness": 108,
     "mean_hue": 3,
-    "name": "Wukong"
+    "name": "Wukong",
+    "intension": 113,
+    "vote": [
+      "Les verts"
+    ],
+    "regime": [
+      "Vegan"
+    ],
+    "pilosite": [
+      "Tas de poil"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Jungle"
+    ],
+    "espece": [
+      "Vastaya"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Ionia"
+    ],
+    "annee_sortie": "2011"
   },
   "brand": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/63.png",
@@ -1596,9 +4536,32 @@
     "family_mastery": [],
     "cc_quantity": 121,
     "mobility": 150,
-    "randomness": 85,
+    "randomness": 102,
     "mean_hue": 19,
-    "name": "Brand"
+    "name": "Brand",
+    "intension": 38,
+    "vote": [
+      "Extreme droite"
+    ],
+    "regime": [
+      "Fast food"
+    ],
+    "pilosite": [
+      "Aucun poil"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Support"
+    ],
+    "espece": [
+      "Humain,Altéré Magiquement"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Freljord,Runeterra"
+    ],
+    "annee_sortie": "2011"
   },
   "lee sin": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/64.png",
@@ -1607,9 +4570,32 @@
     "family_mastery": [],
     "cc_quantity": 138,
     "mobility": 63,
-    "randomness": 73,
+    "randomness": 78,
     "mean_hue": 3,
-    "name": "Lee Sin"
+    "name": "Lee Sin",
+    "intension": 80,
+    "vote": [
+      "Gauche"
+    ],
+    "regime": [
+      "Vegan"
+    ],
+    "pilosite": [
+      "Chauve"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Jungle"
+    ],
+    "espece": [
+      "Humain,Spiritualiste"
+    ],
+    "ressource": "Énergie",
+    "portee": "Mêlée",
+    "region": [
+      "Ionia"
+    ],
+    "annee_sortie": "2011"
   },
   "vayne": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/67.png",
@@ -1621,9 +4607,33 @@
     ],
     "cc_quantity": 100,
     "mobility": 100,
-    "randomness": 112,
+    "randomness": 109,
     "mean_hue": 292,
-    "name": "Vayne"
+    "name": "Vayne",
+    "intension": 46,
+    "vote": [
+      "Extreme droite"
+    ],
+    "regime": [
+      "Haute gastronomie",
+      "Chasse"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Bas,Haut"
+    ],
+    "espece": [
+      "Humain"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Demacia"
+    ],
+    "annee_sortie": "2011"
   },
   "rumble": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/68.png",
@@ -1632,9 +4642,32 @@
     "family_mastery": [],
     "cc_quantity": 132,
     "mobility": 138,
-    "randomness": 86,
+    "randomness": 27,
     "mean_hue": 352,
-    "name": "Rumble"
+    "name": "Rumble",
+    "intension": 99,
+    "vote": [
+      "Anarchiste"
+    ],
+    "regime": [
+      "Fast food"
+    ],
+    "pilosite": [
+      "Tas de poil"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Haut"
+    ],
+    "espece": [
+      "Yordle"
+    ],
+    "ressource": "Vapeur",
+    "portee": "Mêlée",
+    "region": [
+      "Bandle"
+    ],
+    "annee_sortie": "2011"
   },
   "cassiopeia": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/69.png",
@@ -1645,9 +4678,32 @@
     ],
     "cc_quantity": 77,
     "mobility": 57,
-    "randomness": 51,
+    "randomness": 54,
     "mean_hue": 30,
-    "name": "Cassiopeia"
+    "name": "Cassiopeia",
+    "intension": 41,
+    "vote": [
+      "Extreme droite"
+    ],
+    "regime": [
+      "Haute gastronomie"
+    ],
+    "pilosite": [
+      "Aucun poil"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Milieu,Haut"
+    ],
+    "espece": [
+      "Humain,Altéré Magiquement"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Noxus,Shurima"
+    ],
+    "annee_sortie": "2010"
   },
   "leblanc": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/7.png",
@@ -1656,9 +4712,32 @@
     "family_mastery": [],
     "cc_quantity": 54,
     "mobility": 2,
-    "randomness": 70,
+    "randomness": 76,
     "mean_hue": 346,
-    "name": "LeBlanc"
+    "name": "LeBlanc",
+    "intension": 50,
+    "vote": [
+      "Extreme droite"
+    ],
+    "regime": [
+      "Haute gastronomie"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Milieu"
+    ],
+    "espece": [
+      "Humain,Altéré Magiquement"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Noxus"
+    ],
+    "annee_sortie": "2010"
   },
   "vex": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/711.png",
@@ -1669,9 +4748,32 @@
     ],
     "cc_quantity": 51,
     "mobility": 45,
-    "randomness": 105,
+    "randomness": 47,
     "mean_hue": 210,
-    "name": "Vex"
+    "name": "Vex",
+    "intension": 84,
+    "vote": [
+      "Ne vote pas"
+    ],
+    "regime": [
+      "Fast food"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Milieu"
+    ],
+    "espece": [
+      "Yordle"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Bandle,Îles Obscures"
+    ],
+    "annee_sortie": "2021"
   },
   "skarner": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/72.png",
@@ -1682,7 +4784,32 @@
     "mobility": 34,
     "randomness": 8,
     "mean_hue": 89,
-    "name": "Skarner"
+    "name": "Skarner",
+    "intension": 92,
+    "vote": [
+      "Ne vote pas",
+      "Les verts"
+    ],
+    "regime": [
+      "Mange des gens",
+      "Chasse"
+    ],
+    "pilosite": [
+      "Aucun poil"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Jungle"
+    ],
+    "espece": [
+      "Brackern"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Ixtal"
+    ],
+    "annee_sortie": "2011"
   },
   "heimerdinger": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/74.png",
@@ -1694,9 +4821,33 @@
     ],
     "cc_quantity": 76,
     "mobility": 153,
-    "randomness": 122,
+    "randomness": 134,
     "mean_hue": 15,
-    "name": "Heimerdinger"
+    "name": "Heimerdinger",
+    "intension": 96,
+    "vote": [
+      "Gauche"
+    ],
+    "regime": [
+      "Haute gastronomie"
+    ],
+    "pilosite": [
+      "Belle moustache",
+      "Tas de poil"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Milieu,Haut"
+    ],
+    "espece": [
+      "Yordle"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Piltover"
+    ],
+    "annee_sortie": "2009"
   },
   "nasus": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/75.png",
@@ -1707,9 +4858,33 @@
     ],
     "cc_quantity": 35,
     "mobility": 160,
-    "randomness": 165,
+    "randomness": 159,
     "mean_hue": 286,
-    "name": "Nasus"
+    "name": "Nasus",
+    "intension": 128,
+    "vote": [
+      "idk"
+    ],
+    "regime": [
+      "Haute gastronomie",
+      "Fouille les poubelles"
+    ],
+    "pilosite": [
+      "Tas de poil"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Haut"
+    ],
+    "espece": [
+      "Dieu-Guerrier"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Shurima"
+    ],
+    "annee_sortie": "2009"
   },
   "nidalee": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/76.png",
@@ -1718,9 +4893,33 @@
     "family_mastery": [],
     "cc_quantity": 170,
     "mobility": 90,
-    "randomness": 76,
+    "randomness": 80,
     "mean_hue": 22,
-    "name": "Nidalee"
+    "name": "Nidalee",
+    "intension": 69,
+    "vote": [
+      "Les verts"
+    ],
+    "regime": [
+      "Chasse"
+    ],
+    "pilosite": [
+      "Tas de poil",
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Jungle"
+    ],
+    "espece": [
+      "Humain,Spiritualiste"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée,À distance",
+    "region": [
+      "Ixtal"
+    ],
+    "annee_sortie": "2009"
   },
   "udyr": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/77.png",
@@ -1729,9 +4928,32 @@
     "family_mastery": [],
     "cc_quantity": 102,
     "mobility": 82,
-    "randomness": 100,
+    "randomness": 13,
     "mean_hue": 271,
-    "name": "Udyr"
+    "name": "Udyr",
+    "intension": 85,
+    "vote": [
+      "Les verts"
+    ],
+    "regime": [
+      "Chasse"
+    ],
+    "pilosite": [
+      "Belle moustache"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Jungle"
+    ],
+    "espece": [
+      "Humain,Spiritualiste"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Freljord,Ionia"
+    ],
+    "annee_sortie": "2009"
   },
   "yone": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/777.png",
@@ -1740,9 +4962,32 @@
     "family_mastery": [],
     "cc_quantity": 110,
     "mobility": 120,
-    "randomness": 71,
+    "randomness": 90,
     "mean_hue": 314,
-    "name": "Yone"
+    "name": "Yone",
+    "intension": 58,
+    "vote": [
+      "Extreme droite"
+    ],
+    "regime": [
+      "Fast food"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Milieu,Haut"
+    ],
+    "espece": [
+      "Humain,Altéré Magiquement"
+    ],
+    "ressource": "Sans Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Ionia"
+    ],
+    "annee_sortie": "2020"
   },
   "poppy": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/78.png",
@@ -1753,9 +4998,32 @@
     ],
     "cc_quantity": 70,
     "mobility": 93,
-    "randomness": 107,
+    "randomness": 105,
     "mean_hue": 313,
-    "name": "Poppy"
+    "name": "Poppy",
+    "intension": 155,
+    "vote": [
+      "Gauche"
+    ],
+    "regime": [
+      "Cuisine soi même"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Support,Haut"
+    ],
+    "espece": [
+      "Yordle"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Demacia"
+    ],
+    "annee_sortie": "2010"
   },
   "gragas": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/79.png",
@@ -1766,9 +5034,34 @@
     ],
     "cc_quantity": 60,
     "mobility": 68,
-    "randomness": 61,
+    "randomness": 119,
     "mean_hue": 8,
-    "name": "Gragas"
+    "name": "Gragas",
+    "intension": 97,
+    "vote": [
+      "Gauche"
+    ],
+    "regime": [
+      "Haute gastronomie",
+      "Fast food"
+    ],
+    "pilosite": [
+      "Belle moustache",
+      "Chauve"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Jungle,Haut"
+    ],
+    "espece": [
+      "Humain,Né de glace"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Freljord"
+    ],
+    "annee_sortie": "2010"
   },
   "ambessa": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/799.png",
@@ -1779,9 +5072,32 @@
     ],
     "cc_quantity": 129,
     "mobility": 91,
-    "randomness": 43,
+    "randomness": 96,
     "mean_hue": 7,
-    "name": "Ambessa"
+    "name": "Ambessa",
+    "intension": 61,
+    "vote": [
+      "Extreme droite"
+    ],
+    "regime": [
+      "Haute gastronomie"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Haut"
+    ],
+    "espece": [
+      "Humain"
+    ],
+    "ressource": "Énergie",
+    "portee": "Mêlée",
+    "region": [
+      "Noxus,Piltover"
+    ],
+    "annee_sortie": "2024"
   },
   "vladimir": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/8.png",
@@ -1790,9 +5106,32 @@
     "family_mastery": [],
     "cc_quantity": 155,
     "mobility": 142,
-    "randomness": 106,
+    "randomness": 104,
     "mean_hue": 6,
-    "name": "Vladimir"
+    "name": "Vladimir",
+    "intension": 48,
+    "vote": [
+      "Extreme droite"
+    ],
+    "regime": [
+      "Haute gastronomie"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Milieu,Haut"
+    ],
+    "espece": [
+      "Humain,Altéré Magiquement"
+    ],
+    "ressource": "Soif de sang",
+    "portee": "À distance",
+    "region": [
+      "Camavor,Noxus,Îles Obscures"
+    ],
+    "annee_sortie": "2010"
   },
   "pantheon": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/80.png",
@@ -1801,9 +5140,32 @@
     "family_mastery": [],
     "cc_quantity": 53,
     "mobility": 12,
-    "randomness": 81,
+    "randomness": 126,
     "mean_hue": 23,
-    "name": "Pantheon"
+    "name": "Pantheon",
+    "intension": 93,
+    "vote": [
+      "idk"
+    ],
+    "regime": [
+      "Cuisine soi même"
+    ],
+    "pilosite": [
+      "Mystère"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Jungle,Support,Haut"
+    ],
+    "espece": [
+      "Hôte,Humain"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Targon"
+    ],
+    "annee_sortie": "2010"
   },
   "mel": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/800.png",
@@ -1812,9 +5174,32 @@
     "family_mastery": [],
     "cc_quantity": 98,
     "mobility": 158,
-    "randomness": 48,
+    "randomness": 92,
     "mean_hue": 0,
-    "name": "Mel"
+    "name": "Mel",
+    "intension": 148,
+    "vote": [
+      "Gauche"
+    ],
+    "regime": [
+      "Haute gastronomie"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Milieu,Support"
+    ],
+    "espece": [
+      "Humain,Altéré Magiquement"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Noxus,Piltover"
+    ],
+    "annee_sortie": "2025"
   },
   "yunara": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/804.png",
@@ -1825,7 +5210,32 @@
     "mobility": 144,
     "randomness": 9,
     "mean_hue": 264,
-    "name": "Yunara"
+    "name": "Yunara",
+    "intension": 114,
+    "vote": [
+      "idk"
+    ],
+    "regime": [
+      "Haute gastronomie",
+      "Vegan",
+      "Cuisine soi même"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Bas"
+    ],
+    "espece": [
+      "Humain,Spiritualiste"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Ionia"
+    ],
+    "annee_sortie": "2025"
   },
   "ezreal": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/81.png",
@@ -1837,9 +5247,33 @@
     ],
     "cc_quantity": 166,
     "mobility": 29,
-    "randomness": 115,
+    "randomness": 167,
     "mean_hue": 2,
-    "name": "Ezreal"
+    "name": "Ezreal",
+    "intension": 130,
+    "vote": [
+      "Gauche"
+    ],
+    "regime": [
+      "Fast food",
+      "Mange de la \"nouriture\""
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Bas"
+    ],
+    "espece": [
+      "Humain,Né magique"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Piltover"
+    ],
+    "annee_sortie": "2010"
   },
   "mordekaiser": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/82.png",
@@ -1848,9 +5282,32 @@
     "family_mastery": [],
     "cc_quantity": 22,
     "mobility": 159,
-    "randomness": 146,
+    "randomness": 144,
     "mean_hue": 164,
-    "name": "Mordekaiser"
+    "name": "Mordekaiser",
+    "intension": 19,
+    "vote": [
+      "Extreme droite"
+    ],
+    "regime": [
+      "Ne mange pas"
+    ],
+    "pilosite": [
+      "Mystère"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Haut"
+    ],
+    "espece": [
+      "Revenant"
+    ],
+    "ressource": "Bouclier",
+    "portee": "Mêlée",
+    "region": [
+      "Noxus,Îles Obscures"
+    ],
+    "annee_sortie": "2010"
   },
   "yorick": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/83.png",
@@ -1859,9 +5316,32 @@
     "family_mastery": [],
     "cc_quantity": 57,
     "mobility": 171,
-    "randomness": 80,
+    "randomness": 84,
     "mean_hue": 215,
-    "name": "Yorick"
+    "name": "Yorick",
+    "intension": 124,
+    "vote": [
+      "Gauche"
+    ],
+    "regime": [
+      "Fouille les poubelles"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Haut"
+    ],
+    "espece": [
+      "Humain,Altéré Magiquement"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Îles Obscures"
+    ],
+    "annee_sortie": "2011"
   },
   "akali": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/84.png",
@@ -1872,9 +5352,32 @@
     ],
     "cc_quantity": 169,
     "mobility": 69,
-    "randomness": 42,
+    "randomness": 103,
     "mean_hue": 240,
-    "name": "Akali"
+    "name": "Akali",
+    "intension": 42,
+    "vote": [
+      "idk"
+    ],
+    "regime": [
+      "Haute gastronomie"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Milieu"
+    ],
+    "espece": [
+      "Humain"
+    ],
+    "ressource": "Énergie",
+    "portee": "Mêlée",
+    "region": [
+      "Ionia"
+    ],
+    "annee_sortie": "2010"
   },
   "kennen": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/85.png",
@@ -1883,9 +5386,32 @@
     "family_mastery": [],
     "cc_quantity": 19,
     "mobility": 42,
-    "randomness": 19,
+    "randomness": 20,
     "mean_hue": 292,
-    "name": "Kennen"
+    "name": "Kennen",
+    "intension": 134,
+    "vote": [
+      "Gauche"
+    ],
+    "regime": [
+      "Cuisine soi même"
+    ],
+    "pilosite": [
+      "Tas de poil"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Milieu,Haut"
+    ],
+    "espece": [
+      "Yordle"
+    ],
+    "ressource": "Énergie",
+    "portee": "À distance",
+    "region": [
+      "Ionia"
+    ],
+    "annee_sortie": "2010"
   },
   "garen": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/86.png",
@@ -1897,9 +5423,32 @@
     ],
     "cc_quantity": 151,
     "mobility": 60,
-    "randomness": 159,
+    "randomness": 155,
     "mean_hue": 350,
-    "name": "Garen"
+    "name": "Garen",
+    "intension": 131,
+    "vote": [
+      "idk"
+    ],
+    "regime": [
+      "Haute gastronomie"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Haut"
+    ],
+    "espece": [
+      "Humain"
+    ],
+    "ressource": "Sans Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Demacia"
+    ],
+    "annee_sortie": "2010"
   },
   "sett": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/875.png",
@@ -1908,9 +5457,32 @@
     "family_mastery": [],
     "cc_quantity": 84,
     "mobility": 113,
-    "randomness": 88,
+    "randomness": 95,
     "mean_hue": 3,
-    "name": "Sett"
+    "name": "Sett",
+    "intension": 141,
+    "vote": [
+      "idk"
+    ],
+    "regime": [
+      "Cuisine soi même"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Haut"
+    ],
+    "espece": [
+      "Humain,Vastaya"
+    ],
+    "ressource": "Agressivité",
+    "portee": "Mêlée",
+    "region": [
+      "Ionia"
+    ],
+    "annee_sortie": "2020"
   },
   "lillia": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/876.png",
@@ -1923,9 +5495,33 @@
     ],
     "cc_quantity": 31,
     "mobility": 15,
-    "randomness": 72,
+    "randomness": 77,
     "mean_hue": 334,
-    "name": "Lillia"
+    "name": "Lillia",
+    "intension": 161,
+    "vote": [
+      "Les verts"
+    ],
+    "regime": [
+      "Vegan",
+      "Est la nouriture"
+    ],
+    "pilosite": [
+      "Tas de poil"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Jungle"
+    ],
+    "espece": [
+      "Esprit"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Ionia"
+    ],
+    "annee_sortie": "2020"
   },
   "gwen": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/887.png",
@@ -1936,9 +5532,32 @@
     ],
     "cc_quantity": 165,
     "mobility": 99,
-    "randomness": 38,
+    "randomness": 40,
     "mean_hue": 202,
-    "name": "Gwen"
+    "name": "Gwen",
+    "intension": 157,
+    "vote": [
+      "idk"
+    ],
+    "regime": [
+      "Ne mange pas"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Jungle,Haut"
+    ],
+    "espece": [
+      "Humain,Altéré Magiquement"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Camavor,Îles Obscures"
+    ],
+    "annee_sortie": "2021"
   },
   "renata glasc": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/888.png",
@@ -1949,9 +5568,32 @@
     ],
     "cc_quantity": 88,
     "mobility": 161,
-    "randomness": 36,
+    "randomness": 38,
     "mean_hue": 25,
-    "name": "Renata Glasc"
+    "name": "Renata Glasc",
+    "intension": 52,
+    "vote": [
+      "Extreme droite"
+    ],
+    "regime": [
+      "Haute gastronomie"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Support"
+    ],
+    "espece": [
+      "Altéré Chimiquement,Humain"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Zaun"
+    ],
+    "annee_sortie": "2022"
   },
   "leona": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/89.png",
@@ -1963,9 +5605,32 @@
     ],
     "cc_quantity": 4,
     "mobility": 121,
-    "randomness": 148,
+    "randomness": 145,
     "mean_hue": 23,
-    "name": "Leona"
+    "name": "Leona",
+    "intension": 82,
+    "vote": [
+      "Gauche"
+    ],
+    "regime": [
+      "Cuisine soi même"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Support"
+    ],
+    "espece": [
+      "Hôte,Humain"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Targon"
+    ],
+    "annee_sortie": "2011"
   },
   "aurora": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/893.png",
@@ -1976,7 +5641,31 @@
     "mobility": 74,
     "randomness": 6,
     "mean_hue": 336,
-    "name": "Aurora"
+    "name": "Aurora",
+    "intension": 112,
+    "vote": [
+      "Les verts"
+    ],
+    "regime": [
+      "Vegan",
+      "Est la nouriture"
+    ],
+    "pilosite": [
+      "Tas de poil"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Milieu"
+    ],
+    "espece": [
+      "Vastaya"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Freljord"
+    ],
+    "annee_sortie": "2024"
   },
   "nilah": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/895.png",
@@ -1987,7 +5676,30 @@
     "mobility": 102,
     "randomness": 1,
     "mean_hue": 322,
-    "name": "Nilah"
+    "name": "Nilah",
+    "intension": 154,
+    "vote": [
+      "Anarchiste"
+    ],
+    "regime": [
+      "Vegan"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Bas"
+    ],
+    "espece": [
+      "Humain,Altéré Magiquement"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Bilgewater"
+    ],
+    "annee_sortie": "2022"
   },
   "k'sante": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/897.png",
@@ -1996,9 +5708,32 @@
     "family_mastery": [],
     "cc_quantity": 44,
     "mobility": 78,
-    "randomness": 21,
+    "randomness": 22,
     "mean_hue": 5,
-    "name": "K'Sante"
+    "name": "K'Sante",
+    "intension": 136,
+    "vote": [
+      "Gauche"
+    ],
+    "regime": [
+      "Vegan"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Haut"
+    ],
+    "espece": [
+      "Humain"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Shurima"
+    ],
+    "annee_sortie": "2022"
   },
   "fiddlesticks": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/9.png",
@@ -2007,9 +5742,33 @@
     "family_mastery": [],
     "cc_quantity": 10,
     "mobility": 131,
-    "randomness": 55,
+    "randomness": 60,
     "mean_hue": 351,
-    "name": "Fiddlesticks"
+    "name": "Fiddlesticks",
+    "intension": 9,
+    "vote": [
+      "Anarchiste"
+    ],
+    "regime": [
+      "Fouille les poubelles",
+      "Mange des gens"
+    ],
+    "pilosite": [
+      "Aucun poil"
+    ],
+    "genre": "Autre",
+    "role": [
+      "Jungle"
+    ],
+    "espece": [
+      "Démon,Esprit"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Runeterra"
+    ],
+    "annee_sortie": "2009"
   },
   "malzahar": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/90.png",
@@ -2018,9 +5777,32 @@
     "family_mastery": [],
     "cc_quantity": 2,
     "mobility": 157,
-    "randomness": 87,
+    "randomness": 94,
     "mean_hue": 274,
-    "name": "Malzahar"
+    "name": "Malzahar",
+    "intension": 18,
+    "vote": [
+      "Extreme droite"
+    ],
+    "regime": [
+      "Ne mange pas"
+    ],
+    "pilosite": [
+      "Mystère"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Milieu"
+    ],
+    "espece": [
+      "Humain,Être du néant"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Shurima,Le Néant"
+    ],
+    "annee_sortie": "2010"
   },
   "smolder": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/901.png",
@@ -2029,9 +5811,33 @@
     "family_mastery": [],
     "cc_quantity": 153,
     "mobility": 52,
-    "randomness": 37,
+    "randomness": 42,
     "mean_hue": 7,
-    "name": "Smolder"
+    "name": "Smolder",
+    "intension": 119,
+    "vote": [
+      "Ne vote pas"
+    ],
+    "regime": [
+      "Fast food",
+      "Chasse"
+    ],
+    "pilosite": [
+      "Aucun poil"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Bas"
+    ],
+    "espece": [
+      "Dragon"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Camavor,Noxus"
+    ],
+    "annee_sortie": "2024"
   },
   "milio": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/902.png",
@@ -2040,9 +5846,32 @@
     "family_mastery": [],
     "cc_quantity": 89,
     "mobility": 137,
-    "randomness": 29,
+    "randomness": 31,
     "mean_hue": 20,
-    "name": "Milio"
+    "name": "Milio",
+    "intension": 169,
+    "vote": [
+      "Ne vote pas"
+    ],
+    "regime": [
+      "Fast food"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Support"
+    ],
+    "espece": [
+      "Humain,Né magique"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Ixtal"
+    ],
+    "annee_sortie": "2023"
   },
   "zaahen": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/904.png",
@@ -2051,9 +5880,32 @@
     "family_mastery": [],
     "cc_quantity": 91,
     "mobility": 107,
-    "randomness": 31,
+    "randomness": 33,
     "mean_hue": 357,
-    "name": "Zaahen"
+    "name": "Zaahen",
+    "intension": 117,
+    "vote": [
+      "Gauche"
+    ],
+    "regime": [
+      "Haute gastronomie"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Haut"
+    ],
+    "espece": [
+      "Darkin,Humain"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Ionia,Shurima"
+    ],
+    "annee_sortie": "2025"
   },
   "talon": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/91.png",
@@ -2064,7 +5916,30 @@
     "mobility": 5,
     "randomness": 12,
     "mean_hue": 261,
-    "name": "Talon"
+    "name": "Talon",
+    "intension": 43,
+    "vote": [
+      "Extreme droite"
+    ],
+    "regime": [
+      "Haute gastronomie"
+    ],
+    "pilosite": [
+      "Mystère"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Jungle,Milieu"
+    ],
+    "espece": [
+      "Humain"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Noxus"
+    ],
+    "annee_sortie": "2011"
   },
   "hwei": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/910.png",
@@ -2075,7 +5950,31 @@
     "mobility": 133,
     "randomness": 10,
     "mean_hue": 231,
-    "name": "Hwei"
+    "name": "Hwei",
+    "intension": 111,
+    "vote": [
+      "Extreme droite"
+    ],
+    "regime": [
+      "Haute gastronomie",
+      "Vegan"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Milieu"
+    ],
+    "espece": [
+      "Humain,Né magique"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Ionia"
+    ],
+    "annee_sortie": "2023"
   },
   "riven": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/92.png",
@@ -2084,9 +5983,32 @@
     "family_mastery": [],
     "cc_quantity": 40,
     "mobility": 49,
-    "randomness": 90,
+    "randomness": 123,
     "mean_hue": 60,
-    "name": "Riven"
+    "name": "Riven",
+    "intension": 98,
+    "vote": [
+      "Gauche"
+    ],
+    "regime": [
+      "Cuisine soi même"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Haut"
+    ],
+    "espece": [
+      "Humain"
+    ],
+    "ressource": "Sans Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Ionia,Noxus"
+    ],
+    "annee_sortie": "2011"
   },
   "naafiri": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/950.png",
@@ -2095,9 +6017,33 @@
     "family_mastery": [],
     "cc_quantity": 172,
     "mobility": 88,
-    "randomness": 17,
+    "randomness": 18,
     "mean_hue": 17,
-    "name": "Naafiri"
+    "name": "Naafiri",
+    "intension": 14,
+    "vote": [
+      "Ne vote pas"
+    ],
+    "regime": [
+      "Fouille les poubelles",
+      "Mange des gens"
+    ],
+    "pilosite": [
+      "Tas de poil"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Jungle,Milieu"
+    ],
+    "espece": [
+      "Darkin,Chien"
+    ],
+    "ressource": "Mana",
+    "portee": "Mêlée",
+    "region": [
+      "Shurima"
+    ],
+    "annee_sortie": "2023"
   },
   "kog'maw": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/96.png",
@@ -2108,9 +6054,33 @@
     ],
     "cc_quantity": 127,
     "mobility": 146,
-    "randomness": 125,
+    "randomness": 87,
     "mean_hue": 10,
-    "name": "Kog'Maw"
+    "name": "Kog'Maw",
+    "intension": 3,
+    "vote": [
+      "Ne vote pas"
+    ],
+    "regime": [
+      "Fouille les poubelles",
+      "Mange des gens"
+    ],
+    "pilosite": [
+      "Aucun poil"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Bas"
+    ],
+    "espece": [
+      "Être du néant"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Le Néant"
+    ],
+    "annee_sortie": "2010"
   },
   "shen": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/98.png",
@@ -2122,9 +6092,32 @@
     ],
     "cc_quantity": 26,
     "mobility": 17,
-    "randomness": 116,
+    "randomness": 110,
     "mean_hue": 235,
-    "name": "Shen"
+    "name": "Shen",
+    "intension": 139,
+    "vote": [
+      "Gauche"
+    ],
+    "regime": [
+      "Haute gastronomie"
+    ],
+    "pilosite": [
+      "Mystère"
+    ],
+    "genre": "Masculin",
+    "role": [
+      "Support,Haut"
+    ],
+    "espece": [
+      "Humain,Spiritualiste"
+    ],
+    "ressource": "Énergie",
+    "portee": "Mêlée",
+    "region": [
+      "Ionia"
+    ],
+    "annee_sortie": "2010"
   },
   "lux": {
     "icon_url": "https://raw.communitydragon.org/t/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/99.png",
@@ -2137,6 +6130,29 @@
     "mobility": 156,
     "randomness": 164,
     "mean_hue": 21,
-    "name": "Lux"
+    "name": "Lux",
+    "intension": 83,
+    "vote": [
+      "Extreme droite"
+    ],
+    "regime": [
+      "Haute gastronomie"
+    ],
+    "pilosite": [
+      "Pilositée normale"
+    ],
+    "genre": "Feminin",
+    "role": [
+      "Milieu,Support"
+    ],
+    "espece": [
+      "Humain,Né magique"
+    ],
+    "ressource": "Mana",
+    "portee": "À distance",
+    "region": [
+      "Demacia"
+    ],
+    "annee_sortie": "2010"
   }
 }

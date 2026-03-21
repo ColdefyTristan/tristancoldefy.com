@@ -1,9 +1,11 @@
 from sqlmodel import SQLModel, Field, Relationship
 from datetime import datetime, date
 from sqlalchemy import Column, Integer, ForeignKey, UniqueConstraint, Index
+from sqlalchemy.dialects.postgresql import JSONB
 
 from app.models.tables import User
 from app.models.familledle.champ_data import ChampData
+from app.models.familledle.schemas import ClueType
 from app.utils.time import utcnow_naive, today_paris_date
 
 
@@ -32,6 +34,12 @@ class FamilledleAttempt(SQLModel, table=True):
     finished_at: datetime | None = None
 
     try_count: int = Field(default=0, ge=0)
+
+    clues: list[ClueType] = Field(
+        default_factory=list,
+        sa_column=Column(JSONB, nullable=False, server_default="'[]'"),
+    )
+    clue_points: int = Field(default=0, ge=0, le=3)
 
     guesses: list["FamilledleAttemptGuess"] = Relationship(back_populates="attempt")
     user: "User" = Relationship()
