@@ -119,6 +119,7 @@ export type AttemptOut = {
   day: string;
   try_count: number;
   finished_at: string | null;
+  clue_points?: number;
 };
 
 export type AttemptGuessOut = {
