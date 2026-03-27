@@ -5,7 +5,9 @@
       "WebFetch(domain:universe-meeps.leagueoflegends.com)",
       "WebFetch(domain:raw.communitydragon.org)",
       "WebFetch(domain:cdn.merakianalytics.com)",
-      "Bash(grep -rh \"^revision:\" alembic/versions/*.py)"
+      "Bash(grep -rh \"^revision:\" alembic/versions/*.py)",
+      "Bash(python -c \"import json; d=json.load\\(open\\(''c:/Users/trcol/Desktop/code_perso/tristancoldefy-com/server/data/scryfall/oracle_cards_27bf3214-1271-490b-bdfe-c0be6c23d02e.json''\\)\\); c=d[100]; print\\(list\\(c.keys\\(\\)\\)\\)\")",
+      "Bash(python -c \"import json; d=json.load\\(open\\(''c:/Users/trcol/Desktop/code_perso/tristancoldefy-com/server/data/scryfall/oracle_cards_27bf3214-1271-490b-bdfe-c0be6c23d02e.json'', encoding=''utf-8''\\)\\); c=d[100]; print\\(list\\(c.keys\\(\\)\\)\\)\")"
     ]
   }
 }

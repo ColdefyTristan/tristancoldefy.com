@@ -1,6 +1,6 @@
 from sqlmodel import SQLModel, Field, Relationship
 from datetime import datetime, date
-from sqlalchemy import Column, Integer, ForeignKey, UniqueConstraint, Index
+from sqlalchemy import Column, Integer, ForeignKey, UniqueConstraint, Index, text
 from sqlalchemy.dialects.postgresql import JSONB
 
 from app.models.tables import User
@@ -37,7 +37,7 @@ class FamilledleAttempt(SQLModel, table=True):
 
     clues: list[ClueType] = Field(
         default_factory=list,
-        sa_column=Column(JSONB, nullable=False, server_default="'[]'"),
+        sa_column=Column(JSONB, nullable=False, server_default=text("'[]'")),
     )
     clue_points: int = Field(default=0, ge=0, le=3)
 

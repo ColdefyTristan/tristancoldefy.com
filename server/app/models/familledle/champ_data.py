@@ -1,5 +1,5 @@
 from sqlmodel import SQLModel, Field
-from sqlalchemy import Column
+from sqlalchemy import Column, text
 from sqlalchemy.dialects.postgresql import JSONB
 
 
@@ -40,15 +40,15 @@ class ChampData(SQLModel, table=True):
 
     role: list[str] = Field(
         default_factory=list,
-        sa_column=Column(JSONB, nullable=False, server_default="'[]'"),
+        sa_column=Column(JSONB, nullable=False, server_default=text("'[]'")),
     )
     espece: list[str] = Field(
         default_factory=list,
-        sa_column=Column(JSONB, nullable=False, server_default="'[]'"),
+        sa_column=Column(JSONB, nullable=False, server_default=text("'[]'")),
     )
     region: list[str] = Field(
         default_factory=list,
-        sa_column=Column(JSONB, nullable=False, server_default="'[]'"),
+        sa_column=Column(JSONB, nullable=False, server_default=text("'[]'")),
     )
 
     icon_url: str

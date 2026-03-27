@@ -43,8 +43,9 @@ _CHAMP_DATA_FIELDS = (
 )
 
 
-def _compute_ranks(session: Session, champ: ChampData) -> dict:
+def _compute_ranks(session: Session, row: dict) -> dict:
     """Calcule le rang du champion parmi tous les champions pour chaque stat buckettée."""
+    tbl = ChampData.__table__
     total: int = session.execute(
         sa_select(func.count()).select_from(ChampData)
     ).scalar_one()
@@ -56,10 +57,10 @@ def _compute_ranks(session: Session, champ: ChampData) -> dict:
         return count + 1
 
     return {
-        "mobility_rank": rank_of(ChampData.mobility, champ.mobility),
-        "randomness_rank": rank_of(ChampData.randomness, champ.randomness),
-        "cc_quantity_rank": rank_of(ChampData.cc_quantity, champ.cc_quantity),
-        "intension_rank": rank_of(ChampData.intension, champ.intension),
+        "mobility_rank": rank_of(tbl.c.mobility, row["mobility"]),
+        "randomness_rank": rank_of(tbl.c.randomness, row["randomness"]),
+        "cc_quantity_rank": rank_of(tbl.c.cc_quantity, row["cc_quantity"]),
+        "intension_rank": rank_of(tbl.c.intension, row["intension"]),
         "total_champions": total,
     }
 
@@ -72,12 +73,11 @@ def get_champ_data(
     champion_name: str,
     session: Session = Depends(get_session),
 ):
-    stmt = select(ChampData).where(
-        func.lower(ChampData.name) == func.lower(champion_name)
-    )
-    champ_data = session.exec(stmt).first()
+    tbl = ChampData.__table__
+    stmt = sa_select(tbl).where(func.lower(tbl.c.name) == func.lower(champion_name))
+    row = session.execute(stmt).mappings().first()
 
-    if champ_data is None:
+    if row is None:
         raise HTTPException(
             status_code=404,
             detail={
@@ -87,11 +87,11 @@ def get_champ_data(
             },
         )
 
-    ranks = _compute_ranks(session, champ_data)
+    ranks = _compute_ranks(session, row)
     return {
-        "name": champ_data.name,
+        "name": row["name"],
         "data": {
-            **{k: getattr(champ_data, k) for k in _CHAMP_DATA_FIELDS},
+            **{k: row[k] for k in _CHAMP_DATA_FIELDS},
             **ranks,
         },
     }

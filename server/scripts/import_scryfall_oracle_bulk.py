@@ -42,8 +42,19 @@ def extract_image_urls(card_data: dict) -> tuple[str | None, str | None]:
     return None, None
 
 
+def get_oracle_text(card_data: dict) -> str | None:
+    text = card_data.get("oracle_text")
+    if text is None:
+        faces = card_data.get("card_faces") or []
+        texts = [f.get("oracle_text") for f in faces if f.get("oracle_text")]
+        text = "\n//\n".join(texts) if texts else None
+    return text
+
+
 def build_mtg_card_row(card_data: dict) -> dict:
     image_url_small, image_url_medium = extract_image_urls(card_data)
+    power = card_data.get("power")
+    toughness = card_data.get("toughness")
 
     return {
         "oracle_id": card_data["oracle_id"],
@@ -51,7 +62,13 @@ def build_mtg_card_row(card_data: dict) -> dict:
         "image_url_small": image_url_small,
         "image_url_medium": image_url_medium,
         "color_identity": card_data.get("color_identity") or [],
+        "colors": card_data.get("colors") or [],
         "converted_mana_cost": int(card_data.get("cmc") or 0),
+        "type_line": card_data.get("type_line"),
+        "oracle_text": get_oracle_text(card_data),
+        "power": str(power) if power is not None else None,
+        "toughness": str(toughness) if toughness is not None else None,
+        "edhrec_rank": card_data.get("edhrec_rank"),
     }
 
 
@@ -70,7 +87,13 @@ def upsert_mtg_cards(session: Session, mtg_card_rows: list[dict]) -> None:
             "image_url_small": insert_statement.excluded.image_url_small,
             "image_url_medium": insert_statement.excluded.image_url_medium,
             "color_identity": insert_statement.excluded.color_identity,
+            "colors": insert_statement.excluded.colors,
             "converted_mana_cost": insert_statement.excluded.converted_mana_cost,
+            "type_line": insert_statement.excluded.type_line,
+            "oracle_text": insert_statement.excluded.oracle_text,
+            "power": insert_statement.excluded.power,
+            "toughness": insert_statement.excluded.toughness,
+            "edhrec_rank": insert_statement.excluded.edhrec_rank,
         },
     )
 
@@ -78,12 +101,23 @@ def upsert_mtg_cards(session: Session, mtg_card_rows: list[dict]) -> None:
 
 
 def main() -> None:
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Importe le bulk oracle Scryfall dans la DB.")
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help="Importe même si le statut n'est pas 'downloaded' (utile après un import partiel ou un échec).",
+    )
+    args = parser.parse_args()
+
     with Session(engine) as session:
         sync_state = get_or_create_sync_state(session)
 
-        if sync_state.last_status != "downloaded":
+        if sync_state.last_status != "downloaded" and not args.force:
             raise RuntimeError(
-                "Aucun bulk prêt à être importé. Lancez d'abord le script de téléchargement."
+                "Aucun bulk prêt à être importé. Lancez d'abord le script de téléchargement.\n"
+                "Utilisez --force pour importer quand même."
             )
 
         if not sync_state.last_downloaded_file_path:

@@ -34,4 +34,18 @@ class MtgCard(SQLModel, table=True):
         default_factory=list, sa_column=Column(ARRAY(String(1)), nullable=False)
     )
 
+    colors: list[str] = Field(
+        default_factory=list, sa_column=Column(ARRAY(String(1)), nullable=False)
+    )
+
     converted_mana_cost: int = Field(default=0, nullable=False)
+
+    type_line: str | None = Field(default=None, sa_column=Column(Text, nullable=True))
+
+    oracle_text: str | None = Field(default=None, sa_column=Column(Text, nullable=True))
+
+    power: str | None = Field(default=None, sa_column=Column(String(10), nullable=True))
+
+    toughness: str | None = Field(default=None, sa_column=Column(String(10), nullable=True))
+
+    edhrec_rank: int | None = Field(default=None, nullable=True)
