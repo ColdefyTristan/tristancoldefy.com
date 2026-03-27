@@ -35,7 +35,7 @@ build/
 # --- DB / local data ---
 *.sqlite
 *.sqlite3
-data/scryfall/
+server/data/scryfall/
 
 # --- VSCode ---
 .vscode/
