@@ -16,9 +16,17 @@ export default async function CompetencesPage() {
     <div className={styles.projectRow}>
       <div className={styles.projectRowInner}>
         <span>
-          <strong>FamilleDLE</strong> - un jeu quotidien inspiré de <a href="https://loldle.net/">LoLdle</a> pensé pour mon cercle proche.
+          <strong>Riftdle</strong> - Un jeu quotidien inspiré de <a href="https://loldle.net/">LoLdle</a> avec des catégories surprenantes.
         </span>
-        <a href="/familledle">Jouer</a>
+        <a href="/riftdle">Jouer</a>
+      </div>
+    </div>
+    <div className={styles.projectRow}>
+      <div className={styles.projectRowInner}>
+        <span>
+          <strong>MtgDoku</strong> - Une grille de 9 cartes Magic the Gathering à trouver selon des conditions.
+        </span>
+        <a href="/mtgdoku">Jouer</a>
       </div>
     </div>
     <div className={styles.projectRow}>

@@ -191,7 +191,8 @@ Returns user identity + email status.
     "primary": "string | null",
     "pending": "string | null",
     "verification_sent_at": "ISO-8601 | null"
-  }
+  },
+  "is_family":"boolean"
 }
 ```
 
@@ -340,11 +341,11 @@ Applies a list of deck operations atomically. The batch is idempotent via `batch
 
 ---
 
-## Familledle
+## Riftdle
 
 ### Get champion data
 
-`GET /familledle/champ_data/{champion_name}` — **200**
+`GET /riftdle/champ_data/{champion_name}` — **200**
 
 Returns stats and ranks for a given champion.
 
@@ -378,7 +379,7 @@ Returns stats and ranks for a given champion.
 
 ### Get daily game
 
-`GET /familledle/daily_game` — **200**
+`GET /riftdle/daily_game` — **200**
 
 Returns the configuration for today's game: the champion to guess, which row columns are active, and the current winner count.
 
@@ -403,7 +404,7 @@ Returns the configuration for today's game: the champion to guess, which row col
 
 ### Submit a guess
 
-`POST /familledle/attempts/guess` — **200**
+`POST /riftdle/attempts/guess` — **200**
 
 Submits a champion guess for today's game. Works for anonymous and authenticated users. Authenticated users have their attempt persisted; `winner_count` is incremented on a correct guess.
 
@@ -445,7 +446,7 @@ For anonymous users, `attempt` is `null` and `position` is `null`.
 
 ### Get today's attempt (protected)
 
-`GET /familledle/attempts/today` — **200**
+`GET /riftdle/attempts/today` — **200**
 
 Returns the authenticated user's attempt for today, if any.
 
@@ -472,6 +473,236 @@ Returns the authenticated user's attempt for today, if any.
 **Errors**
 
 * 401 `NOT_AUTHENTICATED`
+
+---
+
+## MTGDoku
+
+A daily Magic: The Gathering grid puzzle (Immaculate Grid style). Each daily game has three 3×3 grids (easy / medium / hard). Rows and columns each have a set of conditions (categories), and the player must find a card that satisfies both the row and column conditions for each cell.
+
+### Shared types
+
+**`ConditionOut`**
+```json
+{ "id": "string", "label": "string", "weight": 1.0, "total": 120, "known": 80 }
+```
+- `total`: total valid cards for this condition
+- `known`: valid cards from the "known" subset
+
+**`GroupOut`** — a row or column
+```json
+{ "conditions": [ConditionOut], "total": 50, "known": 30 }
+```
+
+**`CellOut`** — intersection stats (no attempt context)
+```json
+{ "total": 10, "known": 7 }
+```
+
+**`CellWithAttemptOut`** — intersection stats + player's guesses
+```json
+{ "total": 10, "known": 7, "cards_tried": [{ "oracle_id": "string", "name": "string", "is_valid": true }] }
+```
+
+**`GridOut`**
+```json
+{
+  "id": 1,
+  "difficulty": "easy",
+  "score": 42.5,
+  "difficulty_score": 0.3,
+  "rows": [GroupOut, GroupOut, GroupOut],
+  "cols": [GroupOut, GroupOut, GroupOut],
+  "cells": [[CellOut, CellOut, CellOut], ...]
+}
+```
+`difficulty` is one of `"easy"`, `"medium"`, `"hard"`.
+
+**`GridWithAttemptOut`** — same as `GridOut` but `cells` contains `CellWithAttemptOut`.
+
+**`DailyGameOut`**
+```json
+{ "id": 1, "day": "2026-03-29", "easy": GridOut | null, "medium": GridOut | null, "hard": GridOut | null }
+```
+
+**`AttemptOut`**
+```json
+{
+  "id": 1,
+  "day": "2026-03-29",
+  "won_easy": false,
+  "won_medium": false,
+  "won_hard": false,
+  "finished_at": "ISO-8601 | null",
+  "guesses": [GuessOut]
+}
+```
+
+**`GuessOut`**
+```json
+{ "id": 1, "position": 0, "difficulty": "easy", "cell_row": 0, "cell_col": 1, "oracle_id": "string", "card_name": "string", "is_valid": true }
+```
+
+**`GuessResultOut`**
+```json
+{ "is_valid": true, "oracle_id": "string", "card_name": "string | null", "attempt": AttemptOut | null }
+```
+`attempt` is `null` for anonymous users.
+
+---
+
+### Get grid
+
+`GET /mtgdoku/grid/{grid_id}` — **200**
+
+Returns a grid without attempt context.
+
+**Response (200):** `GridOut`
+
+**Errors**
+- 404 grid not found
+
+---
+
+### Get grid with attempt (protected)
+
+`GET /mtgdoku/grid/{grid_id}/attempt/{attempt_id}` — **200**
+
+Returns the grid with the player's card guesses per cell.
+
+**Response (200):** `GridWithAttemptOut`
+
+**Errors**
+- 401 `NOT_AUTHENTICATED`
+- 404 grid or attempt not found
+
+---
+
+### Get today's daily game
+
+`GET /mtgdoku/daily` — **200**
+
+Returns today's daily game with all three grids.
+
+**Response (200):** `DailyGameOut`
+
+**Errors**
+- 404 no daily game for today
+
+---
+
+### Get today's attempt (protected)
+
+`GET /mtgdoku/daily/attempt` — **200**
+
+Returns the authenticated user's attempt for today.
+
+**Response (200):** `AttemptOut`
+
+**Errors**
+- 401 `NOT_AUTHENTICATED`
+- 404 no attempt found for today
+
+---
+
+### Get daily game by id
+
+`GET /mtgdoku/daily/{daily_game_id}` — **200**
+
+**Response (200):** `DailyGameOut`
+
+**Errors**
+- 404 not found
+
+---
+
+### Submit a guess
+
+`POST /mtgdoku/daily/guess` — **200**
+
+Works for both anonymous and authenticated users. Anonymous users get validation only (no persistence). A difficulty is won when all 9 cells are correctly filled.
+
+**Body**
+```json
+{ "difficulty": "easy", "cell_row": 0, "cell_col": 1, "oracle_id": "string" }
+```
+- `difficulty`: `"easy"` | `"medium"` | `"hard"`
+- `cell_row`, `cell_col`: 0-indexed position in the 3×3 grid
+- `oracle_id`: Scryfall oracle ID of the guessed card
+
+**Response (200):** `GuessResultOut`
+
+**Errors**
+- 400 invalid difficulty
+- 404 no daily game, grid not found, or card not found
+- 409 cell already won / duplicate card in cell / max guesses reached
+
+---
+
+### Check card validity
+
+`GET /mtgdoku/check` — **200**
+
+Checks whether a card satisfies both conditions for a given cell, without any game state side effects.
+
+**Query parameters**
+- `grid_id` (int)
+- `cell_row` (int)
+- `cell_col` (int)
+- `oracle_id` (string)
+
+**Response (200)**
+```json
+{ "is_valid": true, "oracle_id": "string", "card_name": "string | null" }
+```
+
+---
+
+### List categories
+
+`GET /mtgdoku/categories` — **200**
+
+Returns all available card filter categories (60+).
+
+**Response (200)**
+```json
+[{ "id": "c=w", "label": "Mono-blanc", "group": "exact_color" }]
+```
+
+Category groups: `exact_monocolor`, `exact_bicolor`, `at_least_color`, `cmc`, `type`, `power`, `toughness`, `keyword`, `mention`.
+
+---
+
+### Category stats
+
+`GET /mtgdoku/category-stats` — **200**
+
+Returns card counts per category.
+
+**Response (200)**
+```json
+[{ "id": "c=w", "label": "Mono-blanc", "group": "exact_color", "count": 320 }]
+```
+
+---
+
+### Pair count
+
+`GET /mtgdoku/pair-count` — **200**
+
+Returns the number of cards satisfying two categories simultaneously (cell difficulty estimate).
+
+**Query parameters**
+- `cat1` (string) — category id
+- `cat2` (string) — category id
+
+**Response (200)**
+```json
+{ "cat1": "c=w", "cat2": "flying", "count": 45 }
+```
+
+**Errors**
+- 200 with `{ "error": "unknown_category", "category": "..." }` if a category id is invalid
 
 ---
 

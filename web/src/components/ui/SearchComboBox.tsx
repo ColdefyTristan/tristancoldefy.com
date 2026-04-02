@@ -81,6 +81,10 @@ export default function SearchComboBox({
   function onKeyDown(e: React.KeyboardEvent<HTMLInputElement>) {
     if (!open && (e.key === "ArrowDown" || e.key === "ArrowUp")) {
       setOpen(true);
+      if (e.key === "ArrowDown" && suggestions.length > 0) {
+        e.preventDefault();
+        setActiveIndex(0);
+      }
       return;
     }
     if (e.key === "Escape") {

@@ -369,6 +369,33 @@ def check_card(
 
 
 # ---------------------------------------------------------------------------
+# Cartes — autocomplétion
+# ---------------------------------------------------------------------------
+
+class CardEntryOut(BaseModel):
+    name: str
+    oracle_id: str
+    image_url_medium: str | None
+
+
+class CardNamesOut(BaseModel):
+    lang: str
+    cards: list[CardEntryOut]
+
+
+@router.get("/cards/names", response_model=CardNamesOut)
+def get_card_names(session: Session = Depends(get_session)):
+    """Retourne tous les noms et oracle_ids distincts pour l'autocomplétion côté client."""
+    rows = session.exec(
+        select(MtgCard.name, MtgCard.oracle_id, MtgCard.image_url_medium).distinct().order_by(MtgCard.name)
+    ).all()
+    return CardNamesOut(lang="en", cards=[
+        CardEntryOut(name=name, oracle_id=oracle_id, image_url_medium=image_url_medium)
+        for name, oracle_id, image_url_medium in rows
+    ])
+
+
+# ---------------------------------------------------------------------------
 # Catégories (debug/admin)
 # ---------------------------------------------------------------------------
 

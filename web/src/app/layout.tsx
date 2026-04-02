@@ -1,4 +1,5 @@
 import "./globals.css";
+import "mana-font/css/mana.css";
 import { Header } from "@/components/layout/Header";
 import { Providers } from "./providers";
 import { getMeServer } from "@/components/auth/server";

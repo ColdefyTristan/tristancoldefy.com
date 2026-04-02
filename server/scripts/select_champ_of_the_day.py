@@ -5,9 +5,9 @@ from sqlmodel import Session, select
 from sqlalchemy import func
 
 from app.db import engine
-from app.models.familledle.champ_data import ChampData
-from app.models.familledle.daily_game import FamilledleDailyGame, RowColumn
-from app.services.familledle.column_selection import select_columns
+from app.models.riftdle.champ_data import ChampData
+from app.models.riftdle.daily_game import RiftdleDailyGame, RowColumn
+from app.services.riftdle.column_selection import select_columns
 from app.utils.time import today_paris_date
 
 RECENT_DAYS = 21  # fenêtre d'exclusion des champions récents
@@ -23,7 +23,7 @@ def select_champ_of_the_day(
     with Session(engine) as session:
         # Vérifier l'existence d'une partie aujourd'hui
         existing = session.exec(
-            select(FamilledleDailyGame).where(FamilledleDailyGame.day == day)
+            select(RiftdleDailyGame).where(RiftdleDailyGame.day == day)
         ).first()
 
         if existing is not None:
@@ -39,7 +39,7 @@ def select_champ_of_the_day(
         recent_names: set[str] = {
             row.champ_name
             for row in session.exec(
-                select(FamilledleDailyGame).where(FamilledleDailyGame.day > cutoff)
+                select(RiftdleDailyGame).where(RiftdleDailyGame.day > cutoff)
             ).all()
         }
 
@@ -63,7 +63,7 @@ def select_champ_of_the_day(
 
         active_columns = select_columns(champ, forced=forced_columns, verbose=verbose)
 
-        daily_game = FamilledleDailyGame(
+        daily_game = RiftdleDailyGame(
             day=day,
             champ_name=champ.name,
             row_columns=[col.value for col in active_columns],

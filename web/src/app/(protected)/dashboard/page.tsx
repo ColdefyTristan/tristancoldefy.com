@@ -15,6 +15,13 @@ export default function Dashboard() {
         <h1 className={styles.greeting}>Bonjour, {user?.username}</h1>
       </div>
 
+      {user?.is_family && (
+        <div className={styles.familyBanner}>
+          <span className={styles.familyIcon}>★</span>
+          Vous faites partie de la famille !
+        </div>
+      )}
+
       <div className={styles.section}>
         <p className={styles.sectionTitle}>Informations du compte</p>
         <div className={styles.card}>

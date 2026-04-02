@@ -18,7 +18,7 @@ services:
       retries: 20
 
   backend:
-    image: tristancoldefy/tristancoldefy.com-backend:0.2.0
+    image: tristancoldefy/tristancoldefy.com-backend:0.4.0
     build:
       context: ./server
       dockerfile: Dockerfile
@@ -38,7 +38,7 @@ services:
       - ./server:/app
     
   web:
-    image: tristancoldefy/tristancoldefy.com-web:0.2.0
+    image: tristancoldefy/tristancoldefy.com-web:0.4.0
     build:
       context: ./web
     container_name: website_frontend

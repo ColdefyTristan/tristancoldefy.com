@@ -16,7 +16,8 @@ from __future__ import annotations
 import argparse
 import random
 import sys
-from datetime import date, datetime, timedelta, timezone
+from datetime import date, timedelta
+from app.utils.time import utcnow_naive, today_paris_date
 from pathlib import Path
 
 from sqlmodel import Session, select
@@ -99,7 +100,7 @@ def assign_daily(
     weight_power: float,
     verbose: bool,
 ) -> None:
-    started_at = datetime.now(timezone.utc)
+    started_at = utcnow_naive()
     print(f"[{started_at.isoformat()}] assign_daily_doku : démarrage")
     print(f"  Date cible : {target_date}  cooldown={cooldown_days}j  weight_power={weight_power}")
 
@@ -132,12 +133,16 @@ def assign_daily(
         session.commit()
         session.refresh(game)
 
-    finished_at = datetime.now(timezone.utc)
+        easy_id = grids["easy"].id
+        medium_id = grids["medium"].id
+        hard_id = grids["hard"].id
+
+    finished_at = utcnow_naive()
     duration = (finished_at - started_at).total_seconds()
     print(
         f"[{finished_at.isoformat()}] assign_daily_doku : terminé en {duration:.1f}s"
         f" | day={target_date}"
-        f" easy={grids['easy'].id} medium={grids['medium'].id} hard={grids['hard'].id}"
+        f" easy={easy_id} medium={medium_id} hard={hard_id}"
     )
 
 
@@ -147,7 +152,7 @@ def assign_daily(
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Assigne les grilles MTGDoku du jour.")
-    parser.add_argument("--date", type=date.fromisoformat, default=date.today(),
+    parser.add_argument("--date", type=date.fromisoformat, default=today_paris_date(),
                         help="Date cible (défaut : aujourd'hui, format YYYY-MM-DD)")
     parser.add_argument("--cooldown", type=int, default=COOLDOWN_DAYS,
                         help=f"Jours de cooldown avant réutilisation d'une grille (défaut : {COOLDOWN_DAYS})")

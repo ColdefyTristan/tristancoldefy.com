@@ -79,6 +79,8 @@ class User(SQLModel, table=True):
     created_at: datetime = Field(default_factory=utcnow_naive)
     is_active: bool = Field(default=True)
 
+    is_family: bool = Field(default=False)
+
 
 class UserSession(SQLModel, table=True):
     id: int | None = Field(default=None, primary_key=True)

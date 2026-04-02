@@ -36,8 +36,8 @@ export function HeaderNav() {
 
   ];*/
   const links:NavItem[] = [
-    { href: "/", label:"Accueil"},
-    { href: "/familledle", label: "FamilleDLE" },
+    { href: "/riftdle", label: "Riftdle" },
+    { href: "/mtgdoku", label: "MtgDoku" },
   ]
   const authLinks:NavItem[] = user
     ? [{ href: "/dashboard", label: user.username , icon: UserRound}] 
@@ -48,6 +48,9 @@ export function HeaderNav() {
 
   return (
     <nav aria-label="Navigation principale" className={styles.nav}>
+    <NavLink href={"/"} label={"Accueil"} />
+    <span className={styles.vSep} aria-hidden="true" />
+
     <div className={styles.group}>
       {links.map((l) => (
         <NavLink key={l.href} {...l} />

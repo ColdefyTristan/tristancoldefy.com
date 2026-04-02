@@ -89,7 +89,8 @@ def test_atleast_no_colorless():
 
 
 def test_cmc_count():
-    assert len(_cats_by_group("cmc")) == 5
+    # exact(5) + lt(5: cmc<2..cmc<6) + gt(5: cmc>0..cmc>4)
+    assert len(_cats_by_group("cmc")) == 15
 
 
 def test_cmc_ids_present():
@@ -99,6 +100,16 @@ def test_cmc_ids_present():
 
 def test_cmc_zero_not_present():
     assert "cmc=0" not in CATEGORIES_BY_ID
+
+
+def test_cmc_lt_ids_present():
+    for n in range(2, 7):
+        assert f"cmc<{n}" in CATEGORIES_BY_ID
+
+
+def test_cmc_gt_ids_present():
+    for n in range(0, 5):
+        assert f"cmc>{n}" in CATEGORIES_BY_ID
 
 
 # ---------------------------------------------------------------------------
@@ -126,11 +137,13 @@ def test_non_permanent_types_present():
 
 
 def test_power_count():
-    assert len(_cats_by_group("power")) == 6  # 0 to 5
+    # exact(6) + lt(4: pow<2..pow<5) + gt(5: pow>0..pow>4)
+    assert len(_cats_by_group("power")) == 15
 
 
 def test_toughness_count():
-    assert len(_cats_by_group("toughness")) == 6
+    # exact(6) + lt(4) + gt(5)
+    assert len(_cats_by_group("toughness")) == 15
 
 
 def test_power_ids_present():
@@ -138,9 +151,29 @@ def test_power_ids_present():
         assert f"pow={i}" in CATEGORIES_BY_ID
 
 
+def test_power_lt_ids_present():
+    for n in range(2, 6):
+        assert f"pow<{n}" in CATEGORIES_BY_ID
+
+
+def test_power_gt_ids_present():
+    for n in range(0, 5):
+        assert f"pow>{n}" in CATEGORIES_BY_ID
+
+
 def test_toughness_ids_present():
     for i in range(6):
         assert f"tou={i}" in CATEGORIES_BY_ID
+
+
+def test_toughness_lt_ids_present():
+    for n in range(2, 6):
+        assert f"tou<{n}" in CATEGORIES_BY_ID
+
+
+def test_toughness_gt_ids_present():
+    for n in range(0, 5):
+        assert f"tou>{n}" in CATEGORIES_BY_ID
 
 
 # ---------------------------------------------------------------------------

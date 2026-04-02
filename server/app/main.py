@@ -3,7 +3,7 @@ from fastapi.responses import JSONResponse
 from fastapi.exceptions import RequestValidationError
 from contextlib import asynccontextmanager
 from app.routers.auth import router as auth_router
-from app.routers.familledle import router as familledle_router
+from app.routers.riftdle import router as riftdle_router
 from app.routers.mtg import router as mtg_router
 from app.routers.mtgdoku import router as mtgdoku_router
 import app.models.mtg.mtgdoku_grid  # noqa: F401 — enregistrement SQLModel
@@ -48,6 +48,6 @@ async def validation_exception_handler(request: Request, exc: RequestValidationE
 
 
 app.include_router(auth_router)
-app.include_router(familledle_router)
+app.include_router(riftdle_router)
 app.include_router(mtg_router)
 app.include_router(mtgdoku_router)

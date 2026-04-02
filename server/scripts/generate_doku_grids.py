@@ -26,13 +26,14 @@ from __future__ import annotations
 import argparse
 import json
 import random
+import re
 import statistics
 from dataclasses import dataclass
 
 from pathlib import Path
 
-DEFAULT_COMBOS_PATH = Path(__file__).parent / "doku_combos.json"
-DEFAULT_OUTPUT_PATH = Path(__file__).parent / "doku_grids.json"
+DEFAULT_COMBOS_PATH = Path(__file__).parent.parent / "data" / "mtgdoku" / "doku_combos.json"
+DEFAULT_OUTPUT_PATH = Path(__file__).parent.parent / "data" / "mtgdoku" / "doku_grids.json"
 DEFAULT_TOP_N = 5000
 DEFAULT_MAX_PAIRS = 300    # meilleures paires conservées pour l'énumération
 MIN_PAIR_GROUP_TOTAL = 20  # cartes minimum pour qu'une paire soit un label valide
@@ -203,6 +204,59 @@ def _group_theme(group: Group, cond_meta: dict[str, CondMeta]) -> str:
 
 
 # ---------------------------------------------------------------------------
+# Redondances entre conditions
+# ---------------------------------------------------------------------------
+
+_NUM_COND_RE = re.compile(r"^(cmc|pow|tou)([=<>])(\d+)$")
+_COLOR_MONO_RE = re.compile(r"^c=([wubrg])$")
+_COLOR_BI_RE = re.compile(r"^c=([wubrg]{2})$")
+_COLOR_ATLEAST_RE = re.compile(r"^c>([wubrg])$")
+
+
+def _implies(a: str, b: str) -> bool:
+    """Retourne True si la condition a ⊆ b (toute carte satisfaisant a satisfait aussi b)."""
+    if a == b:
+        return True
+
+    ma = _NUM_COND_RE.match(a)
+    mb = _NUM_COND_RE.match(b)
+    if ma and mb and ma.group(1) == mb.group(1):
+        op_a, val_a = ma.group(2), int(ma.group(3))
+        op_b, val_b = mb.group(2), int(mb.group(3))
+        if op_a == "=" and op_b == "<":
+            return val_a < val_b
+        if op_a == "=" and op_b == ">":
+            return val_a > val_b
+        if op_a == "<" and op_b == "<":
+            return val_a <= val_b
+        if op_a == ">" and op_b == ">":
+            return val_a >= val_b
+        return False
+
+    mb_at = _COLOR_ATLEAST_RE.match(b)
+    if mb_at:
+        color_b = mb_at.group(1)
+        m_mono = _COLOR_MONO_RE.match(a)
+        if m_mono:
+            return m_mono.group(1) == color_b
+        m_bi = _COLOR_BI_RE.match(a)
+        if m_bi:
+            return color_b in set(m_bi.group(1))
+
+    return False
+
+
+def _has_redundant_conditions(groups: list[Group]) -> bool:
+    """Retourne True si deux conditions parmi tous les groupes sont en relation de subsomption."""
+    all_conds = [cid for g in groups for cid in g.conds]
+    for i, a in enumerate(all_conds):
+        for b in all_conds[i + 1:]:
+            if _implies(a, b) or _implies(b, a):
+                return True
+    return False
+
+
+# ---------------------------------------------------------------------------
 # Score et difficulté
 # ---------------------------------------------------------------------------
 
@@ -321,6 +375,9 @@ def _try_build_grid(
     C0, C1, C2 = groups[c0], groups[c1], groups[c2]
 
     if C0.cond_set & C1.cond_set or C0.cond_set & C2.cond_set or C1.cond_set & C2.cond_set:
+        return None
+
+    if _has_redundant_conditions([R0, R1, R2, C0, C1, C2]):
         return None
 
     row_groups = [R0, R1, R2]

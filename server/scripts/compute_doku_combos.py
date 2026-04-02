@@ -39,7 +39,7 @@ MIN_TOTAL = 10             # trop peu de réponses → cellule injouable
 MAX_TOTAL = 5000           # trop de réponses → trop facile
 MIN_KNOWN = 10             # au moins N cartes "connues" dans l'intersection
 
-OUTPUT_PATH = Path(__file__).parent / "doku_combos.json"
+OUTPUT_PATH = Path(__file__).parent.parent / "data" / "mtgdoku" / "doku_combos.json"
 
 
 # ---------------------------------------------------------------------------

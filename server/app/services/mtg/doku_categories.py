@@ -1,8 +1,11 @@
 from itertools import combinations
 
-from sqlalchemy import and_, func
+from sqlalchemy import Integer, and_, cast, func
 
 from app.models.mtg.mtg_card import MtgCard
+
+# Regexp PostgreSQL pour ne cibler que les puissances/endurances numériques (exclut "*", "X", etc.)
+_NUMERIC_RE = r"^\d+$"
 
 # ---------------------------------------------------------------------------
 # Color helpers
@@ -70,8 +73,32 @@ def _power_eq(n: int):
     return MtgCard.power == str(n)
 
 
+def _power_lt(n: int):
+    return and_(MtgCard.power.op("~")(_NUMERIC_RE), cast(MtgCard.power, Integer) < n)
+
+
+def _power_gt(n: int):
+    return and_(MtgCard.power.op("~")(_NUMERIC_RE), cast(MtgCard.power, Integer) > n)
+
+
 def _toughness_eq(n: int):
     return MtgCard.toughness == str(n)
+
+
+def _toughness_lt(n: int):
+    return and_(MtgCard.toughness.op("~")(_NUMERIC_RE), cast(MtgCard.toughness, Integer) < n)
+
+
+def _toughness_gt(n: int):
+    return and_(MtgCard.toughness.op("~")(_NUMERIC_RE), cast(MtgCard.toughness, Integer) > n)
+
+
+def _cmc_lt(n: int):
+    return MtgCard.converted_mana_cost < n
+
+
+def _cmc_gt(n: int):
+    return MtgCard.converted_mana_cost > n
 
 
 def _oracle_contains(text: str):
@@ -120,7 +147,7 @@ def _build_all_categories() -> list[DokuCategory]:
             filter_fn=lambda c=c_fixed: _at_least(c),
         ))
 
-    # CMC (cmc=1 to cmc=5)
+    # CMC exact (cmc=1 to cmc=5)
     for i in range(1, 6):
         i_fixed = i
         cats.append(DokuCategory(
@@ -128,6 +155,26 @@ def _build_all_categories() -> list[DokuCategory]:
             label=f"CMC {i_fixed}",
             group="cmc",
             filter_fn=lambda i=i_fixed: _cmc(i),
+        ))
+
+    # CMC < n  (cmc<2 … cmc<6)
+    for n in range(2, 7):
+        n_fixed = n
+        cats.append(DokuCategory(
+            id=f"cmc<{n_fixed}",
+            label=f"CMC < {n_fixed}",
+            group="cmc",
+            filter_fn=lambda n=n_fixed: _cmc_lt(n),
+        ))
+
+    # CMC > n  (cmc>0 … cmc>4)
+    for n in range(0, 5):
+        n_fixed = n
+        cats.append(DokuCategory(
+            id=f"cmc>{n_fixed}",
+            label=f"CMC > {n_fixed}",
+            group="cmc",
+            filter_fn=lambda n=n_fixed: _cmc_gt(n),
         ))
 
     # Card types — permanent
@@ -150,7 +197,7 @@ def _build_all_categories() -> list[DokuCategory]:
             filter_fn=lambda t=t_fixed: _type_contains(t),
         ))
 
-    # Power (pow=0 to pow=5)
+    # Power exact (pow=0 to pow=5)
     for i in range(6):
         i_fixed = i
         cats.append(DokuCategory(
@@ -160,7 +207,27 @@ def _build_all_categories() -> list[DokuCategory]:
             filter_fn=lambda i=i_fixed: _power_eq(i),
         ))
 
-    # Toughness (tou=0 to tou=5)
+    # Power < n  (pow<2 … pow<5)
+    for n in range(2, 6):
+        n_fixed = n
+        cats.append(DokuCategory(
+            id=f"pow<{n_fixed}",
+            label=f"Power < {n_fixed}",
+            group="power",
+            filter_fn=lambda n=n_fixed: _power_lt(n),
+        ))
+
+    # Power > n  (pow>0 … pow>4)
+    for n in range(0, 5):
+        n_fixed = n
+        cats.append(DokuCategory(
+            id=f"pow>{n_fixed}",
+            label=f"Power > {n_fixed}",
+            group="power",
+            filter_fn=lambda n=n_fixed: _power_gt(n),
+        ))
+
+    # Toughness exact (tou=0 to tou=5)
     for i in range(6):
         i_fixed = i
         cats.append(DokuCategory(
@@ -168,6 +235,26 @@ def _build_all_categories() -> list[DokuCategory]:
             label=f"Toughness {i_fixed}",
             group="toughness",
             filter_fn=lambda i=i_fixed: _toughness_eq(i),
+        ))
+
+    # Toughness < n  (tou<2 … tou<5)
+    for n in range(2, 6):
+        n_fixed = n
+        cats.append(DokuCategory(
+            id=f"tou<{n_fixed}",
+            label=f"Toughness < {n_fixed}",
+            group="toughness",
+            filter_fn=lambda n=n_fixed: _toughness_lt(n),
+        ))
+
+    # Toughness > n  (tou>0 … tou>4)
+    for n in range(0, 5):
+        n_fixed = n
+        cats.append(DokuCategory(
+            id=f"tou>{n_fixed}",
+            label=f"Toughness > {n_fixed}",
+            group="toughness",
+            filter_fn=lambda n=n_fixed: _toughness_gt(n),
         ))
 
     # Keywords (oracle text)

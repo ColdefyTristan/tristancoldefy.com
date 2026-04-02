@@ -1,0 +1,447 @@
+/* ─── Theme: Arcane ──────────────────────────────────────────────────────── */
+
+.page {
+  --accent:         #8b5cf6;
+  --cell-bg:        #15102a;
+  --cell-solved--bg : #271e49;
+  --cell-border:    rgba(139, 92, 246, 0.22);
+  --cell-solved-border:  rgba(92, 246, 233, 0.5);
+  --cell-hover:     rgba(139, 92, 246, 0.08);
+  --pill-from:      #4c1d95;
+  --pill-to:        #7c3aed;
+  --pill-text:      #e9d5ff;
+  --title-color:    #c4b5fd;
+  --sidebar-border: rgba(139, 92, 246, 0.18);
+  --glow:           0 0 28px rgba(139, 92, 246, 0.18);
+  --corner-radius:  14px;
+
+  padding: 24px 24px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-height: 100vh;
+}
+
+/* ─── Title ───────────────────────────────────────────────────────────────── */
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  position: relative;
+}
+
+.backLink {
+  position: absolute;
+  left: 0;
+  font-size: 13px;
+  color: rgba(196, 181, 253, 0.6);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.backLink:hover {
+  color: var(--title-color);
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--title-color);
+  margin: 0;
+  text-align: center;
+}
+
+/* ─── Main layout ─────────────────────────────────────────────────────────── */
+
+.layout {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* ─── Grid ────────────────────────────────────────────────────────────────── */
+
+.gridWrapper {
+  flex-shrink: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 150px repeat(3, 200px);
+  grid-template-rows:    100px repeat(3, 200px);
+  gap: 0;
+}
+
+/* Header cells — invisible, just provide spacing */
+.cornerCell,
+.headerCell {
+  background: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* Pill inside a header cell */
+.pill i.ms {
+  font-size: 1.1em;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+.pillSep {
+  display: inline-block;
+  width: 5px;
+}
+
+.pill {
+  display: inline-block;
+  padding: 5px 14px;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(135deg, var(--pill-from), var(--pill-to));
+  color: var(--pill-text);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-align: center;
+  line-height: 1.4;
+  margin-right: 10px;
+}
+
+/* Playable cells */
+.gameCell {
+  background: var(--cell-bg);
+  border: 1px solid var(--cell-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.15s, box-shadow 0.15s;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.gameCell:hover {
+  background: var(--cell-hover);
+  box-shadow: inset 0 0 0 1px var(--accent);
+}
+
+.gameCellInner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.18;
+  font-size: 36px;
+  user-select: none;
+}
+
+.cellHint {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 11px;
+  color: rgba(196, 181, 253, 0.55);
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  user-select: none;
+}
+
+.gameCell:hover .cellHint {
+  opacity: 1;
+}
+
+.gameCellSolved {
+  cursor: default;
+  border-color: var(--cell-solved-border);
+  background: var(--cell-solved--bg);
+}
+
+.gameCellSolved:hover {
+  background: var(--cell-bg);
+  box-shadow: none;
+}
+
+.cellCardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Outer corners of the 3×3 game area */
+.gameCellTopLeft     { border-top-left-radius:     var(--corner-radius); }
+.gameCellTopRight    { border-top-right-radius:    var(--corner-radius); }
+.gameCellBottomLeft  { border-bottom-left-radius:  var(--corner-radius); }
+.gameCellBottomRight { border-bottom-right-radius: var(--corner-radius); }
+
+/* Wrong card in modal */
+.wrongCardWrapper {
+  flex-shrink: 0;
+  width: 100px;
+  border: 2px solid #ef4444;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.4);
+}
+
+.wrongCardImage {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ─── Sidebar ─────────────────────────────────────────────────────────────── */
+
+.sidebar {
+  width: 300px;
+  flex-shrink: 0;
+  border: 1px solid var(--sidebar-border);
+  border-radius: var(--radius-md);
+  background: var(--cell-bg);
+  min-height: 400px;
+  padding: 16px;
+  margin-top: 100px;
+}
+
+.sidebarTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 0 12px;
+}
+
+.sidebarEmpty {
+  font-size: 13px;
+  opacity: 0.4;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.triedList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 320px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.triedItem {
+  font-size: 13px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  color: rgba(233, 213, 255, 0.7);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.triedValid {
+  color: #86efac;
+  background: rgba(134, 239, 172, 0.06);
+}
+
+.triedInvalid {
+  color: rgba(233, 213, 255, 0.5);
+}
+
+/* ─── Modal ───────────────────────────────────────────────────────────────── */
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10vh;
+}
+
+.modal {
+  background: #1a1330;
+  border: 1px solid rgba(139, 92, 246, 0.28);
+  border-radius: 16px;
+  padding: 24px;
+  width: 520px;
+  max-width: 95vw;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Conditions row */
+.modalHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(139, 92, 246, 0.15);
+}
+
+.modalHeader .modalCloseBtn {
+  margin-left: auto;
+  align-self: flex-start;
+}
+
+.modalCondGroup {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.modalSep {
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 20px;
+  font-weight: 300;
+  flex-shrink: 0;
+}
+
+/* Body row */
+.modalBody {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.modalSearchGroup {
+  flex: 0 1 260px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.modalSearchInput {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: #e9d5ff;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.modalSearchInput::placeholder {
+  color: rgba(255, 255, 255, 0.28);
+}
+
+.modalSearchInput:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15);
+}
+
+.modalSuggestions {
+  background: #120e22;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.suggestionItem {
+  display: block;
+  width: 100%;
+  padding: 9px 14px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(139, 92, 246, 0.08);
+  color: #e9d5ff;
+  font-size: 13px;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+.suggestionItem:last-child {
+  border-bottom: none;
+}
+
+.suggestionItem:hover {
+  background: rgba(139, 92, 246, 0.12);
+}
+
+.modalValidateBtn {
+  flex-shrink: 0;
+  align-self: flex-start;
+  padding: 10px 18px;
+  background: rgba(139, 92, 246, 0.1);
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  border-radius: 8px;
+  color: rgba(233, 213, 255, 0.35);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: not-allowed;
+  white-space: nowrap;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.modalValidateBtn:not(:disabled) {
+  background: rgba(139, 92, 246, 0.25);
+  border-color: var(--accent);
+  color: #e9d5ff;
+  cursor: pointer;
+}
+
+.modalValidateBtn:not(:disabled):hover {
+  background: rgba(139, 92, 246, 0.4);
+}
+
+
+.modalCloseBtn {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.modalCloseBtn:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ─── States ──────────────────────────────────────────────────────────────── */
+
+.statusMsg {
+  font-size: 14px;
+  opacity: 0.6;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.errorMsg {
+  color: #f87171;
+  font-size: 14px;
+  text-align: center;
+  padding: 40px 0;
+}

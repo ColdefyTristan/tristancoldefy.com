@@ -8,4 +8,5 @@ export type AuthUser = {
   id: string;
   username: string;
   email: AuthMail;
+  is_family:boolean;
 };

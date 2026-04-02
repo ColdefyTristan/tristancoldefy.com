@@ -36,6 +36,7 @@ build/
 *.sqlite
 *.sqlite3
 server/data/scryfall/
+server/data/mtgdoku/
 
 # --- VSCode ---
 .vscode/

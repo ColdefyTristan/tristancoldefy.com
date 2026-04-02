@@ -237,6 +237,7 @@ def me(
             "pending": pending.email if pending else None,
             "verification_sent_at": pending.verification_sent_at if pending else None,
         },
+        "is_family":user.is_family,
     }
 
 
