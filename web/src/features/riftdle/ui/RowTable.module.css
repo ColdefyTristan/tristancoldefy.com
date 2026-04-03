@@ -1,5 +1,7 @@
 .root {
   width: 100%;
+  min-width: 0;
+  overflow-x: auto;
 }
 
 .table {
@@ -10,18 +12,21 @@
   border-spacing: 8px;
   padding: 8px;
   border-radius: 100px;
+  margin: 0 auto;
 }
 
 .table th,
 .table td {
   border-radius: 12px;
-  width: 100px;
-  min-width: 100px;
-  max-width: 100px;
-  height: 100px;
+  width: clamp(64px, 13vw, 100px);
+  min-width: clamp(64px, 13vw, 100px);
+  max-width: clamp(64px, 13vw, 100px);
+  height: clamp(64px, 13vw, 100px);
+  aspect-ratio: 1;
   text-align: center;
   vertical-align: middle;
   overflow: hidden;
+  padding: 0;
 }
 
 .table th{
@@ -29,8 +34,8 @@
 }
 
 .table td{
-  color:black;
-  font-size: 24px;
+  color: black;
+  font-size: clamp(10px, 2.5vw, 20px);
   font-weight: 600;
 }
 
@@ -94,13 +99,21 @@
 }
 
 .listCell {
-  font-size: 14px;
+  font-size: clamp(8px, 1.6vw, 13px);
   padding: 4px;
+  overflow: hidden;
+  max-height: 100%;
+  line-height: 1.2;
+  word-break: break-word;
 }
 
 .bucketText {
-  font-size: 14px;
+  font-size: clamp(8px, 1.6vw, 13px);
   padding: 4px;
+  overflow: hidden;
+  max-height: 100%;
+  line-height: 1.2;
+  word-break: break-word;
 }
 
 .portrait {
@@ -113,9 +126,10 @@
 
 .hueWidget {
   position: relative;
-  width: 80px;
-  height: 80px;
-  margin: 0 auto; /* centre dans la cellule */
+  width: min(80px, 100%);
+  height: min(80px, 100%);
+  aspect-ratio: 1;
+  margin: 0 auto;
 }
 
 .hueCenter {

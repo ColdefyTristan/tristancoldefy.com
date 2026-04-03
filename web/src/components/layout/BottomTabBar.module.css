@@ -1,0 +1,84 @@
+.bar {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .bar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+
+    flex-direction: row;
+    align-items: stretch;
+
+    padding: 8px 8px calc(8px + env(safe-area-inset-bottom));
+
+    background: rgba(30, 30, 30, 0.85);
+    backdrop-filter: blur(24px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
+  }
+}
+
+.tab {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding: 6px 4px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.45);
+  transition: color 120ms ease, background 120ms ease;
+}
+
+.tab:hover {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+}
+
+.active {
+  color: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+/* Colorize SVG icons to match the tab color */
+.tab img {
+  filter: brightness(0) invert(1) opacity(0.45);
+  transition: filter 120ms ease;
+}
+
+.tab:hover img {
+  filter: brightness(0) invert(1) opacity(0.75);
+}
+
+.active img {
+  filter: brightness(0) invert(1) opacity(0.95);
+}
+
+.riftdleIcon {
+  transform: scaleY(-1);
+}
+²
+.label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 72px;
+}

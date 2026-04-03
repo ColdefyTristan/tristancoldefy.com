@@ -12,7 +12,9 @@
       "Bash(npm install:*)",
       "Bash(python -c \":*)",
       "Bash(.venv/Scripts/python -c \":*)",
-      "Bash(git mv:*)"
+      "Bash(git mv:*)",
+      "Bash(xargs grep:*)",
+      "Bash(grep -E \"fixed|[0-9]{3,}px\")"
     ]
   }
 }

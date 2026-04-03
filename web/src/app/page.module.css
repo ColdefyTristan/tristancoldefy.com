@@ -46,7 +46,9 @@
 }
 .linkFooter {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  row-gap: 6px;
   padding-top: 30px;
 }
 

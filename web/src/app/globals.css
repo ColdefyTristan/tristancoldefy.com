@@ -1,17 +1,27 @@
 @import "../styles/theme.css";
 
 * { box-sizing: border-box; }
-html, body { padding: 0; margin: 0; }
+html, body { padding: 0; margin: 0; height: 100%; }
 body {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color: whitesmoke;
   background:  #0c0c0c;
-  padding-bottom: 68px;
+}
 
+@media (max-width: 640px) {
+  body {
+    padding-bottom: calc(68px + env(safe-area-inset-bottom));
+  }
 }
 
 
 
+
+main { flex: 1; }
 
 a { color: inherit; text-decoration: none; }
 a:hover { text-decoration: underline; }

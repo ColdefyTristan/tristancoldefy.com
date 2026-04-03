@@ -59,7 +59,7 @@ const KEYWORD_FR: Record<string, string> = {
   trample:        'Piétinement',
   haste:          'Célérité',
   deathtouch:     'Contact mortel',
-  lifelink:       'Lien vital',
+  lifelink:       'Lien de vie',
 };
 
 const MENTION_FR: Record<string, string> = {
@@ -68,7 +68,7 @@ const MENTION_FR: Record<string, string> = {
   discard:    'défausse',
   hand:       'main',
   library:    'bibliothèque',
-  scry:       'scruter',
+  scry:       'regard',
   '+1/+1':    '+1/+1',
   '-1/-1':    '-1/-1',
   token:      'jeton',
@@ -111,16 +111,17 @@ export function getCategoryDisplay(id: string): CategoryDisplay {
   if (atLeast) {
     const c = atLeast[1];
     return {
-      text: `${COLOR_FR[c]} et multicolore`,
+      text: `${COLOR_FR[c]}, multicolore`,
       icons: [mana(COLOR_MANA[c])],
     };
   }
 
-  // CMC: cmc=1 … cmc=5
-  const cmc = id.match(/^cmc=(\d+)$/);
+  // CMC: cmc=1 … cmc=5, cmc<X, cmc>X
+  const cmc = id.match(/^cmc([=><])(\d+)$/);
   if (cmc) {
-    const n = cmc[1];
-    return { text: `Coût ${n}`, icons: [mana(`ms-${n}`)] };
+    const [, op, n] = cmc;
+    const icons = op === '=' ? [mana(`ms-${n}`)] : [];
+    return { text: `CMC ${op} ${n}`, icons };
   }
 
   // Card type

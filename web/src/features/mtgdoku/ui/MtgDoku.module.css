@@ -63,6 +63,20 @@
   justify-content: center;
 }
 
+@media (max-width: 640px) {
+  .layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin-top: 0;
+    min-height: unset;
+    box-sizing: border-box;
+  }
+}
+
 /* ─── Grid ────────────────────────────────────────────────────────────────── */
 
 .gridWrapper {
@@ -70,9 +84,14 @@
 }
 
 .grid {
+  /* game-cell shrinks fluidly; header col = 75%, header row = 50% */
+  --game-cell:   clamp(72px, calc((100vw - 32px) / 3.75), 200px);
+  --header-col:  calc(var(--game-cell) * 0.75);
+  --header-row:  calc(var(--game-cell) * 0.5);
+
   display: grid;
-  grid-template-columns: 150px repeat(3, 200px);
-  grid-template-rows:    100px repeat(3, 200px);
+  grid-template-columns: var(--header-col) repeat(3, var(--game-cell));
+  grid-template-rows:    var(--header-row) repeat(3, var(--game-cell));
   gap: 0;
 }
 
@@ -106,12 +125,23 @@
   border-radius: var(--radius-pill);
   background: linear-gradient(135deg, var(--pill-from), var(--pill-to));
   color: var(--pill-text);
-  font-size: 12px;
+  font-size: clamp(9px, 1.5vw, 12px);
   font-weight: 600;
   letter-spacing: 0.01em;
   text-align: center;
   line-height: 1.4;
   margin-right: 10px;
+}
+
+@media (max-width: 640px) {
+  .pill {
+    padding: 3px 8px;
+    margin-right: 0;
+  }
+
+  .page {
+    padding: 16px 16px 48px;
+  }
 }
 
 /* Playable cells */

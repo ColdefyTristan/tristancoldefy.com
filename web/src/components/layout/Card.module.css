@@ -1,6 +1,6 @@
 .card {
   margin-top: 100px;
-  width: 600px;
+  width: min(600px, 100%);
   margin-inline: auto;
   background-color: rgba(0, 0, 0, 0.219);
   border-radius: 30px;
@@ -72,6 +72,5 @@
 }
 
 .medium {
-  width: 900px;
-
+  width: min(900px, 100%);
 }

@@ -78,7 +78,10 @@ const OFFSET_DEG = -90;
 
 function hueDotStyle(hue: number): React.CSSProperties {
   const rad = ((hue + OFFSET_DEG) * Math.PI) / 180;
-  return { left: CX + R * Math.cos(rad), top: CY + R * Math.sin(rad) };
+  return {
+    left: `${((CX + R * Math.cos(rad)) / SIZE) * 100}%`,
+    top: `${((CY + R * Math.sin(rad)) / SIZE) * 100}%`,
+  };
 }
 
 function HueArc({ hue, delta }: { hue: number; delta: number }) {
