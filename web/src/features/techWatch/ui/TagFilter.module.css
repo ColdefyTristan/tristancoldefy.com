@@ -1,0 +1,64 @@
+.tagFilter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 13px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: transparent;
+  color: var(--lighGray);
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, border-color 0.18s;
+  font-family: inherit;
+}
+
+.tag:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+}
+
+.tag.active {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-strong);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.count {
+  font-size: 11px;
+  color: var(--gray);
+  background: rgba(255, 255, 255, 0.07);
+  padding: 1px 6px;
+  border-radius: 999px;
+  line-height: 1.6;
+}
+
+.tag.active .count {
+  color: var(--lighGray);
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.more {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 11px;
+  border-radius: 999px;
+  border: 1px dashed rgba(255, 255, 255, 0.14);
+  background: transparent;
+  color: var(--gray);
+  font-size: 12px;
+  cursor: pointer;
+  transition: color 0.18s, border-color 0.18s;
+  font-family: inherit;
+}
+
+.more:hover {
+  color: var(--lighGray);
+  border-color: rgba(255, 255, 255, 0.25);
+}

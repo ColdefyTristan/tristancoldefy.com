@@ -1,5 +1,6 @@
 import { api } from '@/lib/api/client';
 import { ApiError } from '@/lib/api/errors';
+
 import { AttemptOut, CardNamesOut, DailyGameOut, GuessIn, GuessResultOut } from '../types';
 
 export async function getDailyGame(): Promise<DailyGameOut> {

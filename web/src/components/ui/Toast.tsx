@@ -2,6 +2,7 @@
 
 import * as ToastPrimitive from "@radix-ui/react-toast";
 import React from "react";
+
 import styles from "./Toast.module.css";
 
 type ToastVariant = "info" | "success" | "error";

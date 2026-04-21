@@ -1,9 +1,11 @@
 import "./globals.css";
 import "mana-font/css/mana.css";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
-import { Providers } from "./providers";
+
 import { getMeServer } from "@/components/auth/server";
+import { Footer } from "@/components/layout/Footer";
+import { Header } from "@/components/layout/Header";
+
+import { Providers } from "./providers";
 export const metadata = {
   title: "TristanColdefy",
   description: "Portfolio",

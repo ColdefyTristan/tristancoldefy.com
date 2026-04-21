@@ -1,7 +1,8 @@
 "use client";
 
+import type { Cell,ChampRow } from "@/features/riftdle/types";
+
 import styles from "./RowTable.module.css";
-import type { ChampRow, Cell } from "@/features/riftdle/types";
 
 function cellClass(c: Cell): string {
   if (c.prox === "equal") return styles.equal;

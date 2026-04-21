@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
+
 import { getTodayAttempt, postClue } from "../api/attempts";
 import { getChampData, postAttemptGuess } from "../api/client";
 import { buildRow } from "../domain/buildRow";
 import { RULES } from "../domain/rules";
-import type { ChampDataResponse, ClueType, DailyGameResponse, ChampRow, Status } from "../types";
+import type { ChampDataResponse, ChampRow, ClueType, DailyGameResponse, Status } from "../types";
 
 const LOCAL_KEY = "riftdle_session";
 

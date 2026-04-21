@@ -6,6 +6,7 @@ from app.routers.auth import router as auth_router
 from app.routers.riftdle import router as riftdle_router
 from app.routers.mtg import router as mtg_router
 from app.routers.mtgdoku import router as mtgdoku_router
+from app.routers.tech_watch import router as tech_watch_router
 import app.models.mtg.mtgdoku_grid  # noqa: F401 — enregistrement SQLModel
 import app.models.mtg.mtgdoku_attempt  # noqa: F401 — enregistrement SQLModel
 
@@ -51,3 +52,4 @@ app.include_router(auth_router)
 app.include_router(riftdle_router)
 app.include_router(mtg_router)
 app.include_router(mtgdoku_router)
+app.include_router(tech_watch_router)

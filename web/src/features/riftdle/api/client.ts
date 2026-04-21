@@ -1,4 +1,5 @@
 import { api } from "@/lib/api/client";
+
 import { ChampDataResponse, DailyGameResponse, PostAttemptGuessResponse } from "../types";
 
 export async function getChampData(championName: string): Promise<ChampDataResponse> {

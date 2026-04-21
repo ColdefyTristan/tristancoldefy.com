@@ -1,5 +1,5 @@
-import type { ChampDataResponse, BuildRowRules, ChampRow } from "../types";
-import { evalByDeltaInt, evalFamily, evalByBucketAdjacent, evalHue } from "./eval";
+import type { BuildRowRules, ChampDataResponse, ChampRow } from "../types";
+import { evalByBucketAdjacent, evalByDeltaInt, evalFamily, evalHue } from "./eval";
 
 
 function uid() {

@@ -1,12 +1,14 @@
 'use client';
 
-import React from 'react';
 import Fuse from 'fuse.js';
-import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
+import React from 'react';
+import { useEffect, useRef, useState } from 'react';
+
 import { useAuth } from '@/components/auth/AuthProvider';
 import BlobBackground, { PRESET_VIOLET } from '@/components/ui/BlobBackground';
 import GridCellIcon from '@/components/ui/GridCellIcon';
+
 import { getCardNames, getDailyGame, getTodayAttempt, postGuess } from '../api/client';
 import { applyGuessToLocalAttempt, createLocalAttempt, loadLocalAttempt } from '../lib/localAttempt';
 import { AttemptOut, CardEntry, DailyGameOut, GridOut, GuessOut } from '../types';

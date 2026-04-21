@@ -1,0 +1,81 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.container {
+  overflow: hidden;
+}
+
+.track {
+  display: flex;
+  gap: 16px;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+}
+
+.slide {
+  flex-shrink: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* During seamless loop jump: freeze slide transitions to prevent opacity flicker */
+.jumping .slide {
+  transition: none;
+}
+
+.slideCenter {
+  opacity: 1;
+}
+
+/* Cards outside the 3 visible ones — no hover effect */
+.slideHidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Left side cards: outer (left) edge fades to transparent */
+.slideLeft {
+  opacity: 0.55;
+  mask-image: linear-gradient(to right, transparent 0%, black 55%);
+  cursor: pointer;
+}
+
+.slideLeft:hover {
+  transform: translateX(12px);
+  opacity: 0.85;
+}
+
+/* Right side cards: outer (right) edge fades to transparent */
+.slideRight {
+  opacity: 0.55;
+  mask-image: linear-gradient(to left, transparent 0%, black 55%);
+  cursor: pointer;
+}
+
+.slideRight:hover {
+  transform: translateX(-12px);
+  opacity: 0.85;
+}
+
+/* Disable links on side cards — clicking the slide centers it instead */
+.slideLeft a,
+.slideRight a {
+  pointer-events: none;
+}
+
+/* Brighten card background on side hover so title stays legible */
+.slideLeft:hover article,
+.slideRight:hover article {
+  background: rgba(255, 255, 255, 0.09);
+}
+
+
+.empty {
+  color: var(--lighGray);
+  font-size: 14px;
+  text-align: center;
+  padding: 40px 0;
+  margin: 0;
+}

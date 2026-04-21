@@ -1,4 +1,4 @@
-from fastapi import Depends, HTTPException, Request
+from fastapi import Depends, HTTPException, Request, Header
 from sqlmodel import Session, select
 from datetime import datetime, timedelta
 from dataclasses import dataclass
@@ -9,6 +9,7 @@ from app.models.tables import User, UserSession
 from app.security import hash_token
 from app.utils.time import utcnow_naive
 from app.constants import IDLE_TIMEOUT_SECONDS, TOUCH_MIN_INTERVAL_SECONDS
+from app.settings import settings
 
 
 @dataclass
@@ -94,6 +95,14 @@ def get_current_auth_optional(
         return get_current_auth(request, session)
     except HTTPException:
         return None
+
+
+def verify_webhook_secret(x_webhook_secret: Optional[str] = Header(None)) -> None:
+    if not settings.WEBHOOK_SECRET or x_webhook_secret != settings.WEBHOOK_SECRET:
+        raise HTTPException(
+            status_code=401,
+            detail={"code": "INVALID_WEBHOOK_SECRET", "message": "Invalid or missing webhook secret.", "fields": {}},
+        )
 
 
 def touch_session(

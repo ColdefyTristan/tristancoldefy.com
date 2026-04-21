@@ -1,15 +1,17 @@
 "use client";
 
-import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { register } from "@/lib/api/services/auth.browser";
-import { ApiError } from "@/lib/api/errors";
+import { useState } from "react";
+
 import { Button} from "@/components/ui/Button"
-import { Input} from "@/components/ui/Input"
-import { useToast } from "@/components/ui/Toast";
 import { Checkbox } from "@/components/ui/Checkbox";
 import { ConditionalField,isValid } from "@/components/ui/ConditionalField";
-import { passwordRules, usernameRules, emailRulesOptional } from "@/lib/fieldRules";
+import { Input} from "@/components/ui/Input"
+import { useToast } from "@/components/ui/Toast";
+import { ApiError } from "@/lib/api/errors";
+import { register } from "@/lib/api/services/auth.browser";
+import { emailRulesOptional,passwordRules, usernameRules } from "@/lib/fieldRules";
+
 import styles from "./RegisterForm.module.css"
 export default function RegisterForm() {
   const { toast } = useToast();

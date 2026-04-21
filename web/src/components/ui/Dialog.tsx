@@ -1,6 +1,7 @@
 "use client";
 
 import * as DialogPrimitive from "@radix-ui/react-dialog";
+
 import styles from "./Dialog.module.css";
 
 export const Dialog = DialogPrimitive.Root;

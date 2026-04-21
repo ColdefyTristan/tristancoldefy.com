@@ -1,4 +1,4 @@
-import type { Cell, Dir, Prox, Bucket } from "../types";
+import type { Bucket,Cell, Dir, Prox } from "../types";
 
 // --------------------
 // Hue circulaire

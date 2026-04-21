@@ -2,7 +2,9 @@
 
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+
 import BlobBackground, { PRESET_VIOLET } from '@/components/ui/BlobBackground';
+
 import { getDailyGame } from '../api/client';
 import { DailyGameOut } from '../types';
 import styles from './MtgDokuOverview.module.css';

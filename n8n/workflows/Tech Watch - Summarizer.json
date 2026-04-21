@@ -1,0 +1,337 @@
+{
+  "name": "Tech Watch - Summarizer",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "f30e9956-6875-476c-83e6-a94289c98f65",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        1728,
+        -208
+      ]
+    },
+    {
+      "parameters": {
+        "url": "http://backend:8000/tech-watch/tags",
+        "options": {}
+      },
+      "id": "aa9469d7-ecb0-4aea-9d81-f504de4edebc",
+      "name": "GET Tags",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [
+        1952,
+        -112
+      ]
+    },
+    {
+      "parameters": {
+        "url": "http://backend:8000/tech-watch/articles/next-to-summarize",
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "neverError": true
+            }
+          }
+        }
+      },
+      "id": "1a757519-a5e7-46b9-82da-022c99f389c1",
+      "name": "GET Next Article",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [
+        2176,
+        -184
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 1
+          },
+          "conditions": [
+            {
+              "id": "check-404",
+              "leftValue": "={{ $json.statusCode }}",
+              "rightValue": 404,
+              "operator": {
+                "type": "number",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "e4d7cf11-96fd-43c8-9e90-a0d687ec12b1",
+      "name": "IF Done",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        2400,
+        -184
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const article = $input.first().json.body;\nconst tags = $('GET Tags').all();\nconst tagList = tags.length ? tags.map(t => t.json.name).join(', ') : 'aucun';\n\nconst prompt = `Tu es un filtre de veille technologique pour un développeur web full-stack.\n\nCentres d'intérêt (par ordre d'importance) : frontend web (React/Next.js/CSS), backend & API (FastAPI/REST), Python, TypeScript, IA générative & LLMs, automatisation & workflows, DevOps & Docker, sécurité web, bases de données.\n\nArticle à évaluer :\nTitre : ${article.title}\nSource : ${article.source}\n\nDonne un score d'intérêt de 1 à 5 :\n1-2 = hors sujet ou trop généraliste\n3 = pertinent mais pas prioritaire\n4-5 = directement utile\nSi tu ne peux pas accomplir ta tâche (article illisible, contenu vide, etc.),\nréponds UNIQUEMENT avec ce JSON brut : {\"error\": \"raison courte\"}\nSi score <= 2 : réponds UNIQUEMENT avec ce JSON brut (pas de markdown) :\n{\"interest_score\": <score>}\n\nSi score >= 3 : résume en 3 phrases en français et choisis 2-4 tags parmi : ${tagList} (tu peux proposer un nouveau tag si nécessaire, court, en anglais, en minuscules). N'explique pas pourquoi ton choix est pertinant. Ne mentionne pas que c'est un article ni sa provenance.\nRéponds UNIQUEMENT avec ce JSON brut (pas de markdown) :\n{\"interest_score\": <score>, \"summary\": \"...\", \"tags\": [\"tag1\", \"tag2\"]}`;\n\nreturn [{ json: { ...article, prompt } }];"
+      },
+      "id": "6f6d690d-9b9a-457a-bded-03e248bed141",
+      "name": "Prepare Prompt",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2624,
+        -184
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const response = $input.first().json;\nconst content = response.content;\nconst text = Array.isArray(content) ? content[0].text : String(content);\n\nconst cleaned = text.replace(/```json\\n?/g, '').replace(/```\\n?/g, '').trim();\n\nlet parsed;\ntry {\n  parsed = JSON.parse(cleaned);\n} catch (e) {\n  const match = cleaned.match(/\\{[\\s\\S]*\\}/);\n  if (match) {\n    parsed = JSON.parse(match[0]);\n  } else {\n    throw new Error('Could not parse Claude response: ' + cleaned);\n  }\n}\nif (parsed.error) {\n  throw new Error('AI processing error: ' + parsed.error);\n}\n\nconst article = $('Prepare Prompt').item.json;\n\nconst result = { article_id: article.id, interest_score: parsed.interest_score };\nif (parsed.summary) result.summary = parsed.summary;\nif (parsed.tags)    result.tags    = parsed.tags;\n\nreturn [{ json: result }];"
+      },
+      "id": "c6df6f91-3aa6-43df-8d19-33bc7bff7560",
+      "name": "Parse Response",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3200,
+        -184
+      ],
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "method": "PATCH",
+        "url": "=http://backend:8000/tech-watch/articles/{{ $('GET Next Article').item.json.body.id }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": []
+        },
+        "sendBody": true,
+        "contentType": "raw",
+        "rawContentType": "application/json",
+        "body": "={{ $json.error ? JSON.stringify({ error: $json.error }) : JSON.stringify({ interest_score: $json.interest_score, summary: $json.summary ?? null, tags: $json.tags ?? null }) }}",
+        "options": {}
+      },
+      "id": "b361f1ff-117f-4106-b77d-64e63e36608d",
+      "name": "PATCH Article",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [
+        3424,
+        -184
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "rs75J34QrjCMbtaG",
+          "name": "Header Auth account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "unit": "seconds"
+      },
+      "id": "8f11c5f1-8aff-4d54-9452-2a7717b3944e",
+      "name": "Wait 3s",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        3648,
+        -112
+      ],
+      "webhookId": "tech-watch-summarizer-wait"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "claude-haiku-4-5-20251001",
+          "mode": "list",
+          "cachedResultName": "claude-haiku-4-5-20251001"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "={{ $json.prompt }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.anthropic",
+      "typeVersion": 1,
+      "position": [
+        2848,
+        -184
+      ],
+      "id": "b554a5ba-fb85-4f52-b341-6cb8b55610ba",
+      "name": "Message a model",
+      "credentials": {
+        "anthropicApi": {
+          "id": "ykkxCmZEZBtAuo86",
+          "name": "Anthropic account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "068f94a3-fa37-4f94-b7fc-6e60be073305",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        1728,
+        -16
+      ],
+      "id": "5652a045-a68d-4091-9d9f-8db7d992b675",
+      "name": "Webhook",
+      "webhookId": "068f94a3-fa37-4f94-b7fc-6e60be073305"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Manual Trigger": {
+      "main": [
+        [
+          {
+            "node": "GET Tags",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "GET Tags": {
+      "main": [
+        [
+          {
+            "node": "GET Next Article",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "GET Next Article": {
+      "main": [
+        [
+          {
+            "node": "IF Done",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF Done": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Prepare Prompt",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Response": {
+      "main": [
+        [
+          {
+            "node": "PATCH Article",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "PATCH Article",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "PATCH Article": {
+      "main": [
+        [
+          {
+            "node": "Wait 3s",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Prompt": {
+      "main": [
+        [
+          {
+            "node": "Message a model",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Message a model": {
+      "main": [
+        [
+          {
+            "node": "Parse Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait 3s": {
+      "main": [
+        [
+          {
+            "node": "GET Tags",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "GET Tags",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "296ab936-3c94-401c-8fbf-0a54e265f1c4",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "9b359d58faf1e6850c294ed30d864e2c1904dffe70cd649eaf82d786a04eba01"
+  },
+  "id": "OOrbxPbGe0MsMNSq",
+  "tags": []
+}

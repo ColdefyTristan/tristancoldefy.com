@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
+
 import { getChampData, getDailyGame } from "../api/client";
 import type { ChampDataResponse, DailyGameResponse } from "../types";
 

@@ -1,17 +1,18 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import SearchComboBox from "@/components/ui/SearchComboBox";
-import champTerms from "../data/champTerms.json";
-import styles from "./Riftdle.module.css";
 
+import { useAuth } from "@/components/auth/AuthProvider";
 import BlobBackground, { PRESET_EMBER } from "@/components/ui/BlobBackground";
-import GameBar from "./GameBar";
-import RowTable from "./RowTable";
+import SearchComboBox from "@/components/ui/SearchComboBox";
+
+import champTerms from "../data/champTerms.json";
 import { useDailyGame } from "../hooks/useChampOfTheDay";
 import { useRiftdleGame } from "../hooks/useRiftdleGame";
 import type { ChampDataOut, ClueType } from "../types";
-import { useAuth } from "@/components/auth/AuthProvider";
+import GameBar from "./GameBar";
+import styles from "./Riftdle.module.css";
+import RowTable from "./RowTable";
 
 const normalize = (s: string) => s.trim().toLowerCase();
 

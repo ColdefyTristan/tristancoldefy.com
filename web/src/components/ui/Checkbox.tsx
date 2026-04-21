@@ -1,4 +1,5 @@
 import * as React from "react";
+
 import styles from "./Checkbox.module.css";
 
 type Props = Omit<React.InputHTMLAttributes<HTMLInputElement>, "type"> & {

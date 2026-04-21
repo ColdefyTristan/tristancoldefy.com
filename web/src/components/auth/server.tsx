@@ -1,4 +1,5 @@
 import { cookies } from "next/headers";
+
 import type { AuthUser } from "@/lib/api/services/users";
 
 export async function getMeServer(): Promise<AuthUser | null> {

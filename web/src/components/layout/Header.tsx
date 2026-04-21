@@ -1,7 +1,8 @@
 import Link from "next/link";
+
+import {BottomTabBar} from "./BottomTabBar";
 import styles from "./Header.module.css";
 import {HeaderNav} from "./HeaderNav";
-import {BottomTabBar} from "./BottomTabBar";
 
 export function Header() {
   return (

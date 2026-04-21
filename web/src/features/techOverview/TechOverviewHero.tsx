@@ -1,5 +1,5 @@
-import styles from "./TechOverviewHero.module.css";
 import { ArchitectureDiagram } from "./diagram/ArchitectureDiagram";
+import styles from "./TechOverviewHero.module.css";
 
 export function TechOverviewHero() {
   return (

@@ -1,10 +1,11 @@
 "use client";
 
+import {LucideIcon ,UserRound} from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import styles from "./HeaderNav.module.css";
+
 import { useAuth } from "../auth/AuthProvider";
-import {LucideIcon ,UserRound} from "lucide-react";
+import styles from "./HeaderNav.module.css";
 
 
 

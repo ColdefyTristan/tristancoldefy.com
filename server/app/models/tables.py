@@ -1,7 +1,7 @@
 from sqlmodel import SQLModel, Field, Relationship
 from datetime import datetime
 from pydantic import EmailStr
-from sqlalchemy import Column, Integer, ForeignKey
+from sqlalchemy import Column, Integer, ForeignKey, JSON
 
 
 from app.utils.time import utcnow_naive
@@ -109,6 +109,32 @@ class PasswordResetToken(SQLModel, table=True):
     expires_at: datetime = Field(index=True)
 
     used_at: datetime | None = Field(default=None, index=True)
+
+
+class TechTag(SQLModel, table=True):
+    __tablename__ = "tech_tag"
+
+    id: int | None = Field(default=None, primary_key=True)
+    name: str = Field(index=True, unique=True)
+    created_at: datetime = Field(default_factory=utcnow_naive)
+
+
+class TechArticle(SQLModel, table=True):
+    __tablename__ = "tech_article"
+
+    id: int | None = Field(default=None, primary_key=True)
+    url: str = Field(index=True, unique=True)
+    title: str
+    source: str = Field(index=True)
+    published_at: datetime | None = Field(default=None, index=True)
+    priority: int = Field(default=0)
+    interest_score: int | None = Field(default=None)
+    summary: str | None = Field(default=None)
+    summarized: bool = Field(default=False)
+    tags: list[str] | None = Field(default=None, sa_column=Column(JSON))
+    tried_at: datetime | None = Field(default=None)
+    error: str | None = Field(default=None)
+    created_at: datetime = Field(default_factory=utcnow_naive)
 
 
 class EmailVerificationToken(SQLModel, table=True):

@@ -1,7 +1,7 @@
 "use client";
 
+import type { Cell, ChampRow, RowColumn } from "../types";
 import styles from "./RowTable.module.css";
-import type { ChampRow, Cell, RowColumn } from "../types";
 
 // --------------------
 // Column config

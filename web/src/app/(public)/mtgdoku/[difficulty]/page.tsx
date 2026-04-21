@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+
 import MtgDokuPage, { Difficulty } from '@/features/mtgdoku/ui/MtgDokuPage';
 
 const VALID: Difficulty[] = ['easy', 'medium', 'hard'];

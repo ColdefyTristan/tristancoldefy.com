@@ -1,5 +1,6 @@
 import { api } from "@/lib/api/client";
 import { ApiError } from "@/lib/api/errors";
+
 import type { ClueType, RiftdleAttemptTodayWrapperOut } from "../types";
 
 export async function getTodayAttempt(): Promise<RiftdleAttemptTodayWrapperOut> {

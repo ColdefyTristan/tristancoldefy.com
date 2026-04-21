@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+
 import styles from "./SearchComboBox.module.css";
 
 type Props = {

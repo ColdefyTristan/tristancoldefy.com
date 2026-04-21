@@ -2,8 +2,9 @@
 "use client";
 
 import React from "react";
-import { ToastProvider } from "@/components/ui/Toast";
+
 import { AuthProvider} from "@/components/auth/AuthProvider";
+import { ToastProvider } from "@/components/ui/Toast";
 import { AuthUser } from "@/lib/api/services/users";
 
 export function Providers({

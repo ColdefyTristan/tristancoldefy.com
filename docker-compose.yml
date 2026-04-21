@@ -18,7 +18,7 @@ services:
       retries: 20
 
   backend:
-    image: tristancoldefy/tristancoldefy.com-backend:0.4.0
+    image: tristancoldefy/tristancoldefy.com-backend:0.5.0
     build:
       context: ./server
       dockerfile: Dockerfile
@@ -38,7 +38,7 @@ services:
       - ./server:/app
     
   web:
-    image: tristancoldefy/tristancoldefy.com-web:0.4.0
+    image: tristancoldefy/tristancoldefy.com-web:0.5.0
     build:
       context: ./web
     container_name: website_frontend
@@ -49,7 +49,26 @@ services:
     ports:
       - "3000:3000"
 
-  
+  n8n:
+    image: n8nio/n8n
+    container_name: website_n8n
+    restart: unless-stopped
+    ports:
+      - "5678:5678"
+    environment:
+      - N8N_BASIC_AUTH_ACTIVE=true
+      - N8N_BASIC_AUTH_USER=${N8N_USER}
+      - N8N_BASIC_AUTH_PASSWORD=${N8N_PASSWORD}
+      - N8N_ENCRYPTION_KEY=${N8N_ENCRYPTION_KEY}
+      - GENERIC_TIMEZONE=Europe/Paris
+      - WEBHOOK_SECRET=${WEBHOOK_SECRET}
+      - N8N_BLOCK_ENV_ACCESS_IN_NODE=false
+      - N8N_PUBLIC_API_DISABLED=false
+    volumes:
+      - n8n_data:/home/node/.n8n
+
+
 volumes:
   pgdata:
+  n8n_data:
 

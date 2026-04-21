@@ -1,5 +1,5 @@
-import { ConditionOut } from '../types';
 import { getCategoryDisplay } from '../lib/categoryLabels';
+import { ConditionOut } from '../types';
 import styles from './MtgDoku.module.css';
 
 type Props = { condition: ConditionOut };

@@ -1,6 +1,7 @@
 import { redirect } from "next/navigation";
-import { getMe } from "@/lib/api/services/auth.server";
+
 import { ApiError } from "@/lib/api/errors"; 
+import { getMe } from "@/lib/api/services/auth.server";
 
 export const dynamic = "force-dynamic";
 

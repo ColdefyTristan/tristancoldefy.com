@@ -1,11 +1,12 @@
 "use client";
 
-import Link from "next/link";
+import { Home, LogIn,UserRound } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, UserRound, LogIn } from "lucide-react";
-import styles from "./BottomTabBar.module.css";
+
 import { useAuth } from "../auth/AuthProvider";
+import styles from "./BottomTabBar.module.css";
 
 function Tab({
   href,

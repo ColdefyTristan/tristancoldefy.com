@@ -1,8 +1,9 @@
 "use client";
 
 import { useRef } from "react";
+
+import { infraItems, mainNodes, securityItem } from "./architectureData";
 import styles from "./ArchitectureDiagram.module.css";
-import { mainNodes, infraItems, securityItem } from "./architectureData";
 import { ArchitectureNode } from "./ArchitectureNode";
 import { DiagramAnimProvider } from "./timeline/DiagramAnimProvider";
 

@@ -1,4 +1,5 @@
 import type { HTMLAttributes, ReactNode } from "react";
+
 import styles from "./InsetBox.module.css";
 
 type InsetBoxProps = HTMLAttributes<HTMLDivElement> & {

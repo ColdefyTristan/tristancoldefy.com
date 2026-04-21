@@ -1,0 +1,91 @@
+.card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 320px;
+  width: 100%;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.source {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--lighGray);
+}
+
+.date {
+  font-size: 12px;
+  color: var(--gray);
+}
+
+.stars {
+  margin-left: auto;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.starFilled {
+  color: rgba(255, 195, 50, 0.9);
+}
+
+.starEmpty {
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-strong);
+  margin: 0;
+  line-height: 1.45;
+}
+
+.title a {
+  color: inherit;
+}
+
+.title a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.summary {
+  font-size: 14px;
+  color: var(--text);
+  margin: 0;
+  line-height: 1.65;
+  flex: 1;
+  min-height: 0; /* required for flex child to scroll */
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: auto;
+  padding-top: 4px;
+}
+
+.tag {
+  font-size: 11px;
+  color: var(--lighGray);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  padding: 3px 9px;
+}

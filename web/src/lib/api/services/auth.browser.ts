@@ -1,6 +1,7 @@
+import {AuthUser} from "@/lib/api/services/users"
+
 import { api } from "../client";
 import { endpoints } from "../endpoints";
-import {AuthUser} from "@/lib/api/services/users"
 
 export async function getMe(): Promise<AuthUser> {
   return api.get<AuthUser>("/auth/me", { 

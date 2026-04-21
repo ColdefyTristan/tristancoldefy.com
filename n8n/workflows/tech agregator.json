@@ -1,0 +1,501 @@
+{
+  "name": "tech agregator",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "e9e56cad-7a0c-4299-87c9-bbac59171821",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -480,
+        288
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://news.ycombinator.com/rss",
+        "options": {}
+      },
+      "id": "c8af674a-d74a-40d9-9316-5f546852ab8c",
+      "name": "RSS - Hacker News",
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1,
+      "position": [
+        -32,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://www.smashingmagazine.com/feed/",
+        "options": {}
+      },
+      "id": "a2b400f1-6e5a-414d-8cc5-43e59d567e31",
+      "name": "RSS - Smashing Magazine",
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1,
+      "position": [
+        -32,
+        192
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://github.blog/feed/",
+        "options": {}
+      },
+      "id": "ddad4e94-535f-451f-bff7-320fd3d660b4",
+      "name": "RSS - GitHub Blog",
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1,
+      "position": [
+        -32,
+        576
+      ]
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "priority",
+              "type": "numberValue",
+              "numberValue": "2"
+            },
+            {
+              "name": "source",
+              "stringValue": "hacker news"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "3c0f6ceb-520c-4d01-a686-c53604db1c92",
+      "name": "Set - Hacker News",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3,
+      "position": [
+        192,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "priority",
+              "type": "numberValue",
+              "numberValue": "2"
+            },
+            {
+              "name": "source",
+              "stringValue": "smashing magazine"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "c2694772-83a1-4bfd-8e31-599a3405f8a0",
+      "name": "Set - Smashing Magazine",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3,
+      "position": [
+        192,
+        192
+      ]
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "priority",
+              "type": "numberValue",
+              "numberValue": "1"
+            },
+            {
+              "name": "source",
+              "stringValue": "infoQ"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b2de71d1-04c0-497a-95cc-136db9cd539c",
+      "name": "Set - InfoQ",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3,
+      "position": [
+        192,
+        384
+      ]
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "priority",
+              "type": "numberValue",
+              "numberValue": "3"
+            },
+            {
+              "name": "source",
+              "stringValue": "github blog"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "4aa528ec-eb32-4eef-9103-611ab6e67482",
+      "name": "Set - GitHub Blog",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3,
+      "position": [
+        192,
+        576
+      ]
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "priority",
+              "type": "numberValue",
+              "numberValue": "1"
+            },
+            {
+              "name": "source",
+              "stringValue": "stripe blog"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "6792f68d-334a-42ec-b4f6-72b050f066d7",
+      "name": "Set - Stripe Blog",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3,
+      "position": [
+        192,
+        768
+      ]
+    },
+    {
+      "parameters": {
+        "numberInputs": 5
+      },
+      "id": "8128c580-2477-4fa6-9b74-01785d611e28",
+      "name": "Merge",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [
+        416,
+        336
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://www.wired.com/feed/tag/ai/latest/rss",
+        "options": {}
+      },
+      "id": "7643d915-2ea7-45eb-bc81-566a5fe0343f",
+      "name": "RSS - wired",
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1,
+      "position": [
+        -32,
+        768
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://techcrunch.com/rss",
+        "options": {}
+      },
+      "id": "eb37326b-3fa8-45eb-9d59-836272e93b52",
+      "name": "RSS - techcrunch",
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1,
+      "position": [
+        -32,
+        384
+      ],
+      "alwaysOutputData": false,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "jsCode": "const articles = $input.all().map(item => ({\n  url: item.json.link,\n  title: item.json.title,\n  source: item.json.source,\n  published_at: item.json.isoDate || null,\n  priority: item.json.priority || 0\n}));\n\nreturn [{ json: { articles } }];"
+      },
+      "id": "be173923-24e4-4439-8e05-1b362de56896",
+      "name": "Aggregate Articles",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        640,
+        384
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://backend:8000/tech-watch/articles/batch",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": []
+        },
+        "sendBody": true,
+        "contentType": "raw",
+        "rawContentType": "application/json",
+        "body": "={{ JSON.stringify($json.articles) }}",
+        "options": {}
+      },
+      "id": "038bfe53-69d4-4c71-b952-4980bef58ced",
+      "name": "POST Batch",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [
+        864,
+        384
+      ],
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "rs75J34QrjCMbtaG",
+          "name": "Header Auth account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "91e1025f-533c-4c7f-beb1-f7b54f82d661",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -480,
+        480
+      ],
+      "id": "104f32f7-8674-472f-9e8e-78fbfa043473",
+      "name": "Webhook",
+      "webhookId": "91e1025f-533c-4c7f-beb1-f7b54f82d661"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        -256,
+        384
+      ],
+      "id": "6d5d6337-127b-477c-a799-b441c6f92e7f",
+      "name": "No Operation, do nothing"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Manual Trigger": {
+      "main": [
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RSS - Hacker News": {
+      "main": [
+        [
+          {
+            "node": "Set - Hacker News",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RSS - Smashing Magazine": {
+      "main": [
+        [
+          {
+            "node": "Set - Smashing Magazine",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RSS - GitHub Blog": {
+      "main": [
+        [
+          {
+            "node": "Set - GitHub Blog",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set - Hacker News": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set - Smashing Magazine": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Aggregate Articles",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set - InfoQ": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "Set - GitHub Blog": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 3
+          }
+        ]
+      ]
+    },
+    "Set - Stripe Blog": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 4
+          }
+        ]
+      ]
+    },
+    "RSS - wired": {
+      "main": [
+        [
+          {
+            "node": "Set - Stripe Blog",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RSS - techcrunch": {
+      "main": [
+        [
+          {
+            "node": "Set - InfoQ",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aggregate Articles": {
+      "main": [
+        [
+          {
+            "node": "POST Batch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "No Operation, do nothing": {
+      "main": [
+        [
+          {
+            "node": "RSS - Hacker News",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "RSS - Smashing Magazine",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "RSS - techcrunch",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "RSS - GitHub Blog",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "RSS - wired",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "66a6aac8-f917-4b56-be7a-18badee7a6bd",
+  "meta": {
+    "instanceId": "9b359d58faf1e6850c294ed30d864e2c1904dffe70cd649eaf82d786a04eba01"
+  },
+  "id": "rSBHoL506nsxPUkG",
+  "tags": []
+}

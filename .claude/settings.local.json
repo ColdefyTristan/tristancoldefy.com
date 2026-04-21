@@ -14,7 +14,11 @@
       "Bash(.venv/Scripts/python -c \":*)",
       "Bash(git mv:*)",
       "Bash(xargs grep:*)",
-      "Bash(grep -E \"fixed|[0-9]{3,}px\")"
+      "Bash(grep -E \"fixed|[0-9]{3,}px\")",
+      "Bash(node_modules/.bin/next lint:*)",
+      "Bash(npm run:*)",
+      "Bash(grep -i \"techwatch\\\\|app\\\\\\\\\\\\\\\\page\\\\|carousel\\\\|article\\\\|tagfilter\\\\|techwatch\")",
+      "Bash(docker compose:*)"
     ]
   }
 }

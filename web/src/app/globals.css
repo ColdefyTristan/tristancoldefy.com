@@ -10,6 +10,7 @@ body {
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color: whitesmoke;
   background:  #0c0c0c;
+  overflow-x: clip; /* prevent horizontal scrollbar from full-bleed elements */
 }
 
 @media (max-width: 640px) {

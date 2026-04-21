@@ -1,5 +1,6 @@
 import { Github, Linkedin } from "lucide-react";
 import Link from "next/link";
+
 import styles from "./Footer.module.css";
 
 export function Footer() {

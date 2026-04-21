@@ -2,14 +2,15 @@
 
 import {
   createContext,
+  type ReactNode,
   useCallback,
   useContext,
   useEffect,
   useMemo,
   useRef,
   useState,
-  type ReactNode,
 } from "react";
+
 import { BROWSER_STEPS } from "./steps";
 import type { BrowserAnim, DiagramAnimState } from "./types";
 
